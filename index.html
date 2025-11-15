@@ -1,20 +1,6 @@
 <!doctype html>
 
-<!---
-Copyright 2017 The AMP Start Authors. All Rights Reserved.
 
-Licensed under the Apache License, Version 2.0 (the "License");
-you may not use this file except in compliance with the License.
-You may obtain a copy of the License at
-
-      http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS-IS" BASIS,
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-See the License for the specific language governing permissions and
-limitations under the License.
--->
 
 <html ⚡="">
 
@@ -56,6 +42,24 @@ limitations under the License.
   }
 
   /* container: transparent background by default */
+
+  .banner-container {
+    position: relative;
+     font-family: var(--font-family);
+}
+.corner-text { 
+  position: absolute;
+  top: 90%;
+  right: 70px;
+  transform: translatey(-50%);
+
+  white-space: nowrap;
+  color: black;
+  font-size: 10px;
+  color: var(--muted-color);
+}
+
+
   .fb-banner {
     display: inline-flex;
     align-items: center;
@@ -63,8 +67,8 @@ limitations under the License.
     gap: var(--gap);
     padding: var(--padding);
     border-radius: var(--radius);
-  
-    font-family: var(--font-family);
+  width:80%;
+   
     box-sizing: border-box;
     /* optional subtle shadow — comment out if you want flat */
     /* box-shadow: 0 1px 4px rgba(8,20,30,0.06); */
@@ -456,28 +460,22 @@ creating hand-painted narrowboats that blend heritage, design, and individuality
 
 
 
- <div class="my4   "> 
+ <div class="my1   "> 
 
-<svg width="52px" height="36px" viewBox="0 0 52 36" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>1DE4B1FF-3CB5-431D-B156-5CD3A4219104</title>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round">
-        <g id="Home-Page_Witth-content" transform="translate(-638.000000, -3638.000000)" stroke="white" stroke-width="2">
-            <g id="Testimonials" transform="translate(184.000000, 3364.000000)">
-                <path d="M495.360569,276.955816 C504.600011,269.623028 484.174294,284.999064 495.360569,288.773244 C505.548612,292.210627 505.548612,300.318231 501.388493,305.449362 C497.228373,310.580492 488.127614,310.580492 485.228179,302.599372 C481.919162,293.490813 485.296625,284.942961 495.360569,276.955816 Z M466.360569,276.955816 C475.600011,269.623028 455.174294,284.999064 466.360569,288.773244 C476.548612,292.210627 476.548612,300.318231 472.388493,305.449362 C468.228373,310.580492 459.127614,310.580492 456.228179,302.599372 C452.919162,293.490813 456.296625,284.942961 466.360569,276.955816 Z" id="Quotes"/>
-            </g>
-        </g>
-    </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" height="44px" viewBox="0 -960 960 960" width="44px" fill="#FFFFFF"><path d="m228-240 92-160q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 23-5.5 42.5T458-480L320-240h-92Zm360 0 92-160q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 23-5.5 42.5T818-480L680-240h-92ZM320-500q25 0 42.5-17.5T380-560q0-25-17.5-42.5T320-620q-25 0-42.5 17.5T260-560q0 25 17.5 42.5T320-500Zm360 0q25 0 42.5-17.5T740-560q0-25-17.5-42.5T680-620q-25 0-42.5 17.5T620-560q0 25 17.5 42.5T680-500Zm0-60Zm-360 0Z"/></svg>
 
  
    
 
 
-   <h2 class="h2 my4 " style="margin-top: .222em;
-  margin-bottom: .5em;">In their words</h2>
+  
 
-   <h1 class="h3 mb4">In their words fghd fdgdfgdk d hfdjghdfk dfh gjdfhkg ddhfgjkd hdfgkj dfhjk cxvx v,xc vxcnv,m xc,v xcnvm,xc vnmxc,n ,xcn,xg dhdfjkg d gdfhgjdf dfhkgj hdfjkg dfhgjkdffg dhk</h1>
-    <dt class="h5  mb4  theme2-dividerblock regular">Donald <br> Mart Boat</dt>
+   <h2 class="h2 mb1 ">Really has come out as a <span class="content__highlight" 
+    style="color: #fff;
+  background: linear-gradient( 90deg, rgba(64, 226, 226, 0) 0%, rgba(64, 226, 226, 0.18) 40%, rgba(64, 134, 226, 0.18) 60%, rgba(64, 134, 226, 0) 100% );
+  backdrop-filter: blur(4px); padding: 0 4px;
+border-radius: 4px;">super job ... </span></h2>
+    <dt class="h5  mb4  theme2-dividerblock regular">Dave <br> Martin</dt>
    <dl class="clearfix mxn3 ">
 
  
@@ -644,18 +642,31 @@ class="mr1"
     <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="24px" fill="#296cd5"><path d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"/></svg>
  </span>
 </a>
+<div class="banner-container pt2"> 
+     <a class="fb-banner fb-link" href="https://www.facebook.com/LostArtPainters" target="_blank" rel="noopener noreferrer" aria-label="Find us on Facebook (opens in new tab)">
+    <!-- Inline Facebook "f" logo SVG (flat style, matches FB brand colors) -->
+    <span class="fb-logo" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="100%" height="100%" role="img" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+        <rect width="24" height="24" rx="4" fill="#1877F2"/>
+        <path d="M15.12 8.5h-1.37c-.35 0-.82.18-.82.9v1.05h2.2l-.29 2.21h-1.91V20H10.7v-6.29H8.9v-2.21h1.8V9.65c0-1.98 1.16-3.07 2.86-3.07.83 0 1.55.06 1.69.09v2.83z" fill="#fff"/>
+      </svg>
+    </span>
 
-        <p class="flex-container mb0 ">
-                
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" class="mr1" viewBox="0 -960 960 960" width="24px" fill="white"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
-              
-               
-               <a class="no-underline" href="mailto:lostartboatpainters@gmail.com">lostartboatpainters@gmail.com</a>
+   
+    <span class="fb-text">
+      <span class="fb-title">Lost Art Painters</span>
+      
+        <span class="fb-text">Join us on Facebook</span>
 
-               
-               
-               
-                <br></p>
+
+        <span class="fb-followers">909 followers</span>
+    </span>
+  </a> 
+    <div class="corner-text">
+        Business Page
+    </div>
+
+  </div>
             </div>
             <div class="col col-12 sm-col-6 mb4">
         
@@ -697,25 +708,20 @@ class="mr1"
  </span>
             </a>
 
-               <a class="fb-banner fb-link" href="https://www.facebook.com/LostArtPainters" target="_blank" rel="noopener noreferrer" aria-label="Find us on Facebook (opens in new tab)">
-    <!-- Inline Facebook "f" logo SVG (flat style, matches FB brand colors) -->
-    <span class="fb-logo" aria-hidden="true">
-      <svg viewBox="0 0 24 24" width="100%" height="100%" role="img" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-        <rect width="24" height="24" rx="4" fill="#1877F2"/>
-        <path d="M15.12 8.5h-1.37c-.35 0-.82.18-.82.9v1.05h2.2l-.29 2.21h-1.91V20H10.7v-6.29H8.9v-2.21h1.8V9.65c0-1.98 1.16-3.07 2.86-3.07.83 0 1.55.06 1.69.09v2.83z" fill="#fff"/>
-      </svg>
-    </span>
 
-    <!-- Text area -->
-    <span class="fb-text">
-      <span class="fb-title">Lost Art Painters</span>
-      
-        <span class="fb-text">Join us on Facebook</span>
+                <p class="flex-container mb0 ">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" class="mr1" viewBox="0 -960 960 960" width="24px" fill="white"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
+              
+               
+               <a class="no-underline" href="mailto:lostartboatpainters@gmail.com">lostartboatpainters@gmail.com</a>
 
+               
+               
+               
+                <br></p>
 
-        <span class="fb-followers">909 followers</span>
-    </span>
-  </a>
+             
                 </div>
   </div>
 
