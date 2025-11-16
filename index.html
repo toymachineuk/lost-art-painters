@@ -152,11 +152,6 @@ a.no-underline{
   
 }
 
-.sticky-note{
-  bottom: 2rem;
-  right: 3rem;
-  position: absolute;
-}
 
 
 .video-wrapper figcaption {
@@ -214,7 +209,7 @@ amp-video {
   <div class="flex justify-start items-center ampstart-sidebar-header">
     <div role="button" aria-label="close sidebar" on="tap:header-sidebar.toggle" tabindex="0" class="ampstart-navbar-trigger items-start">✕</div>
   </div>
-  <nav class="ampstart-sidebar-nav ampstart-nav">
+  <nav class="mt4 ampstart-sidebar-nav ampstart-nav">
     <ul class="list-reset m0 p0 ampstart-label theme2-divider mb2">
           <li class="ampstart-nav-item "><a class="ampstart-nav-link" href="https://www.lost-art-painters.co.uk/">Home</a></li>
              <li class="ampstart-nav-item"><a class="ampstart-nav-link" href="services.amp.html">Our Services</a
@@ -224,7 +219,7 @@ amp-video {
           <li class="ampstart-nav-item "><a class="ampstart-nav-link" href="cooperation.amp.html">Cooperation and Interenship</a></li>
     </ul>
   </nav>
-<div class="sticky-note"> 
+
 <h4 > Have something in mind?</h4>
 
 
@@ -264,7 +259,7 @@ amp-video {
  Chat Now
 </a>
 
-</div>
+
 
 </amp-sidebar>
 <!-- End Sidebar -->
@@ -321,12 +316,15 @@ that <strong> exceeds expectations </strong> and celebrates the rich <strong>her
           
             <h2 class="h2 my4 ">Our Story</h2>
 
-<p class="mb0">
+<p class="mb4 theme2-divider">
                 
                 Lost Art Painters is owned and run by Dan Holmes, who has an extensive background in art and
 design and holds a First-Class Honours Degree in Fine Art.
                 
                 </p>
+                <p class="mb4">The company name came about when Dan taught himself how to paint beside the canal. With hours of
+trial, error, and experimentation — and few references to guide him — he uncovered what truly felt like
+a lost art: the traditional skill of coach painting narrowboats.</p>
 
                       <div class="my4 mxn3 ">
 
@@ -334,10 +332,13 @@ design and holds a First-Class Honours Degree in Fine Art.
                         
 <dl class="clearfix ">
         
-          <dd class="m0">
+          <dd class="m0" style="width: 70%;
+
+  margin: auto;">
             
         
-            <amp-img src="./img/dan.jpg" width="600" height="450" class="mb2" alt="Happy Hour Monday through Friday 5 PM" layout="responsive"></amp-img>
+            <amp-img src="./img/dan.jpg" width="450" height="450" class="mb2" alt="Happy Hour Monday through Friday 5 PM" layout="responsive"
+            style="border-radius: 50%;"></amp-img>
     
               </dd>
     </dl>    
@@ -346,9 +347,7 @@ design and holds a First-Class Honours Degree in Fine Art.
 
             </div>
 
-<p class="mb0">The company name came about when Dan taught himself how to paint beside the canal. With hours of
-trial, error, and experimentation — and few references to guide him — he uncovered what truly felt like
-a lost art: the traditional skill of coach painting narrowboats.</p>
+
 
 <p class="mb0">Before long, other boat owners began asking Dan to paint their vessels, and what started as a passion
 became a full-time craft. Today, the workshop at Knighton Wharf continues that same tradition —
@@ -461,10 +460,17 @@ creating hand-painted narrowboats that blend heritage, design, and individuality
 
 
  <div class="my1   "> 
+<div class="quote-row" style="  display: flex;
+  align-items: center;   
+  gap: 6px;           
+ 
+  flex-wrap: nowrap;">
 
 <svg xmlns="http://www.w3.org/2000/svg" height="44px" viewBox="0 -960 960 960" width="44px" fill="#FFFFFF"><path d="m228-240 92-160q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 23-5.5 42.5T458-480L320-240h-92Zm360 0 92-160q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 23-5.5 42.5T818-480L680-240h-92ZM320-500q25 0 42.5-17.5T380-560q0-25-17.5-42.5T320-620q-25 0-42.5 17.5T260-560q0 25 17.5 42.5T320-500Zm360 0q25 0 42.5-17.5T740-560q0-25-17.5-42.5T680-620q-25 0-42.5 17.5T620-560q0 25 17.5 42.5T680-500Zm0-60Zm-360 0Z"/></svg>
-
  
+  <small class="quote-text" style="  line-height: 1;        /* keep it vertically aligned */
+  white-space: nowrap;   /* prevent the text wrapping to next line */">What our clients say about us</small> 
+ </div>
    
 
 
@@ -475,7 +481,7 @@ creating hand-painted narrowboats that blend heritage, design, and individuality
   background: linear-gradient( 90deg, rgba(64, 226, 226, 0) 0%, rgba(64, 226, 226, 0.18) 40%, rgba(64, 134, 226, 0.18) 60%, rgba(64, 134, 226, 0) 100% );
   backdrop-filter: blur(4px); padding: 0 4px;
 border-radius: 4px;">super job ... </span></h2>
-    <dt class="h5  mb4  theme2-dividerblock regular">Dave <br> Martin</dt>
+    <dt class="h5  mb4  theme2-dividerblock regular">Dave  Martin</dt>
    <dl class="clearfix mxn3 ">
 
  
@@ -509,10 +515,17 @@ border-radius: 4px;">super job ... </span></h2>
             <h2 id="gallery" class="my4 theme2-anchored">Gallery</h2>
 
             
-<p class="mb1 ">
+<p class="mb4 theme2-divider ">
   
          Browse our gallery to see examples of our hand-painted narrowboats, decorative panels, and signwriting work.        
   </p>
+    <p class="mb4">
+              
+      
+Each piece is a celebration of traditional canal art and the individuality of every boat owner we work with.
+</p>
+
+
             <amp-image-lightbox id="lightbox" layout="nodisplay"></amp-image-lightbox>
             <amp-carousel class="my2 mxn3" height="200" layout="fixed-height" type="carousel">
 
@@ -552,36 +565,20 @@ border-radius: 4px;">super job ... </span></h2>
            
            
                 </amp-carousel>
-  <p class="mb1">
-              
-      
-Each piece is a celebration of traditional canal art and the individuality of every boat owner we work with.
-</p>
+
 
 
  <div class="my4 clearfix"> 
 
   <h2 id="locations" class="my4 theme2-anchored">Locations &amp; Contacts</h2>
 
-  <div class="mxn3">
-    <dl class="clearfix ">
-
-      <dt class="ml3 block regular"> <small>Knighton Wharf   </small> </dt>
-        
-          <dd class="m0"> 
-<amp-img src="./img/boats/knighton.jpg" width="800" height="200"  alt="Key Lime Pie" layout="responsive" tabindex="0"></amp-img>
-
-</dd>
-</dl>
-</div>
-  <p class="mb4"> 
+    <p class="mb4 theme2-divider"> 
             If you’re looking for a traditional boat painter, want to book a DIY tuition session, or would like to discuss ideas for your narrowboat, we’d love to hear from you.
 <br>
 </p >
 
-            <div class="col col-12 sm-col-6 mb4">
-             <p class="mb0 flex-container" > 
-             <svg xmlns="http://www.w3.org/2000/svg" height="44px" viewBox="0 -960 960 960" width="44px" fill="#FFFFFF"
+             <p class="mb4 flex-container" > 
+             <svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px" fill="#FFFFFF"
              class="mr1"
              
              
@@ -590,6 +587,23 @@ Each piece is a celebration of traditional canal art and the individuality of ev
               <span class="mb0 " >  Based at Knighton Wharf on the Shropshire Union Canal  </span>
                 
 </p>
+  <div class="mxn3">
+    <dl class="clearfix ">
+
+     
+        
+          <dd class="m0"> 
+
+          
+<amp-img src="./img/boats/knighton.jpg" width="649" height="427"  alt="Key Lime Pie" layout="responsive" tabindex="0"></amp-img>
+
+</dd>
+</dl>
+</div>
+  
+
+            <div class="col col-12 sm-col-6 mb4">
+
                 
                 
       
