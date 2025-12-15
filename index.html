@@ -41,6 +41,126 @@
     --font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   }
 
+
+
+.right-align-image {
+        float: none;
+         box-sizing: border-box;
+         margin-left:0;
+        
+      }
+
+
+      @media (min-width:40.06rem) {
+      .right-align-image {
+      margin-left:1rem;
+        float: right;
+        margin-right: calc(-1.5rem);
+      }
+
+}
+
+  .left-align-image {
+        float: none;
+         box-sizing: border-box;
+         margin-left:0;
+        
+      }
+
+
+      @media (min-width:40.06rem) {
+      .left-align-image {
+      margin-right:1rem;
+        float: left;
+        margin-left: calc(-1.5rem);
+      }
+
+}
+
+.left-align-image amp-img {
+  width: 100%;
+}
+
+
+    /* video */
+
+
+  .video-wrapper {
+  display: flex;
+  justify-content: center;    
+  align-items: center;      
+  padding: 20px;              
+}
+
+
+  @media (max-width:40.06rem) {
+
+  .video-wrapper {
+       
+  padding: 0;               
+}
+
+
+  }
+
+.video-wrapper amp-video {
+  width: 60%;       /* or whatever width you want, e.g. 50%, 400px, etc */
+  max-width: 800px; /* ensures it doesn’t get too big on large screens */
+  height: auto;     /* keep aspect ratio */
+  display: block;   /* helps margin/auto centering if not using flexbox */
+ 
+}
+
+
+ @media (max-width:40.06rem) {
+ .video-wrapper amp-video {
+  width: 100%;       
+  
+}
+ }
+
+  /* video--end */
+
+    /* hero-carousel */
+ .hero-slide {
+      position: relative;
+      color: #fff;
+      text-align: center;
+    }
+
+    .hero-slide .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+     
+      display: flex;
+      align-items: center;
+     
+      flex-direction: column;
+     
+    }
+
+  
+
+    .hero-btn {
+      margin-top: 15px;
+      padding: 12px 25px;
+      background: #ff0055;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+
+   
+
+
+  /* hero-carousel--end */
+
+
+
   /* container: transparent background by default */
 
   .banner-container {
@@ -188,8 +308,2369 @@ amp-video {
   line-height: 3.5rem;
   z-index: 2;
   position: relative;
+  letter-spacing: 0;
+  font-weight: 600;
 }
-/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}[hidden],template{display:none}.h00{font-size:4rem}.h0{font-size:3rem}.h1{font-size:2.25rem}.h2{font-size:1.75rem}.h3{font-size:1.25rem}.h4{font-size:1rem}.h5{font-size:.875rem}.h6{font-size:.75rem}.font-family-inherit{font-family:inherit}.font-size-inherit{font-size:inherit}.text-decoration-none{text-decoration:none}.bold{font-weight:700}.regular{font-weight:400}.italic{font-style:italic}.caps{text-transform:uppercase;letter-spacing:.2em}.left-align{text-align:left}.center{text-align:center}.right-align{text-align:right}.justify{text-align:justify}.nowrap{white-space:nowrap}.break-word{word-wrap:break-word}.line-height-1{line-height:1rem}.line-height-2{line-height:1.125rem}.line-height-3{line-height:1.75}.line-height-4{line-height:1.6}.list-style-none{list-style:none}.underline{text-decoration:underline}.truncate{max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.list-reset{list-style:none;padding-left:0}.inline{display:inline}.block{display:block}.inline-block{display:inline-block}.table{display:table}.table-cell{display:table-cell}.overflow-hidden{overflow:hidden}.overflow-scroll{overflow:scroll}.overflow-auto{overflow:auto}.clearfix:after,.clearfix:before{content:" ";display:table}.clearfix:after{clear:both}.left{float:left}.right{float:right}.fit{max-width:100%}.max-width-1{max-width:24rem}.max-width-2{max-width:32rem}.max-width-3{max-width:48rem}.max-width-4{max-width:64rem}.border-box{box-sizing:border-box}.align-baseline{vertical-align:baseline}.align-top{vertical-align:top}.align-middle{vertical-align:middle}.align-bottom{vertical-align:bottom}.m0{margin:0}.mt0{margin-top:0}.mr0{margin-right:0}.mb0{margin-bottom:0}.ml0,.mx0{margin-left:0}.mx0{margin-right:0}.my0{margin-top:0;margin-bottom:0}.m1{margin:.5rem}.mt1{margin-top:.5rem}.mr1{margin-right:.5rem}.mb1{margin-bottom:.5rem}.ml1,.mx1{margin-left:.5rem}.mx1{margin-right:.5rem}.my1{margin-top:.5rem;margin-bottom:.5rem}.m2{margin:1rem}.mt2{margin-top:1rem}.mr2{margin-right:1rem}.mb2{margin-bottom:1rem}.ml2,.mx2{margin-left:1rem}.mx2{margin-right:1rem}.my2{margin-top:1rem;margin-bottom:1rem}.m3{margin:1.5rem}.mt3{margin-top:1.5rem}.mr3{margin-right:1.5rem}.mb3{margin-bottom:1.5rem}.ml3,.mx3{margin-left:1.5rem}.mx3{margin-right:1.5rem}.my3{margin-top:1.5rem;margin-bottom:1.5rem}.m4{margin:2rem}.mt4{margin-top:2rem}.mr4{margin-right:2rem}.mb4{margin-bottom:2rem}.ml4,.mx4{margin-left:2rem}.mx4{margin-right:2rem}.my4{margin-top:2rem;margin-bottom:2rem}.mxn1{margin-left:calc(.5rem * -1);margin-right:calc(.5rem * -1)}.mxn2{margin-left:calc(1rem * -1);margin-right:calc(1rem * -1)}.mxn3{margin-left:calc(1.5rem * -1);margin-right:calc(1.5rem * -1)}.mxn4{margin-left:calc(2rem * -1);margin-right:calc(2rem * -1)}.m-auto{margin:auto}.mt-auto{margin-top:auto}.mr-auto{margin-right:auto}.mb-auto{margin-bottom:auto}.ml-auto,.mx-auto{margin-left:auto}.mx-auto{margin-right:auto}.my-auto{margin-top:auto;margin-bottom:auto}.p0{padding:0}.pt0{padding-top:0}.pr0{padding-right:0}.pb0{padding-bottom:0}.pl0,.px0{padding-left:0}.px0{padding-right:0}.py0{padding-top:0;padding-bottom:0}.p1{padding:.5rem}.pt1{padding-top:.5rem}.pr1{padding-right:.5rem}.pb1{padding-bottom:.5rem}.pl1{padding-left:.5rem}.py1{padding-top:.5rem;padding-bottom:.5rem}.px1{padding-left:.5rem;padding-right:.5rem}.p2{padding:1rem}.pt2{padding-top:1rem}.pr2{padding-right:1rem}.pb2{padding-bottom:1rem}.pl2{padding-left:1rem}.py2{padding-top:1rem;padding-bottom:1rem}.px2{padding-left:1rem;padding-right:1rem}.p3{padding:1.5rem}.pt3{padding-top:1.5rem}.pr3{padding-right:1.5rem}.pb3{padding-bottom:1.5rem}.pl3{padding-left:1.5rem}.py3{padding-top:1.5rem;padding-bottom:1.5rem}.px3{padding-left:1.5rem;padding-right:1.5rem}.p4{padding:2rem}.pt4{padding-top:2rem}.pr4{padding-right:2rem}.pb4{padding-bottom:2rem}.pl4{padding-left:2rem}.py4{padding-top:2rem;padding-bottom:2rem}.px4{padding-left:2rem;padding-right:2rem}.col{float:left}.col,.col-right{box-sizing:border-box}.col-right{float:right}.col-1{width:8.33333%}.col-2{width:16.66667%}.col-3{width:25%}.col-4{width:33.33333%}.col-5{width:41.66667%}.col-6{width:50%}.col-7{width:58.33333%}.col-8{width:66.66667%}.col-9{width:75%}.col-10{width:83.33333%}.col-11{width:91.66667%}.col-12{width:100%}@media (min-width:40.06rem){.sm-col{float:left;box-sizing:border-box}.sm-col-right{float:right;box-sizing:border-box}.sm-col-1{width:8.33333%}.sm-col-2{width:16.66667%}.sm-col-3{width:25%}.sm-col-4{width:33.33333%}.sm-col-5{width:41.66667%}.sm-col-6{width:50%}.sm-col-7{width:58.33333%}.sm-col-8{width:66.66667%}.sm-col-9{width:75%}.sm-col-10{width:83.33333%}.sm-col-11{width:91.66667%}.sm-col-12{width:100%}}@media (min-width:52.06rem){.md-col{float:left;box-sizing:border-box}.md-col-right{float:right;box-sizing:border-box}.md-col-1{width:8.33333%}.md-col-2{width:16.66667%}.md-col-3{width:25%}.md-col-4{width:33.33333%}.md-col-5{width:41.66667%}.md-col-6{width:50%}.md-col-7{width:58.33333%}.md-col-8{width:66.66667%}.md-col-9{width:75%}.md-col-10{width:83.33333%}.md-col-11{width:91.66667%}.md-col-12{width:100%}}@media (min-width:64.06rem){.lg-col{float:left;box-sizing:border-box}.lg-col-right{float:right;box-sizing:border-box}.lg-col-1{width:8.33333%}.lg-col-2{width:16.66667%}.lg-col-3{width:25%}.lg-col-4{width:33.33333%}.lg-col-5{width:41.66667%}.lg-col-6{width:50%}.lg-col-7{width:58.33333%}.lg-col-8{width:66.66667%}.lg-col-9{width:75%}.lg-col-10{width:83.33333%}.lg-col-11{width:91.66667%}.lg-col-12{width:100%}}.flex{display:-ms-flexbox;display:flex}@media (min-width:40.06rem){.sm-flex{display:-ms-flexbox;display:flex}}@media (min-width:52.06rem){.md-flex{display:-ms-flexbox;display:flex}}@media (min-width:64.06rem){.lg-flex{display:-ms-flexbox;display:flex}}.flex-column{-ms-flex-direction:column;flex-direction:column}.flex-wrap{-ms-flex-wrap:wrap;flex-wrap:wrap}.items-start{-ms-flex-align:start;align-items:flex-start}.items-end{-ms-flex-align:end;align-items:flex-end}.items-center{-ms-flex-align:center;align-items:center}.items-baseline{-ms-flex-align:baseline;align-items:baseline}.items-stretch{-ms-flex-align:stretch;align-items:stretch}.self-start{-ms-flex-item-align:start;align-self:flex-start}.self-end{-ms-flex-item-align:end;align-self:flex-end}.self-center{-ms-flex-item-align:center;-ms-grid-row-align:center;align-self:center}.self-baseline{-ms-flex-item-align:baseline;align-self:baseline}.self-stretch{-ms-flex-item-align:stretch;-ms-grid-row-align:stretch;align-self:stretch}.justify-start{-ms-flex-pack:start;justify-content:flex-start}.justify-end{-ms-flex-pack:end;justify-content:flex-end}.justify-center{-ms-flex-pack:center;justify-content:center}.justify-between{-ms-flex-pack:justify;justify-content:space-between}.justify-around{-ms-flex-pack:distribute;justify-content:space-around}.justify-evenly{-ms-flex-pack:space-evenly;justify-content:space-evenly}.content-start{-ms-flex-line-pack:start;align-content:flex-start}.content-end{-ms-flex-line-pack:end;align-content:flex-end}.content-center{-ms-flex-line-pack:center;align-content:center}.content-between{-ms-flex-line-pack:justify;align-content:space-between}.content-around{-ms-flex-line-pack:distribute;align-content:space-around}.content-stretch{-ms-flex-line-pack:stretch;align-content:stretch}.flex-auto{-ms-flex:1 1 auto;flex:1 1 auto;min-width:0;min-height:0}.flex-none{-ms-flex:none;flex:none}.order-0{-ms-flex-order:0;order:0}.order-1{-ms-flex-order:1;order:1}.order-2{-ms-flex-order:2;order:2}.order-3{-ms-flex-order:3;order:3}.order-last{-ms-flex-order:99999;order:99999}.relative{position:relative}.absolute{position:absolute}.fixed{position:fixed}.top-0{top:0}.right-0{right:0}.bottom-0{bottom:0}.left-0{left:0}.z1{z-index:1}.z2{z-index:2}.z3{z-index:3}.z4{z-index:4}.border{border-style:solid;border-width:1px}.border-top{border-top-style:solid;border-top-width:1px}.border-right{border-right-style:solid;border-right-width:1px}.border-bottom{border-bottom-style:solid;border-bottom-width:1px}.border-left{border-left-style:solid;border-left-width:1px}.border-none{border:0}.rounded{border-radius:3px}.circle{border-radius:50%}.rounded-top{border-radius:3px 3px 0 0}.rounded-right{border-radius:0 3px 3px 0}.rounded-bottom{border-radius:0 0 3px 3px}.rounded-left{border-radius:3px 0 0 3px}.not-rounded{border-radius:0}.hide{position:absolute;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px)}@media (max-width:40rem){.xs-hide{display:none}}@media (min-width:40.06rem) and (max-width:52rem){.sm-hide{display:none}}@media (min-width:52.06rem) and (max-width:64rem){.md-hide{display:none}}@media (min-width:64.06rem){.lg-hide{display:none}}.display-none{display:none}*{box-sizing:border-box}body{background:#1d1d1d;color:#fff;font-family:Lora,serif;min-width:315px;overflow-x:hidden;font-smooth:always;-webkit-font-smoothing:antialiased}main{max-width:700px;margin:0 auto}p{padding:0;margin:0}.ampstart-accent{color:#fff}#content:target{margin-top:calc(0px - 3.5rem);padding-top:3.5rem}.ampstart-title-lg{font-size:2.25rem;line-height:1.33333;letter-spacing:.06rem}.ampstart-title-md{font-size:1.75rem;line-height:1.71429;letter-spacing:.06rem}.ampstart-title-sm{font-size:1.25rem;line-height:1.6;letter-spacing:.06rem}.ampstart-subtitle,body{line-height:1.75;letter-spacing:normal}.ampstart-subtitle{color:#fff;font-size:1rem}.ampstart-byline,.ampstart-caption,.ampstart-hint,.ampstart-label{font-size:.875rem;color:#fff;line-height:1.125rem;letter-spacing:.06rem}.ampstart-label{text-transform:uppercase}.ampstart-footer,.ampstart-small-text{font-size:.75rem;line-height:1rem;letter-spacing:.06rem}.ampstart-card{box-shadow:0 1px 1px 0 rgba(0,0,0,.14),0 1px 1px -1px rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12)}.h1,h1{font-size:2.25rem;line-height:1.33333}.h2,h2{font-size:1.75rem;line-height:1.71429}.h3,h3{font-size:1.25rem;line-height:1.6}.h4,h4{font-size:1rem;line-height:1.75}.h5,h5{font-size:.875rem;line-height:1.125rem}.h6,h6{font-size:.75rem;line-height:1rem}h1,h2,h3,h4,h5,h6{margin:0;padding:0;font-weight:400;letter-spacing:.06rem}a,a:active,a:visited{color:inherit}.ampstart-btn{font-family:inherit;font-weight:inherit;font-size:1rem;line-height:1.125rem;padding:.7em .8em;text-decoration:none;white-space:nowrap;word-wrap:normal;vertical-align:middle;cursor:pointer;background-color:#000;color:#fff;border:1px solid #fff}.ampstart-btn:visited{color:#fff}.ampstart-btn-secondary{background-color:#000;color:#fff;border:1px solid #fff}.ampstart-btn-secondary:visited{color:#fff}.ampstart-btn:active .ampstart-btn:focus{opacity:.8}.ampstart-btn[disabled],.ampstart-btn[disabled]:active,.ampstart-btn[disabled]:focus,.ampstart-btn[disabled]:hover{opacity:.5;outline:0;cursor:default}.ampstart-dropcap:first-letter{color:#fff;font-size:2.25rem;font-weight:700;float:left;overflow:hidden;line-height:2.25rem;margin-left:0;margin-right:.5rem}.ampstart-initialcap{padding-top:1rem;margin-top:1.5rem}.ampstart-initialcap:first-letter{color:#fff;font-size:2.25rem;font-weight:700;margin-left:-2px}.ampstart-pullquote{border:none;border-left:4px solid #000;font-size:1.25rem;padding-left:1.5rem}.ampstart-byline time{font-style:normal;white-space:nowrap}.amp-carousel-button-next{background-image:url('data:image/svg+xml;charset=utf-8,<svg width="18" height="18" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg"><title>Next</title><path d="M25.557 14.7L13.818 2.961 16.8 0l16.8 16.8-16.8 16.8-2.961-2.961L25.557 18.9H0v-4.2z" fill="%23FFF" fill-rule="evenodd"/></svg>')}.amp-carousel-button-prev{background-image:url('data:image/svg+xml;charset=utf-8,<svg width="18" height="18" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg"><title>Previous</title><path d="M33.6 14.7H8.043L19.782 2.961 16.8 0 0 16.8l16.8 16.8 2.961-2.961L8.043 18.9H33.6z" fill="%23FFF" fill-rule="evenodd"/></svg>')}.ampstart-dropdown{min-width:200px}.ampstart-dropdown.absolute{z-index:100}.ampstart-dropdown.absolute>section,.ampstart-dropdown.absolute>section>header{height:100%}.ampstart-dropdown>section>header{background-color:#000;border:0;color:#fff}.ampstart-dropdown>section>header:after{display:inline-block;content:"+";padding:0 0 0 1.5rem;color:#fff}.ampstart-dropdown>[expanded]>header:after{content:"–"}.absolute .ampstart-dropdown-items{z-index:200}.ampstart-dropdown-item{background-color:#000;color:#fff;opacity:.9}.ampstart-dropdown-item:active,.ampstart-dropdown-item:hover{opacity:1}.ampstart-footer{background-color:inherit;color:currentColor;padding-top:5rem;padding-bottom:5rem}.ampstart-footer .ampstart-icon{fill:currentColor}.ampstart-footer .ampstart-social-follow li:last-child{margin-right:0}.ampstart-image-fullpage-hero{color:#fff}.ampstart-fullpage-hero-heading-text,.ampstart-image-fullpage-hero .ampstart-image-credit{-webkit-box-decoration-break:clone;box-decoration-break:clone;background:#000;padding:0 1rem .2rem}.ampstart-image-fullpage-hero>amp-img{max-height:calc(100vh - 3.5rem)}.ampstart-image-fullpage-hero>amp-img img{-o-object-fit:cover;object-fit:cover}.ampstart-fullpage-hero-heading{line-height:3.5rem}.ampstart-fullpage-hero-cta{background:transparent}.ampstart-readmore{background:linear-gradient(0deg,rgba(0,0,0,.65) 0,transparent);color:#fff;margin-top:5rem;padding-bottom:3.5rem}.ampstart-readmore:after{display:block;content:"⌄";font-size:1.75rem}.ampstart-readmore-text{background:#000}@media (min-width:52.06rem){.ampstart-image-fullpage-hero>amp-img{height:60vh}}.ampstart-image-heading{color:#fff;background:linear-gradient(0deg,rgba(0,0,0,.65) 0,transparent)}.ampstart-image-heading>*{margin:0}amp-carousel .ampstart-image-with-heading{margin-bottom:0}.ampstart-image-with-caption figcaption{color:#fff;line-height:1.125rem}amp-carousel .ampstart-image-with-caption{margin-bottom:0}.ampstart-input{max-width:100%;width:300px;min-width:100px;font-size:1rem;line-height:1.75}.ampstart-input [disabled],.ampstart-input [disabled]+label{opacity:.5}.ampstart-input [disabled]:focus{outline:0}.ampstart-input>input,.ampstart-input>select,.ampstart-input>textarea{width:100%;margin-top:1rem;line-height:1.75;border:0;border-radius:0;border-bottom:1px solid #4a4a4a;background:none;color:#4a4a4a;outline:0}.ampstart-input>label{color:#fff;pointer-events:none;text-align:left;font-size:.875rem;line-height:1rem;opacity:0;animation:.2s;animation-timing-function:cubic-bezier(.4,0,.2,1);animation-fill-mode:forwards}.ampstart-input>input:focus,.ampstart-input>select:focus,.ampstart-input>textarea:focus{outline:0}.ampstart-input>input:focus:-ms-input-placeholder,.ampstart-input>select:focus:-ms-input-placeholder,.ampstart-input>textarea:focus:-ms-input-placeholder{color:transparent}.ampstart-input>input:focus::placeholder,.ampstart-input>select:focus::placeholder,.ampstart-input>textarea:focus::placeholder{color:transparent}.ampstart-input>input:not(:placeholder-shown):not([disabled])+label,.ampstart-input>select:not(:placeholder-shown):not([disabled])+label,.ampstart-input>textarea:not(:placeholder-shown):not([disabled])+label{opacity:1}.ampstart-input>input:focus+label,.ampstart-input>select:focus+label,.ampstart-input>textarea:focus+label{animation-name:a}@keyframes a{to{opacity:1}}.ampstart-input>label:after{content:"";height:2px;position:absolute;bottom:0;left:45%;background:#fff;transition:.2s;transition-timing-function:cubic-bezier(.4,0,.2,1);visibility:hidden;width:10px}.ampstart-input>input:focus+label:after,.ampstart-input>select:focus+label:after,.ampstart-input>textarea:focus+label:after{left:0;width:100%;visibility:visible}.ampstart-input>input[type=search]{-webkit-appearance:none;-moz-appearance:none;appearance:none}.ampstart-input>input[type=range]{border-bottom:0}.ampstart-input>input[type=range]+label:after{display:none}.ampstart-input>select{-webkit-appearance:none;-moz-appearance:none;appearance:none}.ampstart-input>select+label:before{content:"⌄";line-height:1.75;position:absolute;right:5px;zoom:2;top:0;bottom:0;color:#fff}.ampstart-input-chk,.ampstart-input-radio{width:auto;color:#4a4a4a}.ampstart-input input[type=checkbox],.ampstart-input input[type=radio]{margin-top:0;-webkit-appearance:none;-moz-appearance:none;appearance:none;width:20px;height:20px;border:1px solid #fff;vertical-align:middle;margin-right:.5rem;text-align:center}.ampstart-input input[type=radio]{border-radius:20px}.ampstart-input input[type=checkbox]:not([disabled])+label,.ampstart-input input[type=radio]:not([disabled])+label{pointer-events:auto;animation:none;vertical-align:middle;opacity:1;cursor:pointer}.ampstart-input input[type=checkbox]+label:after,.ampstart-input input[type=radio]+label:after{display:none}.ampstart-input input[type=checkbox]:after,.ampstart-input input[type=radio]:after{position:absolute;top:0;left:0;bottom:0;right:0;content:" ";line-height:1.4rem;vertical-align:middle;text-align:center;background-color:#000}.ampstart-input input[type=checkbox]:checked:after{background-color:#fff;color:#000;content:"✓"}.ampstart-input input[type=radio]:checked{background-color:#000}.ampstart-input input[type=radio]:after{top:3px;bottom:3px;left:3px;right:3px;border-radius:12px}.ampstart-input input[type=radio]:checked:after{content:"";font-size:2.25rem;background-color:#fff}.ampstart-input>label,_:-ms-lang(x){opacity:1}.ampstart-input>input:-ms-input-placeholder,_:-ms-lang(x){color:transparent}.ampstart-input>input::placeholder,_:-ms-lang(x){color:transparent}.ampstart-input>input::-ms-input-placeholder,_:-ms-lang(x){color:transparent}.ampstart-input>select::-ms-expand{display:none}.ampstart-headerbar{background-color:#000;color:#fff;z-index:999;box-shadow:0 0 5px 2px rgba(0,0,0,.1)}.ampstart-headerbar+:not(amp-sidebar),.ampstart-headerbar+amp-sidebar+*{margin-top:3.5rem}.ampstart-headerbar-nav .ampstart-nav-item{padding:0 1rem;background:transparent;opacity:.8}.ampstart-headerbar-nav{line-height:3.5rem}.ampstart-nav-item:active,.ampstart-nav-item:focus,.ampstart-nav-item:hover{opacity:1}.ampstart-navbar-trigger:focus{outline:none}.ampstart-nav a,.ampstart-navbar-trigger,.ampstart-sidebar-faq a{cursor:pointer;text-decoration:none}.ampstart-nav .ampstart-label{color:inherit}.ampstart-navbar-trigger{line-height:3.5rem;font-size:1.75rem}.ampstart-headerbar-nav{-ms-flex:1;flex:1}.ampstart-nav-search{-ms-flex-positive:0.5;flex-grow:0.5}.ampstart-headerbar .ampstart-nav-search:active,.ampstart-headerbar .ampstart-nav-search:focus,.ampstart-headerbar .ampstart-nav-search:hover{box-shadow:none}.ampstart-nav-search>input{border:none;border-radius:3px;line-height:normal}.ampstart-nav-dropdown{min-width:200px}.ampstart-nav-dropdown amp-accordion header{background-color:#000;border:none}.ampstart-nav-dropdown amp-accordion ul{background-color:#000}.ampstart-nav-dropdown .ampstart-dropdown-item,.ampstart-nav-dropdown .ampstart-dropdown>section>header{background-color:#000;color:#fff}.ampstart-nav-dropdown .ampstart-dropdown-item{color:#fff}.ampstart-sidebar{background-color:#000;color:#fff;min-width:300px;width:300px}.ampstart-sidebar .ampstart-icon{fill:#fff}.ampstart-sidebar-header{line-height:3.5rem;min-height:3.5rem}.ampstart-sidebar .ampstart-dropdown-item,.ampstart-sidebar .ampstart-dropdown header,.ampstart-sidebar .ampstart-faq-item,.ampstart-sidebar .ampstart-nav-item,.ampstart-sidebar .ampstart-social-follow{margin:0 0 2rem}.ampstart-sidebar .ampstart-nav-dropdown{margin:0}.ampstart-sidebar .ampstart-navbar-trigger{line-height:inherit}.ampstart-navbar-trigger svg{pointer-events:none}.ampstart-related-article-section{border-color:#fff}.ampstart-related-article-section .ampstart-heading{color:#fff;font-weight:400}.ampstart-related-article-readmore{color:#fff;letter-spacing:0}.ampstart-related-section-items>li{border-bottom:1px solid #fff}.ampstart-related-section-items>li:last-child{border:none}.ampstart-related-section-items .ampstart-image-with-caption{display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-align:center;align-items:center;margin-bottom:0}.ampstart-related-section-items .ampstart-image-with-caption>amp-img,.ampstart-related-section-items .ampstart-image-with-caption>figcaption{-ms-flex:1;flex:1}.ampstart-related-section-items .ampstart-image-with-caption>figcaption{padding-left:1rem}@media (min-width:40.06rem){.ampstart-related-section-items>li{border:none}.ampstart-related-section-items .ampstart-image-with-caption>figcaption{padding:1rem 0}.ampstart-related-section-items .ampstart-image-with-caption>amp-img,.ampstart-related-section-items .ampstart-image-with-caption>figcaption{-ms-flex-preferred-size:100%;flex-basis:100%}}.ampstart-social-box{display:-ms-flexbox;display:flex}.ampstart-social-box>amp-social-share{background-color:#000}.ampstart-icon{fill:#fff}.h1,.h2,.h3,h1,h2,h3{font-family:Playfair Display,serif}.h1,h1{letter-spacing:.1px}.h2,h2{letter-spacing:0}.h3,h3{letter-spacing:.3px}.h4,.h5,.h6,h4,h5,h6{font-family:Lato,sans-serif;letter-spacing:0}.ampstart-fullpage-hero-heading-text{display:block;padding:.5rem;line-height:1rem}.ampstart-fullpage-hero-heading-text,.ampstart-image-fullpage-hero .ampstart-image-credit{-webkit-box-decoration-break:none;box-decoration-break:none;background:none}.theme2-divider:after{border-bottom:1px solid #fff;content:"";display:block;height:2rem;width:8.33%}.theme2-anchored{margin-top:-5.5rem;padding-top:5.5rem}.ampstart-dropcap:first-letter{color:inherit;font-size:3.125rem;font-weight:inherit;line-height:1.12}</style>
+
+
+
+.heading-primary {
+font-size: 3.750rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1em;
+  margin-top: 8px;
+  display: block;
+ letter-spacing: 1.9px;
+
+}
+
+
+@media (max-width: 767px) {
+  .heading-primary {
+font-size: 14px;
+ margin-top: 4px;
+
+ margin-bottom: 8px;
+
+
+}
+
+}
+
+.aux-modern-heading-primary {
+
+    line-height: 32px;
+    letter-spacing: 1.9px;
+    color: #fff;
+  text-transform: none;
+  font-weight: 400;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 26px;
+ 
+}
+
+@media (max-width: 767px) {
+  .aux-modern-heading-primary {
+
+    line-height: 32px;
+  font-weight: 400;
+  font-size: 14px;
+}
+
+
+}
+
+.heading-secondary {
+  color: #D89E38;
+  
+  font-family: "Montserrat", Sans-serif;
+  
+  font-weight: 400;
+  line-height: 26px;
+  text-shadow: 0px 0px 10px rgba(0,0,0,0.3);
+  text-transform: none;
+
+  font-family: "Montserrat", Sans-serif;
+  font-size: 19px;
+  font-weight: 500;
+}
+
+@media (max-width: 767px) {
+ .ampstart-fullpage-hero-heading .heading-secondary {
+  
+  font-size: 14px;
+  max-width: 170px;;
+  line-height: 21px;
+
+}
+}
+
+
+
+.aux-head-before {
+color: #D89E38;
+font-size: 23px;
+  font-weight: 500;
+
+}
+.white {
+    color: rgba(255,255,255,0.69);
+}
+
+
+body {
+  margin: 0;
+font-family: "Montserrat", Sans-serif;
+  font-size: 19px;
+  font-weight: 500;
+   background: #1d1d1d;
+  color: #fff;
+
+  min-width: 315px;
+  overflow-x: hidden;
+  font-smooth: always;
+  -webkit-font-smoothing: antialiased
+}
+
+dd {
+color: #AAA;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 26px;
+  margin: 0 0 1em 0;
+}
+
+
+/*To remove */
+
+
+
+
+/*To remove--end*/
+
+
+/*! Bassplate | MIT License | http://github.com/basscss/bassplate */
+
+/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%
+}
+
+
+
+article,aside,footer,header,nav,section {
+  display: block
+}
+
+@media (max-width:40rem) {
+article {
+  text-align: center;
+margin-top: 40px;
+}
+}
+
+
+h1 {
+  font-size: 2em;
+  margin: .67em 0;
+  stroke: #000;
+  color: #FFFFFF;
+  font-family: "Secular One", Sans-serif;
+  font-size: 39px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 40px;
+}
+
+figcaption,figure,main {
+  display: block
+}
+
+figure {
+  margin: 1em 40px
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible
+}
+
+pre {
+  font-family: monospace,monospace;
+  font-size: 1em
+}
+
+a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects
+}
+
+a:active,a:hover {
+  outline-width: 0
+}
+
+abbr[title] {
+  border-bottom: none;
+  text-decoration: underline;
+  text-decoration: underline dotted
+}
+
+b,strong {
+  font-weight: inherit;
+  font-weight: bolder
+}
+
+code,kbd,samp {
+  font-family: monospace,monospace;
+  font-size: 1em
+}
+
+dfn {
+  font-style: italic
+}
+
+mark {
+  background-color: #ff0;
+  color: #000
+}
+
+small {
+  font-size: 80%
+}
+
+sub,sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline
+}
+
+sub {
+  bottom: -.25em
+}
+
+sup {
+  top: -.5em
+}
+
+audio,video {
+  display: inline-block
+}
+
+audio:not([controls]) {
+  display: none;
+  height: 0
+}
+
+img {
+  border-style: none
+}
+
+svg:not(:root) {
+  overflow: hidden
+}
+
+button,input,optgroup,select,textarea {
+  font-family: sans-serif;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0
+}
+
+button,input {
+  overflow: visible
+}
+
+button,select {
+  text-transform: none
+}
+
+[type=reset],[type=submit],button,html [type=button] {
+  -webkit-appearance: button
+}
+
+[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner {
+  border-style: none;
+  padding: 0
+}
+
+[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring {
+  outline: 1px dotted ButtonText
+}
+
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: .35em .625em .75em
+}
+
+legend {
+  box-sizing: border-box;
+  color: inherit;
+  display: table;
+  max-width: 100%;
+  padding: 0;
+  white-space: normal
+}
+
+progress {
+  display: inline-block;
+  vertical-align: baseline
+}
+
+textarea {
+  overflow: auto
+}
+
+[type=checkbox],[type=radio] {
+  box-sizing: border-box;
+  padding: 0
+}
+
+[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button {
+  height: auto
+}
+
+[type=search] {
+  -webkit-appearance: textfield;
+  outline-offset: -2px
+}
+
+[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration {
+  -webkit-appearance: none
+}
+
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  font: inherit
+}
+
+details,menu {
+  display: block
+}
+
+summary {
+  display: list-item
+}
+
+canvas {
+  display: inline-block
+}
+
+[hidden],template {
+  display: none
+}
+
+.h00 {
+  font-size: 4rem
+}
+
+.h0 {
+  font-size: 3rem
+}
+
+.h1 {
+  font-size: 2.25rem
+}
+
+.h2 {
+  font-size: 29px;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.h3 {
+  font-size: 1.25rem
+}
+
+.h4 {
+  font-size: 1rem
+}
+
+.h5 {
+  font-size: .875rem
+}
+
+.h6 {
+  font-size: .75rem
+}
+
+.font-family-inherit {
+  font-family: inherit
+}
+
+.font-size-inherit {
+  font-size: inherit
+}
+
+.text-decoration-none {
+  text-decoration: none
+}
+
+.bold {
+  font-weight: 700
+}
+
+.regular {
+  font-weight: 400
+}
+
+.italic {
+  font-style: italic
+}
+
+.caps {
+  text-transform: uppercase;
+  letter-spacing: .2em
+}
+
+.left-align {
+  text-align: left
+}
+
+.center {
+  text-align: center
+}
+
+.right-align {
+  text-align: right
+}
+
+.justify {
+  text-align: justify
+}
+
+.nowrap {
+  white-space: nowrap
+}
+
+.break-word {
+  word-wrap: break-word
+}
+
+.line-height-1 {
+  line-height: 1rem
+}
+
+.line-height-2 {
+  line-height: 1.125rem
+}
+
+.line-height-3 {
+  line-height: 1.75
+}
+
+.line-height-4 {
+  line-height: 1.6
+}
+
+.list-style-none {
+  list-style: none
+}
+
+.underline {
+  text-decoration: underline
+}
+
+.truncate {
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap
+}
+
+.list-reset {
+  list-style: none;
+  padding-left: 0
+}
+
+.inline {
+  display: inline
+}
+
+.block {
+  display: block
+}
+
+.inline-block {
+  display: inline-block
+}
+
+.table {
+  display: table
+}
+
+.table-cell {
+  display: table-cell
+}
+
+.overflow-hidden {
+  overflow: hidden
+}
+
+.overflow-scroll {
+  overflow: scroll
+}
+
+.overflow-auto {
+  overflow: auto
+}
+
+.clearfix:after,.clearfix:before {
+  content: " ";
+  display: table
+}
+
+.clearfix:after {
+  clear: both
+}
+
+.left {
+  float: left
+}
+
+.right {
+  float: right
+}
+
+.fit {
+  max-width: 100%
+}
+
+.max-width-1 {
+  max-width: 24rem
+}
+
+.max-width-2 {
+  max-width: 32rem
+}
+
+.max-width-3 {
+  max-width: 48rem
+}
+
+.max-width-4 {
+  max-width: 64rem
+}
+
+.border-box {
+  box-sizing: border-box
+}
+
+.align-baseline {
+  vertical-align: baseline
+}
+
+.align-top {
+  vertical-align: top
+}
+
+.align-middle {
+  vertical-align: middle
+}
+
+.align-bottom {
+  vertical-align: bottom
+}
+
+.m0 {
+  margin: 0
+}
+
+.mt0 {
+  margin-top: 0
+}
+
+.mr0 {
+  margin-right: 0
+}
+
+.mb0 {
+  margin-bottom: 0
+}
+
+.ml0,.mx0 {
+  margin-left: 0
+}
+
+.mx0 {
+  margin-right: 0
+}
+
+.my0 {
+  margin-top: 0;
+  margin-bottom: 0
+}
+
+.m1 {
+  margin: .5rem
+}
+
+.mt1 {
+  margin-top: .5rem
+}
+
+.mr1 {
+  margin-right: .5rem
+}
+
+.mb1 {
+  margin-bottom: .5rem
+}
+
+.ml1,.mx1 {
+  margin-left: .5rem
+}
+
+.mx1 {
+  margin-right: .5rem
+}
+
+.my1 {
+  margin-top: .5rem;
+  margin-bottom: .5rem
+}
+
+.m2 {
+  margin: 1rem
+}
+
+.mt2 {
+  margin-top: 1rem
+}
+
+.mr2 {
+  margin-right: 1rem
+}
+
+.mb2 {
+  margin-bottom: 1rem
+}
+
+.ml2,.mx2 {
+  margin-left: 1rem
+}
+
+.mx2 {
+  margin-right: 1rem
+}
+
+.my2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem
+}
+
+.m3 {
+  margin: 1.5rem
+}
+
+.mt3 {
+  margin-top: 1.5rem
+}
+
+.mr3 {
+  margin-right: 1.5rem
+}
+
+.mb3 {
+  margin-bottom: 1.5rem
+}
+
+.ml3,.mx3 {
+  margin-left: 1.5rem
+}
+
+.mx3 {
+  margin-right: 1.5rem
+}
+
+.my3 {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem
+}
+
+.m4 {
+  margin: 2rem
+}
+
+.mt4 {
+  margin-top: 2rem
+}
+
+.mr4 {
+  margin-right: 2rem
+}
+
+.mb4 {
+  margin-bottom: 2rem
+}
+
+.ml4,.mx4 {
+  margin-left: 2rem
+}
+
+.mx4 {
+  margin-right: 2rem
+}
+
+.my4 {
+  margin-top: 2rem;
+  margin-bottom: 2rem
+}
+
+@media (max-width:40rem){
+.my4 {
+  margin-top: 20px;
+  margin-bottom: 20px
+}
+
+}
+
+.mxn1 {
+  margin-left: calc(.5rem * -1);
+  margin-right: calc(.5rem * -1)
+}
+
+.mxn2 {
+  margin-left: calc(1rem * -1);
+  margin-right: calc(1rem * -1)
+}
+
+.mxn3 {
+  margin-left: calc(1.5rem * -1);
+  margin-right: calc(1.5rem * -1)
+}
+
+.mxn4 {
+  margin-left: calc(2rem * -1);
+  margin-right: calc(2rem * -1)
+}
+
+.m-auto {
+  margin: auto
+}
+
+.mt-auto {
+  margin-top: auto
+}
+
+.mr-auto {
+  margin-right: auto
+}
+
+.mb-auto {
+  margin-bottom: auto
+}
+
+.ml-auto,.mx-auto {
+  margin-left: auto
+}
+
+.mx-auto {
+  margin-right: auto
+}
+
+.my-auto {
+  margin-top: auto;
+  margin-bottom: auto
+}
+
+.p0 {
+  padding: 0
+}
+
+.pt0 {
+  padding-top: 0
+}
+
+.pr0 {
+  padding-right: 0
+}
+
+.pb0 {
+  padding-bottom: 0
+}
+
+.pl0,.px0 {
+  padding-left: 0
+}
+
+.px0 {
+  padding-right: 0
+}
+
+.py0 {
+  padding-top: 0;
+  padding-bottom: 0
+}
+
+.p1 {
+  padding: .5rem
+}
+
+.pt1 {
+  padding-top: .5rem
+}
+
+.pr1 {
+  padding-right: .5rem
+}
+
+.pb1 {
+  padding-bottom: .5rem
+}
+
+.pl1 {
+  padding-left: .5rem
+}
+
+.py1 {
+  padding-top: .5rem;
+  padding-bottom: .5rem
+}
+
+.px1 {
+  padding-left: .5rem;
+  padding-right: .5rem
+}
+
+.p2 {
+  padding: 1rem
+}
+
+.pt2 {
+  padding-top: 1rem
+}
+
+.pr2 {
+  padding-right: 1rem
+}
+
+.pb2 {
+  padding-bottom: 1rem
+}
+
+.pl2 {
+  padding-left: 1rem
+}
+
+.py2 {
+  padding-top: 1rem;
+  padding-bottom: 1rem
+}
+
+.px2 {
+  padding-left: 1rem;
+  padding-right: 1rem
+}
+
+.p3 {
+  padding: 1.5rem
+}
+
+.pt3 {
+  padding-top: 1.5rem
+}
+
+.pr3 {
+  padding-right: 1.5rem
+}
+
+.pb3 {
+  padding-bottom: 1.5rem
+}
+
+.pl3 {
+  padding-left: 1.5rem
+}
+
+.py3 {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem
+}
+
+.px3 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem
+}
+
+.p4 {
+  padding: 2rem
+}
+
+.pt4 {
+  padding-top: 2rem
+}
+
+.pr4 {
+  padding-right: 2rem
+}
+
+.pb4 {
+  padding-bottom: 2rem
+}
+
+.pl4 {
+  padding-left: 2rem
+}
+
+.py4 {
+  padding-top: 2rem;
+  padding-bottom: 2rem
+}
+
+.px4 {
+  padding-left: 2rem;
+  padding-right: 2rem
+}
+
+.col {
+  float: left
+}
+
+.col,.col-right {
+  box-sizing: border-box
+}
+
+.col-right {
+  float: right
+}
+
+.col-1 {
+  width: 8.33333%
+}
+
+.col-2 {
+  width: 16.66667%
+}
+
+.col-3 {
+  width: 25%
+}
+
+.col-4 {
+  width: 33.33333%
+}
+
+.col-5 {
+  width: 41.66667%
+}
+
+.col-6 {
+  width: 50%
+}
+
+.col-7 {
+  width: 58.33333%
+}
+
+.col-8 {
+  width: 66.66667%
+}
+
+.col-9 {
+  width: 75%
+}
+
+.col-10 {
+  width: 83.33333%
+}
+
+.col-11 {
+  width: 91.66667%
+}
+
+.col-12 {
+  width: 100%
+}
+
+@media (min-width:40.06rem) {
+  .sm-col {
+    float: left;
+    box-sizing: border-box
+  }
+
+  .sm-col-right {
+    float: right;
+    box-sizing: border-box
+  }
+
+  .sm-col-1 {
+    width: 8.33333%
+  }
+
+  .sm-col-2 {
+    width: 16.66667%
+  }
+
+  .sm-col-3 {
+    width: 25%
+  }
+
+  .sm-col-4 {
+    width: 33.33333%
+  }
+
+  .sm-col-5 {
+    width: 41.66667%
+  }
+
+  .sm-col-6 {
+    width: 50%
+  }
+
+  .sm-col-7 {
+    width: 58.33333%
+  }
+
+  .sm-col-8 {
+    width: 66.66667%
+  }
+
+  .sm-col-9 {
+    width: 75%
+  }
+
+  .sm-col-10 {
+    width: 83.33333%
+  }
+
+  .sm-col-11 {
+    width: 91.66667%
+  }
+
+  .sm-col-12 {
+    width: 100%
+  }
+}
+
+@media (min-width:52.06rem) {
+  .md-col {
+    float: left;
+    box-sizing: border-box
+  }
+
+  .md-col-right {
+    float: right;
+    box-sizing: border-box
+  }
+
+  .md-col-1 {
+    width: 8.33333%
+  }
+
+  .md-col-2 {
+    width: 16.66667%
+  }
+
+  .md-col-3 {
+    width: 25%
+  }
+
+  .md-col-4 {
+    width: 33.33333%
+  }
+
+  .md-col-5 {
+    width: 41.66667%
+  }
+
+  .md-col-6 {
+    width: 50%
+  }
+
+  .md-col-7 {
+    width: 58.33333%
+  }
+
+  .md-col-8 {
+    width: 66.66667%
+  }
+
+  .md-col-9 {
+    width: 75%
+  }
+
+  .md-col-10 {
+    width: 83.33333%
+  }
+
+  .md-col-11 {
+    width: 91.66667%
+  }
+
+  .md-col-12 {
+    width: 100%
+  }
+}
+
+@media (min-width:64.06rem) {
+  .lg-col {
+    float: left;
+    box-sizing: border-box
+  }
+
+  .lg-col-right {
+    float: right;
+    box-sizing: border-box
+  }
+
+  .lg-col-1 {
+    width: 8.33333%
+  }
+
+  .lg-col-2 {
+    width: 16.66667%
+  }
+
+  .lg-col-3 {
+    width: 25%
+  }
+
+  .lg-col-4 {
+    width: 33.33333%
+  }
+
+  .lg-col-5 {
+    width: 41.66667%
+  }
+
+  .lg-col-6 {
+    width: 50%
+  }
+
+  .lg-col-7 {
+    width: 58.33333%
+  }
+
+  .lg-col-8 {
+    width: 66.66667%
+  }
+
+  .lg-col-9 {
+    width: 75%
+  }
+
+  .lg-col-10 {
+    width: 83.33333%
+  }
+
+  .lg-col-11 {
+    width: 91.66667%
+  }
+
+  .lg-col-12 {
+    width: 100%
+  }
+}
+
+.flex {
+  display: -ms-flexbox;
+  display: flex
+}
+
+@media (min-width:40.06rem) {
+  .sm-flex {
+    display: -ms-flexbox;
+    display: flex
+  }
+}
+
+@media (min-width:52.06rem) {
+  .md-flex {
+    display: -ms-flexbox;
+    display: flex
+  }
+}
+
+@media (min-width:64.06rem) {
+  .lg-flex {
+    display: -ms-flexbox;
+    display: flex
+  }
+}
+
+.flex-column {
+  -ms-flex-direction: column;
+  flex-direction: column
+}
+
+.flex-wrap {
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap
+}
+
+.items-start {
+  -ms-flex-align: start;
+  align-items: flex-start
+}
+
+.items-end {
+  -ms-flex-align: end;
+  align-items: flex-end
+}
+
+.items-center {
+  -ms-flex-align: center;
+  align-items: center
+}
+
+.items-baseline {
+  -ms-flex-align: baseline;
+  align-items: baseline
+}
+
+.items-stretch {
+  -ms-flex-align: stretch;
+  align-items: stretch
+}
+
+.self-start {
+  -ms-flex-item-align: start;
+  align-self: flex-start
+}
+
+.self-end {
+  -ms-flex-item-align: end;
+  align-self: flex-end
+}
+
+.self-center {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center
+}
+
+.self-baseline {
+  -ms-flex-item-align: baseline;
+  align-self: baseline
+}
+
+.self-stretch {
+  -ms-flex-item-align: stretch;
+  -ms-grid-row-align: stretch;
+  align-self: stretch
+}
+
+.justify-start {
+  -ms-flex-pack: start;
+  justify-content: flex-start
+}
+
+.justify-end {
+  -ms-flex-pack: end;
+  justify-content: flex-end
+}
+
+.justify-center {
+  -ms-flex-pack: center;
+  justify-content: center
+}
+
+.justify-between {
+  -ms-flex-pack: justify;
+  justify-content: space-between
+}
+
+.justify-around {
+  -ms-flex-pack: distribute;
+  justify-content: space-around
+}
+
+.justify-evenly {
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly
+}
+
+.content-start {
+  -ms-flex-line-pack: start;
+  align-content: flex-start
+}
+
+.content-end {
+  -ms-flex-line-pack: end;
+  align-content: flex-end
+}
+
+.content-center {
+  -ms-flex-line-pack: center;
+  align-content: center
+}
+
+.content-between {
+  -ms-flex-line-pack: justify;
+  align-content: space-between
+}
+
+.content-around {
+  -ms-flex-line-pack: distribute;
+  align-content: space-around
+}
+
+.content-stretch {
+  -ms-flex-line-pack: stretch;
+  align-content: stretch
+}
+
+.flex-auto {
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-width: 0;
+  min-height: 0
+}
+
+.flex-none {
+  -ms-flex: none;
+  flex: none
+}
+
+.order-0 {
+  -ms-flex-order: 0;
+  order: 0
+}
+
+.order-1 {
+  -ms-flex-order: 1;
+  order: 1
+}
+
+.order-2 {
+  -ms-flex-order: 2;
+  order: 2
+}
+
+.order-3 {
+  -ms-flex-order: 3;
+  order: 3
+}
+
+.order-last {
+  -ms-flex-order: 99999;
+  order: 99999
+}
+
+.relative {
+  position: relative
+}
+
+.absolute {
+  position: absolute
+}
+
+.fixed {
+  position: fixed
+}
+
+.top-0 {
+  top: 0
+}
+
+.right-0 {
+  right: 0
+}
+
+.bottom-0 {
+  bottom: 0
+}
+
+.left-0 {
+  left: 0
+}
+
+.z1 {
+  z-index: 1
+}
+
+.z2 {
+  z-index: 2
+}
+
+.z3 {
+  z-index: 3
+}
+
+.z4 {
+  z-index: 4
+}
+
+.border {
+  border-style: solid;
+  border-width: 1px
+}
+
+.border-top {
+  border-top-style: solid;
+  border-top-width: 1px
+}
+
+.border-right {
+  border-right-style: solid;
+  border-right-width: 1px
+}
+
+.border-bottom {
+  border-bottom-style: solid;
+  border-bottom-width: 1px
+}
+
+.border-left {
+  border-left-style: solid;
+  border-left-width: 1px
+}
+
+.border-none {
+  border: 0
+}
+
+.rounded {
+  border-radius: 3px
+}
+
+.circle {
+  border-radius: 50%
+}
+
+.rounded-top {
+  border-radius: 3px 3px 0 0
+}
+
+.rounded-right {
+  border-radius: 0 3px 3px 0
+}
+
+.rounded-bottom {
+  border-radius: 0 0 3px 3px
+}
+
+.rounded-left {
+  border-radius: 3px 0 0 3px
+}
+
+.not-rounded {
+  border-radius: 0
+}
+
+.hide {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px,1px,1px,1px)
+}
+
+@media (max-width:40rem) {
+  .xs-hide {
+    display: none
+  }
+}
+
+@media (min-width:40.06rem) and (max-width:52rem) {
+  .sm-hide {
+    display: none
+  }
+}
+
+@media (min-width:52.06rem) and (max-width:64rem) {
+  .md-hide {
+    display: none
+  }
+}
+
+@media (min-width:64.06rem) {
+  .lg-hide {
+    display: none
+  }
+}
+
+.display-none {
+  display: none
+}
+
+* {
+  box-sizing: border-box
+}
+
+
+
+main {
+  max-width: 700px;
+  margin: 0 auto
+}
+
+p {
+  padding: 0;
+  color: #AAA;
+  font-family: "Montserrat", Sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 26px;
+  margin: 0 0 1em 0;
+}
+
+dt {
+width: 100%;
+}
+
+dd{
+width: 100%;
+}
+
+.ampstart-accent {
+  color: #fff
+}
+
+#content:target {
+  margin-top: calc(0px - 3.5rem);
+  padding-top: 3.5rem
+}
+
+.ampstart-title-lg {
+  font-size: 2.25rem;
+  line-height: 1.33333;
+  letter-spacing: .06rem
+}
+
+.ampstart-title-md {
+  font-size: 1.75rem;
+  line-height: 1.71429;
+  letter-spacing: .06rem
+}
+
+.ampstart-title-sm {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  letter-spacing: .06rem
+}
+
+.ampstart-subtitle,body {
+  line-height: 1.75;
+  letter-spacing: normal
+}
+
+.ampstart-subtitle {
+  color: #fff;
+  font-size: 1rem
+}
+
+.ampstart-byline,.ampstart-caption,.ampstart-hint,.ampstart-label {
+ 
+line-height: 1.5em;
+  letter-spacing: .06rem;
+  color: #FF5D20;
+  font-size: 1.25rem;
+  padding: 0px 0px 20px 0px;
+}
+
+.ampstart-label {
+  text-transform: uppercase
+}
+
+.ampstart-footer,.ampstart-small-text {
+  font-size: .75rem;
+  line-height: 1rem;
+  letter-spacing: .06rem
+}
+
+.ampstart-card {
+  box-shadow: 0 1px 1px 0 rgba(0,0,0,.14),0 1px 1px -1px rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12)
+}
+
+.h1,h1 {
+  font-size: 2.438rem;
+  font-weight: bold;
+  line-height: 1.33333
+}
+
+.h2,h2 {
+  font-size: 1.75rem;
+  line-height: 1.71429
+}
+
+.h3,h3 {
+  
+ 
+  font-family: "Montserrat", Sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 35px;
+  
+}
+
+.h4,h4 {
+color: rgba(255, 255, 255, 0.7);
+  font-family: "Montserrat", Sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.h5,h5 {
+font-family: "Montserrat", Sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 21px;
+  color: #AAA;
+}
+
+.h6,h6 {
+  font-size: .75rem;
+  line-height: 1rem
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  letter-spacing: .06rem
+}
+
+a,a:active,a:visited {
+  color: inherit
+}
+
+.ampstart-btn {
+  font-family: "Montserrat", Sans-serif;
+  font-weight: inherit;
+ font-size: 0.813rem;
+  line-height: 1.125rem;
+  padding: .7em .8em;
+  text-decoration: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  vertical-align: middle;
+  cursor: pointer;
+
+  color: #fff;
+ 
+  text-shadow: 0 2px 0 #292929;
+  background-color: black;
+  font-weight: 700;
+  padding: 20px 35px;
+}
+
+
+ @media (max-width: 767px) {
+
+  .ampstart-btn{
+      display: none;
+    }
+
+    }
+
+.ampstart-btn:visited {
+  color: #fff
+}
+
+.ampstart-btn-secondary {
+  background-color: #000;
+  color: #fff;
+  border: 1px solid #fff
+}
+
+.ampstart-btn-secondary:visited {
+  color: #fff
+}
+
+.ampstart-btn:active .ampstart-btn:focus {
+  opacity: .8
+}
+
+.ampstart-btn[disabled],.ampstart-btn[disabled]:active,.ampstart-btn[disabled]:focus,.ampstart-btn[disabled]:hover {
+  opacity: .5;
+  outline: 0;
+  cursor: default
+}
+
+.ampstart-dropcap:first-letter {
+  color: #fff;
+  font-size: 2.25rem;
+  font-weight: 700;
+  float: left;
+  overflow: hidden;
+  line-height: 2.25rem;
+  margin-left: 0;
+  margin-right: .5rem
+}
+
+.ampstart-initialcap {
+  padding-top: 1rem;
+  margin-top: 1.5rem
+}
+
+.ampstart-initialcap:first-letter {
+  color: #fff;
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-left: -2px
+}
+
+.ampstart-pullquote {
+  border: none;
+  border-left: 4px solid #000;
+  font-size: 1.25rem;
+  padding-left: 1.5rem
+}
+
+.ampstart-byline time {
+  font-style: normal;
+  white-space: nowrap
+}
+
+
+.amp-carousel-button-next {
+  background-image: url('data:image/svg+xml;charset=utf-8,<svg width="18" height="18" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg"><title>Next</title><path d="M25.557 14.7L13.818 2.961 16.8 0l16.8 16.8-16.8 16.8-2.961-2.961L25.557 18.9H0v-4.2z" fill="%23FFF" fill-rule="evenodd"/></svg>')
+}
+
+.amp-carousel-button-prev {
+  background-image: url('data:image/svg+xml;charset=utf-8,<svg width="18" height="18" viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg"><title>Previous</title><path d="M33.6 14.7H8.043L19.782 2.961 16.8 0 0 16.8l16.8 16.8 2.961-2.961L8.043 18.9H33.6z" fill="%23FFF" fill-rule="evenodd"/></svg>')
+}
+
+.ampstart-dropdown {
+  min-width: 200px
+}
+
+.ampstart-dropdown.absolute {
+  z-index: 100
+}
+
+.ampstart-dropdown.absolute>section,.ampstart-dropdown.absolute>section>header {
+  height: 100%
+}
+
+.ampstart-dropdown>section>header {
+  background-color: #000;
+  border: 0;
+  color: #fff
+}
+
+.ampstart-dropdown>section>header:after {
+  display: inline-block;
+  content: "+";
+  padding: 0 0 0 1.5rem;
+  color: #fff
+}
+
+.ampstart-dropdown>[expanded]>header:after {
+  content: "–"
+}
+
+.absolute .ampstart-dropdown-items {
+  z-index: 200
+}
+
+.ampstart-dropdown-item {
+  background-color: #000;
+  color: #fff;
+  opacity: .9
+}
+
+.ampstart-dropdown-item:active,.ampstart-dropdown-item:hover {
+  opacity: 1
+}
+
+.ampstart-footer {
+  background-color: inherit;
+  color: currentColor;
+  padding-top: 5rem;
+  padding-bottom: 5rem
+}
+
+.ampstart-footer .ampstart-icon {
+  fill: currentColor
+}
+
+.ampstart-footer .ampstart-social-follow li:last-child {
+  margin-right: 0
+}
+
+.ampstart-image-fullpage-hero {
+  color: #fff
+}
+
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 60vh; /* or whatever hero height you want */
+  overflow: hidden;
+}
+
+.hero amp-img {
+  object-fit: cover;
+  /* ensure it fills container properly */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0)
+  );
+
+  pointer-events: none; /* so it doesn’t block clicks on hero content */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  /* padding, centering, etc. */
+}
+
+
+
+
+
+.ampstart-fullpage-hero-heading-text,.ampstart-image-fullpage-hero .ampstart-image-credit {
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  background: #000;
+  padding: 0 1rem .2rem
+}
+
+.ampstart-image-fullpage-hero>amp-img {
+  max-height: calc(100vh - 3.5rem)
+}
+
+.ampstart-image-fullpage-hero>amp-img img {
+  -o-object-fit: cover;
+  object-fit: cover
+}
+
+.ampstart-fullpage-hero-heading {
+  line-height: 3.5rem;
+  z-index: 2;
+  position: relative;
+}
+
+
+@media (max-width: 767px) {
+
+.ampstart-fullpage-hero-heading {
+ text-align: left;
+  position: absolute;
+  top:0;
+}
+
+}
+
+.image-wrapper-gradient {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+.image-wrapper-gradient::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0));
+  z-index: 1;
+  pointer-events: none;
+}
+.ampstart-fullpage-hero-cta {
+  background: transparent
+}
+
+.ampstart-readmore {
+  background: linear-gradient(0deg,rgba(0,0,0,.65) 0,transparent);
+  color: #fff;
+  margin-top: 5rem;
+  padding-bottom: 3.5rem
+}
+
+.ampstart-readmore:after {
+  display: block;
+  content: "⌄";
+  font-size: 1.75rem
+}
+
+.ampstart-readmore-text {
+  background: #000
+}
+
+@media (min-width:52.06rem) {
+  .ampstart-image-fullpage-hero>amp-img {
+    height: 60vh
+  }
+}
+
+.ampstart-image-heading {
+  color: #fff;
+  background: linear-gradient(0deg,rgba(0,0,0,.65) 0,transparent)
+}
+
+.ampstart-image-heading>* {
+  margin: 0
+}
+
+amp-carousel .ampstart-image-with-heading {
+  margin-bottom: 0
+}
+
+.ampstart-image-with-caption figcaption {
+  color: #fff;
+  line-height: 1.125rem
+}
+
+amp-carousel .ampstart-image-with-caption {
+  margin-bottom: 0
+}
+
+amp-carousel {
+   box-shadow: 0px 0px 10px 0px rgba(216, 158.00000000000003, 55.999999999999986, 0.62);
+}
+
+.ampstart-input {
+  max-width: 100%;
+  width: 300px;
+  min-width: 100px;
+  font-size: 1rem;
+  line-height: 1.75
+}
+
+.ampstart-input [disabled],.ampstart-input [disabled]+label {
+  opacity: .5
+}
+
+.ampstart-input [disabled]:focus {
+  outline: 0
+}
+
+.ampstart-input>input,.ampstart-input>select,.ampstart-input>textarea {
+  width: 100%;
+  margin-top: 1rem;
+  line-height: 1.75;
+  border: 0;
+  border-radius: 0;
+  border-bottom: 1px solid #4a4a4a;
+  background: none;
+  color: #4a4a4a;
+  outline: 0
+}
+
+.ampstart-input>label {
+  color: #fff;
+  pointer-events: none;
+  text-align: left;
+  font-size: .875rem;
+  line-height: 1rem;
+  opacity: 0;
+  animation: .2s;
+  animation-timing-function: cubic-bezier(.4,0,.2,1);
+  animation-fill-mode: forwards
+}
+
+.ampstart-input>input:focus,.ampstart-input>select:focus,.ampstart-input>textarea:focus {
+  outline: 0
+}
+
+.ampstart-input>input:focus:-ms-input-placeholder,.ampstart-input>select:focus:-ms-input-placeholder,.ampstart-input>textarea:focus:-ms-input-placeholder {
+  color: transparent
+}
+
+.ampstart-input>input:focus::placeholder,.ampstart-input>select:focus::placeholder,.ampstart-input>textarea:focus::placeholder {
+  color: transparent
+}
+
+.ampstart-input>input:not(:placeholder-shown):not([disabled])+label,.ampstart-input>select:not(:placeholder-shown):not([disabled])+label,.ampstart-input>textarea:not(:placeholder-shown):not([disabled])+label {
+  opacity: 1
+}
+
+.ampstart-input>input:focus+label,.ampstart-input>select:focus+label,.ampstart-input>textarea:focus+label {
+  animation-name: a
+}
+
+@keyframes a {
+  to {
+    opacity: 1
+  }
+}
+
+.ampstart-input>label:after {
+  content: "";
+  height: 2px;
+  position: absolute;
+  bottom: 0;
+  left: 45%;
+  background: #fff;
+  transition: .2s;
+  transition-timing-function: cubic-bezier(.4,0,.2,1);
+  visibility: hidden;
+  width: 10px
+}
+
+.ampstart-input>input:focus+label:after,.ampstart-input>select:focus+label:after,.ampstart-input>textarea:focus+label:after {
+  left: 0;
+  width: 100%;
+  visibility: visible
+}
+
+.ampstart-input>input[type=search] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none
+}
+
+.ampstart-input>input[type=range] {
+  border-bottom: 0
+}
+
+.ampstart-input>input[type=range]+label:after {
+  display: none
+}
+
+.ampstart-input>select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none
+}
+
+.ampstart-input>select+label:before {
+  content: "⌄";
+  line-height: 1.75;
+  position: absolute;
+  right: 5px;
+  zoom: 2;
+  top: 0;
+  bottom: 0;
+  color: #fff
+}
+
+.ampstart-input-chk,.ampstart-input-radio {
+  width: auto;
+  color: #4a4a4a
+}
+
+.ampstart-input input[type=checkbox],.ampstart-input input[type=radio] {
+  margin-top: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #fff;
+  vertical-align: middle;
+  margin-right: .5rem;
+  text-align: center
+}
+
+.ampstart-input input[type=radio] {
+  border-radius: 20px
+}
+
+.ampstart-input input[type=checkbox]:not([disabled])+label,.ampstart-input input[type=radio]:not([disabled])+label {
+  pointer-events: auto;
+  animation: none;
+  vertical-align: middle;
+  opacity: 1;
+  cursor: pointer
+}
+
+.ampstart-input input[type=checkbox]+label:after,.ampstart-input input[type=radio]+label:after {
+  display: none
+}
+
+.ampstart-input input[type=checkbox]:after,.ampstart-input input[type=radio]:after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  content: " ";
+  line-height: 1.4rem;
+  vertical-align: middle;
+  text-align: center;
+  background-color: #000
+}
+
+.ampstart-input input[type=checkbox]:checked:after {
+  background-color: #fff;
+  color: #000;
+  content: "✓"
+}
+
+.ampstart-input input[type=radio]:checked {
+  background-color: #000
+}
+
+.ampstart-input input[type=radio]:after {
+  top: 3px;
+  bottom: 3px;
+  left: 3px;
+  right: 3px;
+  border-radius: 12px
+}
+
+.ampstart-input input[type=radio]:checked:after {
+  content: "";
+  font-size: 2.25rem;
+  background-color: #fff
+}
+
+.ampstart-input>label,_:-ms-lang(x) {
+  opacity: 1
+}
+
+.ampstart-input>input:-ms-input-placeholder,_:-ms-lang(x) {
+  color: transparent
+}
+
+.ampstart-input>input::placeholder,_:-ms-lang(x) {
+  color: transparent
+}
+
+.ampstart-input>input::-ms-input-placeholder,_:-ms-lang(x) {
+  color: transparent
+}
+
+.ampstart-input>select::-ms-expand {
+  display: none
+}
+
+.ampstart-headerbar {
+  background-color: #000;
+  color: #fff;
+  z-index: 999;
+  box-shadow: 0 0 5px 2px rgba(0,0,0,.1)
+}
+
+.ampstart-headerbar+:not(amp-sidebar),.ampstart-headerbar+amp-sidebar+* {
+  margin-top: 3.5rem
+}
+
+.ampstart-headerbar-nav .ampstart-nav-item {
+  padding: 0 1rem;
+  background: transparent;
+  opacity: .8
+}
+
+.ampstart-headerbar-nav {
+  line-height: 3.5rem
+}
+
+.ampstart-nav-item:active,.ampstart-nav-item:focus,.ampstart-nav-item:hover {
+  opacity: 1
+}
+
+.ampstart-navbar-trigger:focus {
+  outline: none
+}
+
+.ampstart-nav a,.ampstart-navbar-trigger,.ampstart-sidebar-faq a {
+  cursor: pointer;
+  text-decoration: none
+}
+
+.ampstart-nav .ampstart-label {
+  color: inherit
+}
+
+.ampstart-navbar-trigger {
+  line-height: 3.5rem;
+  font-size: 1.75rem
+}
+
+.ampstart-headerbar-nav {
+  -ms-flex: 1;
+  flex: 1
+}
+
+.ampstart-nav-search {
+  -ms-flex-positive: 0.5;
+  flex-grow: 0.5
+}
+
+.ampstart-headerbar .ampstart-nav-search:active,.ampstart-headerbar .ampstart-nav-search:focus,.ampstart-headerbar .ampstart-nav-search:hover {
+  box-shadow: none
+}
+
+.ampstart-nav-search>input {
+  border: none;
+  border-radius: 3px;
+  line-height: normal
+}
+
+.ampstart-nav-dropdown {
+  min-width: 200px
+}
+
+.ampstart-nav-dropdown amp-accordion header {
+  background-color: #000;
+  border: none
+}
+
+.ampstart-nav-dropdown amp-accordion ul {
+  background-color: #000
+}
+
+.ampstart-nav-dropdown .ampstart-dropdown-item,.ampstart-nav-dropdown .ampstart-dropdown>section>header {
+  background-color: #000;
+  color: #fff
+}
+
+.ampstart-nav-dropdown .ampstart-dropdown-item {
+  color: #fff
+}
+
+.ampstart-sidebar {
+  background-color: #000;
+  color: #fff;
+  min-width: 300px;
+  width: 300px
+}
+
+.ampstart-sidebar .ampstart-icon {
+  fill: #fff
+}
+
+.ampstart-sidebar-header {
+  line-height: 3.5rem;
+  min-height: 3.5rem
+}
+
+.ampstart-sidebar .ampstart-dropdown-item,.ampstart-sidebar .ampstart-dropdown header,.ampstart-sidebar .ampstart-faq-item,.ampstart-sidebar .ampstart-nav-item,.ampstart-sidebar .ampstart-social-follow {
+  margin: 0 0 2rem
+}
+
+.ampstart-sidebar .ampstart-nav-dropdown {
+  margin: 0
+}
+
+.ampstart-sidebar .ampstart-navbar-trigger {
+  line-height: inherit
+}
+
+.ampstart-navbar-trigger svg {
+  pointer-events: none
+}
+
+.ampstart-related-article-section {
+  border-color: #fff
+}
+
+.ampstart-related-article-section .ampstart-heading {
+  color: #fff;
+  font-weight: 400
+}
+
+.ampstart-related-article-readmore {
+  color: #fff;
+  letter-spacing: 0
+}
+
+.ampstart-related-section-items>li {
+  border-bottom: 1px solid #fff
+}
+
+.ampstart-related-section-items>li:last-child {
+  border: none
+}
+
+.ampstart-related-section-items .ampstart-image-with-caption {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: 0
+}
+
+.ampstart-related-section-items .ampstart-image-with-caption>amp-img,.ampstart-related-section-items .ampstart-image-with-caption>figcaption {
+  -ms-flex: 1;
+  flex: 1
+}
+
+.ampstart-related-section-items .ampstart-image-with-caption>figcaption {
+  padding-left: 1rem
+}
+
+@media (min-width:40.06rem) {
+  .ampstart-related-section-items>li {
+    border: none
+  }
+
+  .ampstart-related-section-items .ampstart-image-with-caption>figcaption {
+    padding: 1rem 0
+  }
+
+  .ampstart-related-section-items .ampstart-image-with-caption>amp-img,.ampstart-related-section-items .ampstart-image-with-caption>figcaption {
+    -ms-flex-preferred-size: 100%;
+    flex-basis: 100%
+  }
+}
+
+.ampstart-social-box {
+  display: -ms-flexbox;
+  display: flex
+}
+
+.ampstart-social-box>amp-social-share {
+  background-color: #000
+}
+
+.ampstart-icon {
+  fill: #fff
+}
+
+.h1,.h2,.h3,h1,h2,h3 {
+ font-family: "Secular One", Sans-serif;
+}
+
+.h1,h1 {
+  letter-spacing: .1px
+}
+
+.h2,h2 {
+  letter-spacing: 0
+}
+
+.h3,h3 {
+  letter-spacing: .3px
+}
+
+.h4,.h5,.h6,h4,h5,h6 {
+ font-family: "Montserrat", Sans-serif;
+  letter-spacing: 0
+}
+
+.ampstart-fullpage-hero-heading-text {
+  display: block;
+  padding: .5rem;
+  line-height: 1rem
+}
+
+.ampstart-fullpage-hero-heading-text,.ampstart-image-fullpage-hero .ampstart-image-credit {
+  -webkit-box-decoration-break: none;
+  box-decoration-break: none;
+  background: none
+}
+
+.theme2-divider:after {
+  border-bottom: 1px solid #fff;
+  content: "";
+  display: block;
+  height: 2rem;
+  width: 8.33%
+}
+
+@media (max-width:40rem) {
+  .theme2-divider:after {
+
+    margin: auto;
+}
+
+}
+
+.theme2-anchored {
+  margin-top: -5.5rem;
+  padding-top: 5.5rem
+}
+
+.ampstart-dropcap:first-letter {
+  color: inherit;
+  font-size: 3.125rem;
+  font-weight: inherit;
+  line-height: 1.12
+}
+
+</style>
 
 
 
@@ -267,36 +2748,254 @@ amp-video {
 
   <div class="center">
 
-  <!-- Start Fullpage Hero -->
-  <div class="image-wrapper-gradient">  
-  <figure class="ampstart-image-fullpage-hero m0 relative mb4">
-    <amp-img width="404" height="720" alt="Lost Art Painters" layout="responsive" src="./img/boats/hero2.jpg" media="(max-width: 415px)"></amp-img>
-    <amp-img height="720" alt="Lost Art Painters" layout="fixed-height" src="./img/boats/hero2.jpg" media="(min-width: 416px)"></amp-img>
-    <figcaption class="absolute top-0 right-0 bottom-0 left-0">
-      <header class="p3">
+
+    <!-- HERO SLIDER -->
+<amp-carousel
+    width="2880"
+    height="1226"
+    layout="responsive"
+    type="slides"
+    autoplay
+    delay="4000"
+    loop
+     media="(min-width: 768px)"
+     >
+  
+  <!-- Slide 1 -->
+  <div class="hero-slide image-wrapper-gradient">
+    <amp-img src="img/boats/hero1.png"
+             width="2880" height="1226" layout="responsive"></amp-img>
+    <figcaption class="absolute top-0 right-0 bottom-0 left-0"> 
+             <header class="p3">
         <h1 class="ampstart-fullpage-hero-heading mb3">
           <span class="ampstart-fullpage-hero-heading-text">
-            <span class="h6 block caps">Welcome </span><span class="h1 block bold caps my1"> Lost Art Painters</span><span class="h6 block caps">“Bringing tradition back to the waterways — one boat at a time.”</span>
+            <span class="block  aux-modern-heading-primary ">Welcome </span><span class=" heading-primary"> Lost Art Painters</span><span class=" block heading-secondary">“Bringing tradition back to the waterways — one boat at a time.”</span>
           </span>
         </h1>
 
     </header>
     <footer class="absolute left-0 right-0 bottom-0">
-      <a class="ampstart-btn inline-block ampstart-fullpage-hero-cta h5 m3 text-decoration-none" href="services.amp.html">Our Services</a>
+      <a class="hero-btn ampstart-btn inline-block  h5 m4  caps text-decoration-none" href="services.amp.html">Our Services</a>
     </footer>
     </figcaption>
-  </figure>
-   </div>
-  <!-- End Fullpage Hero -->
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="hero-slide image-wrapper-gradient" >
+
+
+<amp-img
+  src="img/boats/hero2.png"
+  width="2880"
+  height="1226"
+  layout="responsive"
+  media="(min-width: 768px)">
+</amp-img>
+
+
+
+
+
+<figcaption class="absolute top-0 right-0 bottom-0 left-0"> 
+             <header class="p3">
+        <h1 class="ampstart-fullpage-hero-heading mb3">
+          <span class="ampstart-fullpage-hero-heading-text">
+            <span class="block aux-modern-heading-primary ">Welcome </span><span class=" heading-primary"> Lost Art Painters</span><span class=" block heading-secondary">“Bringing tradition back to the waterways — one boat at a time.”</span>
+          </span>
+        </h1>
+
+    </header>
+    <footer class="absolute left-0 right-0 bottom-0">
+      <a class="hero-btn ampstart-btn inline-block  h5 m4  caps text-decoration-none" href="services.amp.html">Our Services</a>
+    </footer>
+    </figcaption>
+ 
+  </div>
+
+  <!-- Slide 3 -->
+  <div class="hero-slide image-wrapper-gradient">
+    <amp-img src="img/boats/hero3.png"
+             width="2880" height="1226"  media="(min-width: 768px)" layout="responsive"></amp-img>
+   
+<figcaption class="absolute top-0 right-0 bottom-0 left-0"> 
+             <header class="p3">
+        <h1 class="ampstart-fullpage-hero-heading mb3">
+          <span class="ampstart-fullpage-hero-heading-text">
+            <span class="block  aux-modern-heading-primary">Welcome </span><span class=" heading-primary"> Lost Art Painters</span><span class=" block heading-secondary">“Bringing tradition back to the waterways — one boat at a time.”</span>
+          </span>
+        </h1>
+
+    </header>
+    <footer class="absolute left-0 right-0 bottom-0">
+      <a class="hero-btn ampstart-btn inline-block  h5 m4  caps text-decoration-none" href="services.amp.html">Our Services</a>
+    </footer>
+    </figcaption>
+  </div>
+
+</amp-carousel>
+
+
+
+<!-- Mobile carousel (taller) -->
+<amp-carousel
+  width="720"
+  height="400"
+  layout="responsive"
+  type="slides"
+  autoplay
+  delay="4000"
+  loop
+  media="(max-width: 767px)">
+
+
+    <!-- Slide 1 -->
+  <div class="hero-slide image-wrapper-gradient">
+    <amp-img src="img/boats/HERO1MOB.png"
+             width="720" height="400" layout="responsive"></amp-img>
+    <figcaption class="absolute top-0 right-0 bottom-0 left-0"> 
+             <header class="p3">
+        <h1 class="ampstart-fullpage-hero-heading mb3">
+          <span class="ampstart-fullpage-hero-heading-text">
+            <span class="block  aux-modern-heading-primary">Welcome </span><span class=" heading-primary"> Lost Art Painters</span><span class=" block heading-secondary">“Bringing tradition back to the waterways — one boat at a time.”</span>
+          </span>
+        </h1>
+
+    </header>
+    <footer class="absolute left-0 right-0 bottom-0">
+      <a class="hero-btn ampstart-btn inline-block  h5 m4  caps text-decoration-none" href="services.amp.html">Our Services</a>
+    </footer>
+    </figcaption>
+  </div>
+
+  <!-- Slide 2 -->
+  <div class="hero-slide image-wrapper-gradient" >
+
+
+<amp-img
+  src="img/boats/HERO2MOB.png"
+  width="720"
+  height="400"
+  layout="responsive"
+  media="(max-width: 767px)">
+</amp-img>
+
+
+
+<figcaption class="absolute top-0 right-0 bottom-0 left-0"> 
+             <header class="p3">
+        <h1 class="ampstart-fullpage-hero-heading mb3">
+          <span class="ampstart-fullpage-hero-heading-text">
+            <span class="block  aux-modern-heading-primary">Welcome </span><span class=" heading-primary"> Lost Art Painters</span><span class=" block heading-secondary">“Bringing tradition back to the waterways — one boat at a time.”</span>
+          </span>
+        </h1>
+
+    </header>
+    <footer class="absolute left-0 right-0 bottom-0">
+      <a class="hero-btn ampstart-btn inline-block  h5 m4  caps text-decoration-none" href="services.amp.html">Our Services</a>
+    </footer>
+    </figcaption>
+ 
+  </div>
+
+
+    <!-- Slide 3 -->
+  <div class="hero-slide image-wrapper-gradient">
+<amp-img
+  src="img/boats/HERO3MOB.png"
+  width="720"
+  height="400"
+  layout="responsive"
+  media="(max-width: 767px)">
+</amp-img>
+   
+<figcaption class="absolute top-0 right-0 bottom-0 left-0"> 
+             <header class="p3">
+        <h1 class="ampstart-fullpage-hero-heading mb3">
+          <span class="ampstart-fullpage-hero-heading-text">
+            <span class="block  aux-modern-heading-primary">Welcome </span><span class=" heading-primary"> Lost Art Painters</span><span class=" block heading-secondary">“Bringing tradition back to the waterways — one boat at a time.”</span>
+          </span>
+        </h1>
+
+    </header>
+    <footer class="absolute left-0 right-0 bottom-0">
+      <a class="hero-btn ampstart-btn inline-block  h5 m4  caps text-decoration-none" href="services.amp.html">Our Services</a>
+    </footer>
+    </figcaption>
+  </div>
+
+
+    <!-- Slide 4 -->
+  <div class="hero-slide image-wrapper-gradient">
+<amp-img
+  src="img/boats/HERO4MOB.png"
+  width="720"
+  height="400"
+  layout="responsive"
+  media="(max-width: 767px)">
+</amp-img>
+   
+<figcaption class="absolute top-0 right-0 bottom-0 left-0"> 
+             <header class="p3">
+        <h1 class="ampstart-fullpage-hero-heading mb3">
+          <span class="ampstart-fullpage-hero-heading-text">
+            <span class="block aux-modern-heading-primary">Welcome </span><span class=" heading-primary"> Lost Art Painters</span><span class=" block heading-secondary">“Bringing tradition back to the waterways — one boat at a time.”</span>
+          </span>
+        </h1>
+
+    </header>
+    <footer class="absolute left-0 right-0 bottom-0">
+      <a class="hero-btn ampstart-btn inline-block  h5 m4  caps text-decoration-none" href="services.amp.html">Our Services</a>
+    </footer>
+    </figcaption>
+  </div>
+
+
+      <!-- Slide 5 -->
+  <div class="hero-slide image-wrapper-gradient">
+<amp-img
+  src="img/boats/HERO5MOB.png"
+  width="720"
+  height="400"
+  layout="responsive"
+  media="(max-width: 767px)">
+</amp-img>
+   
+<figcaption class="absolute top-0 right-0 bottom-0 left-0"> 
+             <header class="p3">
+        <h1 class="ampstart-fullpage-hero-heading mb3">
+          <span class="ampstart-fullpage-hero-heading-text">
+            <span class="block  aux-modern-heading-primary ">Welcome </span><span class=" heading-primary"> Lost Art Painters</span><span class=" block heading-secondary">“Bringing tradition back to the waterways — one boat at a time.”</span>
+          </span>
+        </h1>
+
+    </header>
+    <footer class="absolute left-0 right-0 bottom-0">
+      <a class="hero-btn ampstart-btn inline-block  h5 m4  caps text-decoration-none" href="services.amp.html">Our Services</a>
+    </footer>
+    </figcaption>
+  </div>
+
+</amp-carousel>
+<!-- END HERO SLIDER -->
+
+
+
+
+
+
+
+
   </div>
 
   <main id="content" role="main">
-      <article class="px3">
-            <h1 id="story" class="my4">About </h1>
-            <p class="mb1 ampstart-dropcap">
+      <article class="px3 ">
+            <h1 id="story" class="my4 h1">About </h1>
+
+            
+            <p class="mb3  heading-secondary">
               
-              We are a <strong> traditional narrowboat painting </strong> and signwriting firm based at the <strong>  historic Knighton Wharf
-on the Shropshire Union Canal</strong>. </p>
+              We are a  traditional narrowboat painting and signwriting firm based at the  historic Knighton Wharf
+on the Shropshire Union Canal. </p>
   <p class="mb1"> 
 Since 2015, Lost Art Painters has specialised in authentic canal boat decoration, combining heritage
 craftsmanship with modern creativity.</p>
@@ -316,42 +3015,75 @@ that <strong> exceeds expectations </strong> and celebrates the rich <strong>her
           
             <h2 class="h2 my4 ">Our Story</h2>
 
-<p class="mb4 theme2-divider">
-                
-                Lost Art Painters is owned and run by Dan Holmes, who has an extensive background in art and
-design and holds a First-Class Honours Degree in Fine Art.
-                
-                </p>
-                <p class="mb4">The company name came about when Dan taught himself how to paint beside the canal. With hours of
-trial, error, and experimentation — and few references to guide him — he uncovered what truly felt like
-a lost art: the traditional skill of coach painting narrowboats.</p>
+
+               
 
                       <div class="my4 mxn3 ">
 
 
                         
-<dl class="clearfix ">
-        
-          <dd class="m0" style="width: 70%;
-
-  margin: auto;">
-            
-        
-            <amp-img src="./img/dan.jpg" width="450" height="450" class="mb2" alt="Happy Hour Monday through Friday 5 PM" layout="responsive"
-            style="border-radius: 50%;"></amp-img>
-    
-              </dd>
-    </dl>    
 
 
 
             </div>
 
+<dl class="clearfix">
+          
+          
+     
 
+           <dd class=" md-col-6 sm-col-12  mb1 self-center left-align-image">
+
+<amp-img src="./img/dan.jpg" width="480" height="480" alt="Key Lime Pie" layout="responsive"></amp-img>
+
+   
+
+</dd>
+          
+          <dd class="col md-col-6 sm-col-12 m0 mb0">
+
+            <p class=" mb1 mt2  heading-secondary white">
+                
+                Lost Art Painters is owned and run by Dan Holmes, who has an extensive background in art and
+design and holds a First-Class Honours Degree in Fine Art.
+                
+                </p>
+        
+ <p class="mb0">The company name came about when Dan taught himself how to paint beside the canal. With hours of
+trial, error, and experimentation — and few references to guide him — he uncovered what truly felt like
+a lost art: the traditional skill of coach painting narrowboats.</p>
+
+
+          </dd>
 
 <p class="mb0">Before long, other boat owners began asking Dan to paint their vessels, and what started as a passion
 became a full-time craft. Today, the workshop at Knighton Wharf continues that same tradition —
 creating hand-painted narrowboats that blend heritage, design, and individuality.<br></p>
+  <dd class="col md-col-6 sm-col-12 m0 mb4">
+             <p class="mb1">We take great pride in restoring traditional narrowboats and historic working boats, respecting the methods and materials of the original builders.
+</p>
+<p class="mb1">From colour matching to period-correct lettering and designs, our aim is always to preserve authenticity while providing long-lasting protection for the years ahead.
+
+
+</p>
+          </dd>
+
+          <dd class=" md-col-6 sm-col-12  mb1 self-center right-align-image">
+
+
+<amp-img src="./img/boats/MEG GREGORY.jpg" width="326" height="277"  class="mb0 mt2"  layout="responsive"></amp-img>
+
+
+  
+
+</dd>
+
+    
+        </dl>
+
+
+  
+  
 
 
             <div class="my4 mxn3 center">
@@ -369,16 +3101,14 @@ creating hand-painted narrowboats that blend heritage, design, and individuality
 <dl class="clearfix theme2-divider ">
          
           
-          <dt class="col col-10 h1 mb1 ">Services </dt>
+          <dt class="col sm-col-10 h1 mb1 ">Services </dt>
           
           <dd class="col col-12 m0 mb4 theme2-divider ">
             We offer a range of traditional narrowboat painting services, including:
           </dd>
-          <dt class="col col-10 h3 mb1">Full and partial boat repaints </dt>
+          <dt class="col sm-col-10 h3 mb1 aux-head-before white">Full and partial boat repaints </dt>
            <dd class="m0 col col-2 m0 mb1 self-center right-align">
             
-        
-           <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q65 0 123 19t107 53l-58 59q-38-24-81-37.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160q133 0 226.5-93.5T800-480q0-18-2-36t-6-35l65-65q11 32 17 66t6 70q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm-56-216L254-466l56-56 114 114 400-401 56 56-456 457Z"/></svg>
         
             </dd>
       
@@ -386,7 +3116,7 @@ creating hand-painted narrowboats that blend heritage, design, and individuality
             From full hull repaints to cabin tops, panels, and decorative detailing, we ensure a smooth, durable finish that reflects the pride you have in your boat.
           </dd>
 
-          <dt class="col col-10 h3 mb1">
+          <dt class="col sm-col-10 h3 mb1 white aux-head-before">
             Signwriting and decorative lettering
 
           
@@ -395,62 +3125,46 @@ creating hand-painted narrowboats that blend heritage, design, and individuality
              <dd class="m0 col col-2 m0 mb1 self-center right-align">
             
         
-           <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q65 0 123 19t107 53l-58 59q-38-24-81-37.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160q133 0 226.5-93.5T800-480q0-18-2-36t-6-35l65-65q11 32 17 66t6 70q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm-56-216L254-466l56-56 114 114 400-401 56 56-456 457Z"/></svg>
-        
             </dd>
 
 
- <dd class="col col-10 m0 mb1 self-center left-align">
+ <dd class="col sm-col-10 m0 mb1 self-center left-align">
           Using hand-painted techniques — never vinyl — we can create everything from classic name panels and scrollwork to modern styles that still respect the boat’s heritage.
   
   
   </dd>
          
         
-          <dt class="col col-10 h3 mb1">Roses and castles artwork</dt>
-        <dd class="m0 col col-2 m0 mb1 self-center right-align">
-            
-        
-           <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q65 0 123 19t107 53l-58 59q-38-24-81-37.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160q133 0 226.5-93.5T800-480q0-18-2-36t-6-35l65-65q11 32 17 66t6 70q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm-56-216L254-466l56-56 114 114 400-401 56 56-456 457Z"/></svg>
-        
-            </dd>
-          <dd class="col col-10 m0 mb4">
-            We offer custom-painted roses, garlands, castles, and scenic panels, tailored to your colour scheme or style preference. 
-          </dd>
+          
                         
 
-          <dt class="col col-10 h3 mb1">Coach lines, scrollwork, and detailing</dt>
+          <dt class="col sm-col-10 h3 mb1 white aux-head-before">Coach lines, scrollwork, and detailing</dt>
         <dd class="m0 col col-2 m0 mb1 self-center right-align">
             
         
-           <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q65 0 123 19t107 53l-58 59q-38-24-81-37.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160q133 0 226.5-93.5T800-480q0-18-2-36t-6-35l65-65q11 32 17 66t6 70q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm-56-216L254-466l56-56 114 114 400-401 56 56-456 457Z"/></svg>
-        
             </dd>
-          <dd class="col col-10 m0 mb4">
+          <dd class="col sm-col-10 m0 mb4">
            We hand-paint coach lines, scrolls, corners, and border designs, using fine brushes and steady craftsmanship to achieve sharp, clean lines that highlight your boat’s shape and structure.
           </dd>
 
-          <dt class="col col-10 h3 mb1">Restoration and repainting of historic narrowboats</dt>
+          <dt class="col sm-col-10 h3 mb1 white aux-head-before">Restoration and repainting of historic narrowboats</dt>
              <dd class="m0 col col-2 m0 mb1 self-center right-align">
             
         
-           <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q65 0 123 19t107 53l-58 59q-38-24-81-37.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160q133 0 226.5-93.5T800-480q0-18-2-36t-6-35l65-65q11 32 17 66t6 70q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm-56-216L254-466l56-56 114 114 400-401 56 56-456 457Z"/></svg>
         
             </dd>
-          <dd class="col col-10 m0 mb4">
+          <dd class="col sm-col-10 m0 mb4">
             We take great pride in restoring traditional narrowboats and historic working boats, respecting the methods and materials of the original builders.
           </dd>
 
          
 
-              <dt class="col col-10 h3 mb1">Custom designs and bespoke commissions</dt>
+              <dt class="col sm-col-10 h3 mb1 white aux-head-before">Custom designs and bespoke commissions</dt>
         <dd class="m0 col col-2 m0 mb1 self-center right-align">
             
         
-           <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#FFFFFF"><path d="M480-80q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q65 0 123 19t107 53l-58 59q-38-24-81-37.5T480-800q-133 0-226.5 93.5T160-480q0 133 93.5 226.5T480-160q133 0 226.5-93.5T800-480q0-18-2-36t-6-35l65-65q11 32 17 66t6 70q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm-56-216L254-466l56-56 114 114 400-401 56 56-456 457Z"/></svg>
-        
             </dd>
-          <dd class="col col-10 m0 mb4">
+          <dd class="col sm-col-10 m0 mb4">
            We love projects that mix heritage and creativity, producing something that’s uniquely yours while rooted in traditional canal painting values.
           </dd>
           
@@ -466,26 +3180,21 @@ creating hand-painted narrowboats that blend heritage, design, and individuality
  
   flex-wrap: nowrap;">
 
-<svg xmlns="http://www.w3.org/2000/svg" height="44px" viewBox="0 -960 960 960" width="44px" fill="#FFFFFF"><path d="m228-240 92-160q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 23-5.5 42.5T458-480L320-240h-92Zm360 0 92-160q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 23-5.5 42.5T818-480L680-240h-92ZM320-500q25 0 42.5-17.5T380-560q0-25-17.5-42.5T320-620q-25 0-42.5 17.5T260-560q0 25 17.5 42.5T320-500Zm360 0q25 0 42.5-17.5T740-560q0-25-17.5-42.5T680-620q-25 0-42.5 17.5T620-560q0 25 17.5 42.5T680-500Zm0-60Zm-360 0Z"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" height="44px" viewBox="0 -960 960 960" width="44px" fill="#D89E38"><path d="m228-240 92-160q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 23-5.5 42.5T458-480L320-240h-92Zm360 0 92-160q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 23-5.5 42.5T818-480L680-240h-92ZM320-500q25 0 42.5-17.5T380-560q0-25-17.5-42.5T320-620q-25 0-42.5 17.5T260-560q0 25 17.5 42.5T320-500Zm360 0q25 0 42.5-17.5T740-560q0-25-17.5-42.5T680-620q-25 0-42.5 17.5T620-560q0 25 17.5 42.5T680-500Zm0-60Zm-360 0Z"/></svg>
  
-  <small class="quote-text" style="  line-height: 1;        /* keep it vertically aligned */
-  white-space: nowrap;   /* prevent the text wrapping to next line */">What our clients say about us</small> 
- </div>
-   
-
-
-  
-
-   <h2 class="h2 mb1 ">Really has come out as a <span class="content__highlight" 
+  <span class="heading-secondary white" >What our clients <span class="content__highlight" 
     style="color: #fff;
   background: linear-gradient( 90deg, rgba(64, 226, 226, 0) 0%, rgba(64, 226, 226, 0.18) 40%, rgba(64, 134, 226, 0.18) 60%, rgba(64, 134, 226, 0) 100% );
   backdrop-filter: blur(4px); padding: 0 4px;
-border-radius: 4px;">super job ... </span></h2>
-    <dt class="h5  mb4  theme2-dividerblock regular">Dave  Martin</dt>
+border-radius: 4px;">say about us</span></span> 
+ </div>
+
+
+
    <dl class="clearfix mxn3 ">
 
  
-          <dd class="m0 ">
+          <dd class="m0  video-wrapper">
             
 
     <amp-video class="ampstart-image-with-heading  m0 relative mb2" controls
@@ -503,7 +3212,16 @@ border-radius: 4px;">super job ... </span></h2>
 </amp-video>
     
   
+    <dt class="h5 center mb4 theme2-dividerblock regular"> Dave  Martin</dt>
 </dd>
+
+
+  
+
+
+
+
+
    </dl>
  </div>
 
@@ -512,104 +3230,140 @@ border-radius: 4px;">super job ... </span></h2>
 
 
 
-            <h2 id="gallery" class="my4 theme2-anchored">Gallery</h2>
+            <h2 id="gallery" class="my4 h1 theme2-anchored">Gallery</h2>
 
             
-<p class="mb4 theme2-divider ">
+<p class="mb4  heading-secondary  white">
   
          Browse our gallery to see examples of our hand-painted narrowboats, decorative panels, and signwriting work.        
   </p>
-    <p class="mb4">
+
+
+
+            <amp-image-lightbox id="lightbox" layout="nodisplay"></amp-image-lightbox>
+  
+<amp-carousel class="my2 mxn3" height="320" layout="fixed-height" type="carousel">
+
+
+<amp-img src="./img/boats/narrowboatpainting24.jpg" width="480" height="320" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
+
+    <amp-img src="./img/boats/narrowboatpainting25.jpg" width="480" height="320" alt="Dining area" on="tap:lightbox" role="button" tabindex="0"></amp-img>
+
+    <amp-img src="./img/boats/narrowboatpainting31.jpg" width="480" height="320" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
+
+   
+    <amp-img src="./img/boats/narrowboatpainting27.jpg" width="480" height="320" alt="Caramel Banana Waffles" role="button" tabindex="0"></amp-img>
+
+    
+    <amp-img src="./img/boats/narrowboatpainting26.jpg" width="480" height="320" alt="Bar area" on="tap:lightbox" role="button" tabindex="0"></amp-img>
+
+    
+
+    <amp-img src="./img/boats/narrowboatpainting28.jpg" width="480" height="320" alt="Pumpkin Soup" role="button" tabindex="0"></amp-img>
+
+    <amp-img src="./img/boats/narrowboatpainting29.jpg" width="480" height="320" alt="Steak" on="tap:lightbox" role="button" tabindex="0"></amp-img>
+
+    <amp-img src="./img/boats/narrowboatpainting30.jpg" width="480" height="320" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <amp-img src="./img/boats/012.jpg" width="480" height="320" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
+
+    <amp-img src="./img/boats/07.jpg" width="480" height="320" alt="Dining area" on="tap:lightbox" role="button" tabindex="0"></amp-img>
+
+    <amp-img src="./img/boats/06.jpg" width="480" height="320" alt="Bar area" on="tap:lightbox" role="button" tabindex="0"></amp-img>
+
+    <amp-img src="./img/boats/05.jpg" width="480" height="320" alt="Caramel Banana Waffles" role="button" tabindex="0"></amp-img>
+
+    <amp-img src="./img/boats/01.jpg" width="480" height="320" alt="Pumpkin Soup" role="button" tabindex="0"></amp-img>
+
+    <amp-img src="./img/boats/03.jpg" width="480" height="320" alt="Steak" on="tap:lightbox" role="button" tabindex="0"></amp-img>
+
+    <amp-img src="./img/boats/02.jpg" width="480" height="320" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
+
+    <amp-img src="./img/boats/08.jpg" width="480" height="320" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
+
+    <amp-img src="./img/boats/09.jpg" width="480" height="320" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
+
+    <amp-img src="./img/boats/010.jpg" width="480" height="320" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
+
+    <amp-img src="./img/boats/011.jpg" width="480" height="320" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
+
+    <amp-img src="./img/boats/012.jpg" width="480" height="320" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
+
+    <amp-img src="./img/boats/013.jpg" width="480" height="320" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
+
+    <amp-img src="./img/boats/014.jpg" width="480" height="320" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
+
+    <amp-img src="./img/boats/015.jpg" width="480" height="320" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
+
+    <amp-img src="./img/boats/016.jpg" width="480" height="320" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
+
+    <amp-img src="./img/boats/017.jpg" width="480" height="320" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
+
+    <amp-img src="./img/boats/018.jpg" width="480" height="320" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
+
+    <amp-img src="./img/boats/019.jpg" width="480" height="320" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
+
+    <amp-img src="./img/boats/020.jpg" width="480" height="320" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
+
+    <amp-img src="./img/boats/021.jpg" width="480" height="320" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
+
+    <amp-img src="./img/boats/022.jpg" width="480" height="320" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
+
+</amp-carousel>
+
+    <p class="mb4 mt4">
               
       
 Each piece is a celebration of traditional canal art and the individuality of every boat owner we work with.
 </p>
 
 
-            <amp-image-lightbox id="lightbox" layout="nodisplay"></amp-image-lightbox>
-            <amp-carousel class="my2 mxn3" height="200" layout="fixed-height" type="carousel">
-
-              
-               <amp-img src="./img/boats/012.jpg" width="300" height="200" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
-   
-                <amp-img src="./img/boats/07.jpg" width="300" height="200" alt="Dining area" on="tap:lightbox" role="button" tabindex="0"></amp-img>
-                
-               
-                <amp-img src="./img/boats/06.jpg" width="300" height="200" alt="Bar area" on="tap:lightbox" role="button" tabindex="0"></amp-img>
-                
-                
-                <amp-img src="./img/boats/05.jpg" width="300" height="200" alt="Caramel Banana Waffles" on="tap:lightbox" role="button" tabindex="0"></amp-img>
-                
-                
-                <amp-img src="./img/boats/01.jpg" width="300" height="200" alt="Pumpkin Soup" on="tap:lightbox" role="button" tabindex="0"></amp-img>
-               
-                <amp-img src="./img/boats/03.jpg" width="300" height="200" alt="Steak" on="tap:lightbox" role="button" tabindex="0"></amp-img>
-                <amp-img src="./img/boats/02.jpg" width="300" height="200" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
-           <amp-img src="./img/boats/08.jpg" width="300" height="200" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
-           
-           <amp-img src="./img/boats/09.jpg" width="300" height="200" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
-           
-           <amp-img src="./img/boats/010.jpg" width="300" height="200" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
-           <amp-img src="./img/boats/011.jpg" width="300" height="200" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
-            <amp-img src="./img/boats/012.jpg" width="300" height="200" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
-            <amp-img src="./img/boats/013.jpg" width="300" height="200" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
-            <amp-img src="./img/boats/014.jpg" width="300" height="200" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
-            <amp-img src="./img/boats/015.jpg" width="300" height="200" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
-            <amp-img src="./img/boats/016.jpg" width="300" height="200" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
-            <amp-img src="./img/boats/017.jpg" width="300" height="200" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
-            <amp-img src="./img/boats/018.jpg" width="300" height="200" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
-            <amp-img src="./img/boats/019.jpg" width="300" height="200" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
-            <amp-img src="./img/boats/020.jpg" width="300" height="200" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
-            <amp-img src="./img/boats/021.jpg" width="300" height="200" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
-            <amp-img src="./img/boats/022.jpg" width="300" height="200" alt="Key Lime Pie" on="tap:lightbox" role="button" tabindex="0"></amp-img>
-           
-           
-                </amp-carousel>
-
-
-
  <div class="my4 clearfix"> 
 
-  <h2 id="locations" class="my4 theme2-anchored">Locations &amp; Contacts</h2>
-
-    <p class="mb4 theme2-divider"> 
-            If you’re looking for a traditional boat painter, want to book a DIY tuition session, or would like to discuss ideas for your narrowboat, we’d love to hear from you.
-<br>
-</p >
-
-             <p class="mb4 flex-container" > 
-             <svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px" fill="#FFFFFF"
+  <h2 id="locations" class="my4 theme2-anchored theme2-divider h2">Locations &amp; Contacts</h2>
+ <dl class="clearfix">
+          
+ <dt>  <p class="mb4 flex-container" > 
+             <svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px" fill="#D89E38"
              class="mr1"
              
              
              ><path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"/></svg>
                 
-              <span class="mb0 " >  Based at Knighton Wharf on the Shropshire Union Canal  </span>
+              <span class="mb0 h4 mt1 heading-secondary" >  Based at Knighton Wharf on the Shropshire Union Canal  </span>
                 
-</p>
-  <div class="mxn3">
-    <dl class="clearfix ">
-
-     
-        
-          <dd class="m0"> 
-
-          
+</p></dt>
+         
+           <dd class=" md-col-6 sm-col-12  mb1 self-center right-align-image">
+    
 <amp-img src="./img/boats/knighton.jpg" width="649" height="427"  alt="Key Lime Pie" layout="responsive" tabindex="0"></amp-img>
 
-</dd>
-</dl>
-</div>
-  
+           
 
-            <div class="col col-12 sm-col-6 mb4">
-
-                
-                
-      
-              
-
-   <a href="https://www.google.com/maps?q=52.83778,-2.37528" target="_blank" rel="noopener noreferrer" class="mb0 my2 blue"  style="display: flex;
+   <a href="https://www.google.com/maps?q=52.83778,-2.37528" target="_blank" rel="noopener noreferrer" class="mb0 mb0 h5 mt1 my2"  style="display: flex;
   align-items: center;">
 
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 5644.173 5644.173" width="30px" height="30px "
@@ -653,37 +3407,12 @@ class="mr1"
 </svg>
   <span class="h5">Open Knighton Wharf on  <br>
     Google Maps 
-    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="24px" fill="#296cd5"><path d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="24px" fill="#ff5d20"><path d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"/></svg>
  </span>
 </a>
-<div class="banner-container pt2"> 
-     <a class="fb-banner fb-link" href="https://www.facebook.com/LostArtPainters" target="_blank" rel="noopener noreferrer" aria-label="Find us on Facebook (opens in new tab)">
-    <!-- Inline Facebook "f" logo SVG (flat style, matches FB brand colors) -->
-    <span class="fb-logo" aria-hidden="true">
-      <svg viewBox="0 0 24 24" width="100%" height="100%" role="img" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-        <rect width="24" height="24" rx="4" fill="#1877F2"/>
-        <path d="M15.12 8.5h-1.37c-.35 0-.82.18-.82.9v1.05h2.2l-.29 2.21h-1.91V20H10.7v-6.29H8.9v-2.21h1.8V9.65c0-1.98 1.16-3.07 2.86-3.07.83 0 1.55.06 1.69.09v2.83z" fill="#fff"/>
-      </svg>
-    </span>
-
-   
-    <span class="fb-text">
-      <span class="fb-title">Lost Art Painters</span>
-      
-        <span class="fb-text">Join us on Facebook</span>
 
 
-        <span class="fb-followers">909 followers</span>
-    </span>
-  </a> 
-    <div class="corner-text">
-        Business Page
-    </div>
 
-  </div>
-            </div>
-            <div class="col col-12 sm-col-6 mb4">
-        
               <strong class="flex-container mb1">
                 
                 <svg xmlns="http://www.w3.org/2000/svg" class="mr1" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"><path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"/></svg> 
@@ -722,8 +3451,53 @@ class="mr1"
  </span>
             </a>
 
+</dd>
 
-                <p class="flex-container mb0 ">
+
+          <dd class=" md-col-6 sm-col-12 m0 mb4 ">
+            <p class="mb1">
+             If you’re looking for a traditional boat painter, want to book a DIY tuition session, or would like to discuss ideas for your narrowboat, we’d love to hear from you. 
+</p>
+<p class="mb1">We use high-quality marine paint systems, carefully applied by hand using traditional brushing and coach painting methods — no shortcuts, no spray booths, just craftsmanship.
+
+
+</p>
+
+
+
+          </dd>
+
+
+  <dd class=" md-col-6 sm-col-12  mb1 self-center ">
+
+<div class="banner-container pt2"> 
+     <a class="fb-banner fb-link" href="https://www.facebook.com/LostArtPainters" target="_blank" rel="noopener noreferrer" aria-label="Find us on Facebook (opens in new tab)">
+    <!-- Inline Facebook "f" logo SVG (flat style, matches FB brand colors) -->
+    <span class="fb-logo" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="100%" height="100%" role="img" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+        <rect width="24" height="24" rx="4" fill="#1877F2"/>
+        <path d="M15.12 8.5h-1.37c-.35 0-.82.18-.82.9v1.05h2.2l-.29 2.21h-1.91V20H10.7v-6.29H8.9v-2.21h1.8V9.65c0-1.98 1.16-3.07 2.86-3.07.83 0 1.55.06 1.69.09v2.83z" fill="#fff"/>
+      </svg>
+    </span>
+
+   
+    <span class="fb-text">
+      <span class="fb-title">Lost Art Painters</span>
+      
+        <span class="fb-text">Join us on Facebook</span>
+
+
+        <span class="fb-followers">910+ followers</span>
+    </span>
+  </a> 
+
+         
+    <div class="corner-text">
+        Business Page
+    </div>
+
+  </div>
+     <p class="flex-container mb0 mt3 ">
                 
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" class="mr1" viewBox="0 -960 960 960" width="24px" fill="white"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
               
@@ -735,14 +3509,17 @@ class="mr1"
                
                 <br></p>
 
-             
-                </div>
-  </div>
+</dd>
+
+
+</dl>
+    
 
 
 
 
 
+</div>
 
 
 
