@@ -52,15 +52,7 @@ limitations under the License.
 
 <style amp custom="">
 
-
-html {
-    font-family: sans-serif;
-    line-height: 1.15;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%}
-body {
-    margin: 0;
-} 
+.amp-carousel-button { display: none; }
 
 #content {
     display: flex;
@@ -162,7 +154,7 @@ article {
 
 
 
-
+/* DL */
 
 .highlight-block dt {
     display: flex;
@@ -209,20 +201,20 @@ article {
     width: 100%}
 .right-align-image amp-img {
     width: 100%}
+
+
+
+/* DL --end */
+
 .artwork-text::after {
     content: "";
     display: block;
     clear: both;
 }
-html {
-    font-family: sans-serif;
-    line-height: 1.15;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%}
 
 
-body,
-amp-body  {
+
+body {
     margin: 0;
     font-family: Montserrat, Sans-serif;
     font-size: 19px;
@@ -343,9 +335,7 @@ button {
 .h2 {
     font-size: 1.75rem;
 }
-.h3 {
-    font-size: 1.25rem;
-}
+
 .h4 {
     font-size: 1rem;
 }
@@ -483,6 +473,9 @@ button {
 }
 .mb4 {
     margin-bottom: 2rem;
+}
+.mt4 {
+  margin-top: 2rem;
 }
 .ml4, .mx4 {
     margin-left: 2rem;
@@ -909,10 +902,10 @@ p {
     line-height: 1.71429;
 }
 .h3, h3 {
-    font-size: 18px;
-    font-weight: 700;
-    text-transform: uppercase;
-    line-height: 35px;
+font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
 }
 .h4, h4 {
     font-size: 1rem;
@@ -970,6 +963,63 @@ _:-ms-lang(x) {
     z-index: 999;
     box-shadow: 0 0 5px 2px rgba(0, 0, 0, .1);
 }
+
+
+.ampstart-headerbar {
+    background-color: #000;
+    color: #fff;
+    z-index: 999;
+    box-shadow: 0 0 5px 2px rgba(0, 0, 0, .1);
+}
+.header-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, .08);
+}
+.header-logo {
+    max-width: 120px;
+    opacity: .95;
+    margin-top: 1rem;
+    margin-left: -1rem;
+}
+.close-btn {
+    font-size: 1.5rem;
+    color: #cfcfcf;
+    cursor: pointer;
+    line-height: 1;
+    padding: .5rem;
+    transition: opacity .2s ease;
+}
+.close-btn:active, .close-btn:hover {
+    opacity: .6;
+}
+
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  font-weight: 600;
+  text-decoration: none;
+  padding: 6px 8px;
+  transition: color 0.2s ease;
+}
+
+.whatsapp-link:hover {
+  color: #1EBE5D;
+}
+
+.whatsapp-link svg {
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.whatsapp-link:hover svg {
+  transform: scale(1.08);
+  filter: drop-shadow(0 4px 8px rgba(37, 211, 102, 0.35));
+}
+
+
 .ampstart-headerbar+:not(amp-sidebar), .ampstart-headerbar+amp-sidebar+* {
     margin-top: 3.5rem;
 }
@@ -1063,69 +1113,89 @@ _:-ms-lang(x) {
       <div class="ampstart-headerbar-title mx-auto">Lost Art Painters</div>
     </header>
 
-    <!-- Start Sidebar -->
-    <amp-sidebar
-      id="header-sidebar"
-      class="ampstart-sidebar px3"
-      layout="nodisplay"
-    >
-      <div class="flex justify-start items-center ampstart-sidebar-header">
-        <div
-          role="button"
-          aria-label="close sidebar"
-          on="tap:header-sidebar.toggle"
-          tabindex="0"
-          class="ampstart-navbar-trigger items-start"
-        >
-          ✕
-        </div>
-      </div>
+<!-- Start Sidebar -->
+<amp-sidebar id="header-sidebar" class="ampstart-sidebar px3  " layout="nodisplay">
+  <div class="ampstart-sidebar-header header-row  ">
+  
+  <amp-img
+    src="./img/logo.svg"
+    width="140"
+    height="80"
+      layout="fixed"
+    alt="Lost Art Painters logo"
+    class="header-logo ">
+  </amp-img>
+
+  <div
+    role="button"
+    aria-label="Close sidebar"
+    on="tap:header-sidebar.toggle"
+    tabindex="0"
+    class="close-btn ">
+    ✕
+  </div>
+
+</div>
+
+<div class="theme2-divider"></div>
+   
+  <nav class="mt4 ampstart-sidebar-nav ampstart-nav">
 
 
-  <nav class="ampstart-sidebar-nav ampstart-nav">
-    <ul class="list-reset m0 p0 ampstart-label theme2-divider mb2">
-          <li class="ampstart-nav-item "><a class="ampstart-nav-link" href="/">Home</a></li>
+
+    <ul class="list-reset m0 p0 ampstart-label mb2">
+           
+          <li class="ampstart-nav-item "><a class="ampstart-nav-link" href="https://www.lost-art-painters.co.uk/">Home</a></li>
              <li class="ampstart-nav-item"><a class="ampstart-nav-link" href="services.amp.html">Our Services</a
             >
           </li>
+
+
           <li class="ampstart-nav-item "><a class="ampstart-nav-link" href="#locations">Locations & Hours</a></li>
           <li class="ampstart-nav-item "><a class="ampstart-nav-link" href="cooperation.amp.html">Cooperation and Interenship</a></li>
     </ul>
   </nav>
 
-  
 <h4 > Have something in mind?</h4>
 
 
 
- <a href="https://wa.me/447495132562" title="click to open whatsapp chat" 
- class="whatsup-button h3 my2" style="        text-decoration: none;
-        
-        padding: 10px;
-        padding-right: 15px;
-        bottom: 30px;
-        right: 30px;
-        color: #fff;
-        background-color:#25D366;
-        border-radius: 25px 30px 5px 25px;
-        z-index: 100;
-        display: flex;
-  align-items: center;
- max-width: 180px;
-  width: 100%;
-    
-         transition: background-color 0.3s ease;
-        box-shadow: 1px 2px 5px 2px rgba(30,30,30,0.3);
-       ">
+<a
+  href="https://wa.me/447495132562"
+  title="Chat on WhatsApp"
+  class="whatsapp-btn"
+>
+  <svg
+    width="42"
+    height="42"
+    viewBox="0 0 36 36"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+  >
+    <defs>
+      <linearGradient id="wa-gradient" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#6EEB83"/>
+        <stop offset="100%" stop-color="#25D366"/>
+      </linearGradient>
+    </defs>
 
+    <path
+      d="M18 2C9.716 2 3 8.268 3 16.5c0 2.89.79 5.56 2.27 7.84L3 34l9.86-2.18A15.1 15.1 0 0 0 18 31c8.284 0 15-6.268 15-14.5S26.284 2 18 2z"
+      fill="url(#wa-gradient)"
+    />
+    <path
+      d="M14.7 11.2c-.2-.5-.4-.5-.7-.5h-.6c-.3 0-.7.1-1 .5-.4.4-1.3 1.3-1.3 3.2s1.3 3.7 1.5 4c.2.2 2.6 4.2 6.4 5.7 3.1 1.2 3.7 1 4.4.9.7-.1 2.2-.9 2.5-1.8.3-.9.3-1.7.2-1.8-.1-.2-.3-.2-.7-.4l-2.6-1.2c-.3-.1-.6-.2-.8.2-.3.4-1 1.2-1.2 1.5-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8l.6-.6c.2-.2.3-.4.4-.6.1-.2.1-.5 0-.7-.1-.2-.8-2-.9-2.7z"
+      fill="#fff"
+    />
+  </svg>
 
-
-
-<svg width="37" height="36" style=" margin-right: 10px;"fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M2.677 34.14l2.303-8.394a16.177 16.177 0 01-2.166-8.087c0-8.923 7.268-16.192 16.191-16.192 4.334 0 8.394 1.69 11.465 4.743a16.109 16.109 0 014.744 11.449c0 8.923-7.269 16.191-16.192 16.191-2.713 0-5.374-.682-7.746-1.979l-8.599 2.27z" fill="url(#paint0_linear_whatsapp_mobile_logo)"/><path fill="url(#pattern0)" d="M.92 0h36v36h-36z"/><path d="M2.097 34.72l2.389-8.684a16.736 16.736 0 01-2.236-8.377C2.233 8.394 9.758.87 19.005.87c4.487 0 8.701 1.74 11.875 4.914a16.673 16.673 0 014.914 11.875c0 9.247-7.525 16.771-16.772 16.771-2.815 0-5.562-.7-8.019-2.047L2.097 34.72zm9.299-5.357l.511.307a13.955 13.955 0 007.098 1.945c7.678 0 13.94-6.261 13.94-13.94 0-3.719-1.45-7.233-4.078-9.86a13.89 13.89 0 00-9.862-4.096c-7.695 0-13.956 6.262-13.956 13.94 0 2.627.733 5.204 2.132 7.422l.324.529-1.416 5.152 5.306-1.399z" fill="url(#paint1_linear_whatsapp_mobile_logo)"/><path fill="url(#pattern1)" d="M8.939 8.531h20.133v18.938H8.939z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M14.825 10.63c-.307-.7-.648-.717-.938-.717-.256-.017-.53-.017-.82-.017-.272 0-.733.102-1.126.529-.392.426-1.467 1.433-1.467 3.497 0 2.065 1.502 4.061 1.706 4.334.205.273 2.9 4.64 7.166 6.33 3.55 1.399 4.266 1.126 5.033 1.04.768-.085 2.474-1.006 2.833-1.996.34-.972.34-1.825.239-1.996-.103-.17-.393-.273-.802-.495-.427-.204-2.474-1.228-2.867-1.365-.392-.136-.665-.204-.938.205-.273.427-1.075 1.365-1.33 1.638-.24.273-.496.307-.905.102-.427-.204-1.775-.648-3.378-2.081-1.246-1.11-2.082-2.491-2.338-2.9-.239-.427-.034-.649.188-.854.188-.187.426-.494.631-.733.205-.24.273-.427.427-.7.136-.273.068-.529-.034-.733-.103-.188-.905-2.253-1.28-3.089z" fill="#fff"/><defs><linearGradient id="paint0_linear_whatsapp_mobile_logo" x1="18.942" y1="34.138" x2="18.942" y2="1.461" gradientUnits="userSpaceOnUse"><stop stop-color="#20B038"/><stop offset="1" stop-color="#60D66A"/></linearGradient><linearGradient id="paint1_linear_whatsapp_mobile_logo" x1="18.942" y1="34.724" x2="18.942" y2=".875" gradientUnits="userSpaceOnUse"><stop stop-color="#F9F9F9"/><stop offset="1" stop-color="#fff"/></linearGradient><pattern id="pattern0_whatsapp_mobile_logo" patternContentUnits="objectBoundingBox" width="1" height="1"><use xlink:href="#image0"/></pattern><pattern id="pattern1_whatsapp_mobile_logo" patternContentUnits="objectBoundingBox" width="1" height="1"><use xlink:href="#image1"/></pattern><image id="image0_whatsapp_mobile_logo" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANMAAADTCAYAAAAbBybZAAAACXBIWXMAAAsSAAALEgHS3X78AAAA"/></defs></svg>
- Chat Now
+  <span>Chat Now</span>
 </a>
-    </amp-sidebar>
-    <!-- End Sidebar -->
+
+
+
+</amp-sidebar>
+<!-- End Sidebar -->
     <!-- End Navbar -->
     <main id="content" role="main">
 
@@ -1147,19 +1217,21 @@ _:-ms-lang(x) {
     autoplay
     delay="4000"
     loop
+      controls="false"
+  hide-controls
 >
      <amp-img
       src="./img/1000008458.jpg"
-      width="450"
-      height="450"
+      width="4"
+      height="3"
       layout="responsive"
       alt="DIY painting tuition environment">
     </amp-img>
 
    <amp-img
       src="./img/1000008459.jpg"
-      width="450"
-      height="450"
+      width="4"
+      height="3"
       layout="responsive"
       alt="DIY painting tuition environment">
     </amp-img>
@@ -1187,25 +1259,17 @@ _:-ms-lang(x) {
 
 
       <article class="px3 py4">
-        <p class="mb4 heading-secondary "> Traditional Narrowboat Painting, Signwriting & Canal Art</p>
-        <h1 class="h1 my4">Our Services</h1>
+        <p class="mb4 heading-secondary left-align"> Traditional Narrowboat Painting, Signwriting & Canal Art</p>
+        <h1 class="h1 my4 left-align">Our Services</h1>
 
         
         
        
 
-        <p class="mb1">At Lost Art Painters, we specialise in traditional narrowboat painting, signwriting, and decorative canal artwork.
+     
+      
 
-
-</p>
-
-       <p class="mb1">Based at the historic Knighton Wharf on the Shropshire Union Canal, we combine heritage techniques with artistic skill to create beautifully hand-painted narrowboats that stand the test of time.
-
-
-
-</p>
-
-       <p class="mb1 theme2-divider"> Whether you’re restoring a historic vessel or giving your floating home a fresh new look, we offer a range of services designed to bring colour, character, and craftsmanship back to your boat.
+       <p class="mb1 theme2-divider left-align"> Whether you’re restoring a historic vessel or giving your floating home a fresh new look, we offer a range of services designed to bring colour, character, and craftsmanship back to your boat.
 
 
 
@@ -1214,7 +1278,7 @@ _:-ms-lang(x) {
 
         <dl class="clearfix">
           
-          <dt class="col col-10 mb1 h3 aux-head-before white">	Full & Partial Repaints</dt>
+          <dt class="col col-10 mb1 h3 aux-head-before white my2">	Full & Partial Repaints</dt>
          
           <dd class="col md-col-6 sm-col-12 m0 mb4 ">
             <p class="mb1">A complete narrowboat repaint can completely transform your vessel, restoring it to a pristine finish while protecting it from the elements.
@@ -1250,7 +1314,7 @@ alt="Happy Hour Monday through Friday 5 PM" layout="responsive"></amp-img>
 
 
 
-          <dt class="col col-10 h3 mb1 h3 mb1 aux-head-before white">Signwriting & Lettering</dt>
+          <dt class="col col-10 h3 my2 h3 mb1 aux-head-before white">Signwriting & Lettering</dt>
 
 
           
@@ -1292,7 +1356,7 @@ alt="Happy Hour Monday through Friday 5 PM" layout="responsive"></amp-img>
 
 
 
-   <dt class="col col-10 h3 mb1  mb1 aux-head-before white">Coach Lines, Scrollwork & Detailing</dt>
+   <dt class="col col-10 h3 my2 aux-head-before white">Coach Lines, Scrollwork & Detailing</dt>
 
            <dd class=" md-col-6 sm-col-12  mb1 self-center left-align-image">
 
@@ -1321,7 +1385,7 @@ alt="Happy Hour Monday through Friday 5 PM" layout="responsive"></amp-img>
           
           
 
-          <dt class="col col-10 h3 mb1 mb1 aux-head-before white" >
+          <dt class="col col-10 h3 my2 aux-head-before white" >
         Restoration & Heritage Work
           </dt>        
 
@@ -1353,7 +1417,7 @@ alt="Happy Hour Monday through Friday 5 PM" layout="responsive"></amp-img>
 
        
 
- <dt class="col col-10 h3 mb1 aux-head-before white">
+ <dt class="col col-10 h3 my2 aux-head-before white">
         Bespoke Artwork & Commissions
 
           </dt>        
@@ -1393,7 +1457,7 @@ alt="Happy Hour Monday through Friday 5 PM" layout="responsive"></amp-img>
 
            <dl class="clearfix highlight-block" > 
    
-          <dt class="col col-10 h3 mb1 aux-head-before white mb1">DIY Painting Under Tuition
+          <dt class="col col-10 h3 mb3 aux-head-before white mb1">DIY Painting Under Tuition
 
 
   <svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="44px" fill="#cd2c24"><path d="M120-160q-33 0-56.5-23.5T40-240v-480q0-33 23.5-56.5T120-800h720q33 0 56.5 23.5T920-720v480q0 33-23.5 56.5T840-160H120Zm0-80h720v-480H120v480Zm20-120h50v-140l102 140h48v-240h-50v140L190-600h-50v240Zm240 0h160v-50H440v-44h100v-50H440v-46h100v-50H380v240Zm240 0h160q17 0 28.5-11.5T820-400v-200h-50v180h-44v-140h-50v140h-46v-180h-50v200q0 17 11.5 28.5T620-360ZM120-240v-480 480Z"/></svg>
@@ -1420,7 +1484,7 @@ alt="Happy Hour Monday through Friday 5 PM" layout="responsive"></amp-img>
 </p>
 
 
-<amp-img src="./img/illustrations/PAINT 1.jpg" width="450" height="250" class="mb2  " 
+<amp-img src="./img/illustrations/paint5.jpg" width="450" height="250" class="mb2  " 
 
 
 alt="Happy Hour Monday through Friday 5 PM" layout="responsive"></amp-img>
