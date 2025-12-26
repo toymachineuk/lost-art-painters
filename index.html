@@ -1304,23 +1304,34 @@ _:-ms-lang(x) {
 .close-btn:active, .close-btn:hover {
     opacity: .6;
 }
-.whatsup-button {
-    font-family: Montserrat, Sans-serif;
-    padding: 12px 28px 11px 14px;
-    text-decoration: none;
-    white-space: nowrap;
-    word-wrap: normal;
-    font-weight: 400;
-    font-size: .937rem;
-    line-height: 1;
-    display: flex;
-    align-items: center;
-    max-width: 180px;
-    width: 100%;
-    color: #fff;
-    background-color: #25d366;
-    border-radius: 25px 30px 5px 25px;
+
+.whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  font-weight: 600;
+  text-decoration: none;
+  padding: 6px 8px;
+  transition: color 0.2s ease;
 }
+
+.whatsapp-link:hover {
+  color: #1EBE5D;
+}
+
+.whatsapp-link svg {
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+.whatsapp-link:hover svg {
+  transform: scale(1.08);
+  filter: drop-shadow(0 4px 8px rgba(37, 211, 102, 0.35));
+}
+
+
+
+
 .ampstart-headerbar+:not(amp-sidebar), .ampstart-headerbar+amp-sidebar+* {
     margin-top: 3.5rem;
 }
@@ -1516,14 +1527,36 @@ dd.theme2-divider::after {
 
 
 
- <a href="https://wa.me/447495132562" title="click to open whatsapp chat" 
- class="whatsup-button  h3 my2" >
+<a
+  href="https://wa.me/447495132562"
+  title="Chat on WhatsApp"
+  class="whatsapp-btn"
+>
+  <svg
+    width="42"
+    height="42"
+    viewBox="0 0 36 36"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+  >
+    <defs>
+      <linearGradient id="wa-gradient" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#6EEB83"/>
+        <stop offset="100%" stop-color="#25D366"/>
+      </linearGradient>
+    </defs>
 
+    <path
+      d="M18 2C9.716 2 3 8.268 3 16.5c0 2.89.79 5.56 2.27 7.84L3 34l9.86-2.18A15.1 15.1 0 0 0 18 31c8.284 0 15-6.268 15-14.5S26.284 2 18 2z"
+      fill="url(#wa-gradient)"
+    />
+    <path
+      d="M14.7 11.2c-.2-.5-.4-.5-.7-.5h-.6c-.3 0-.7.1-1 .5-.4.4-1.3 1.3-1.3 3.2s1.3 3.7 1.5 4c.2.2 2.6 4.2 6.4 5.7 3.1 1.2 3.7 1 4.4.9.7-.1 2.2-.9 2.5-1.8.3-.9.3-1.7.2-1.8-.1-.2-.3-.2-.7-.4l-2.6-1.2c-.3-.1-.6-.2-.8.2-.3.4-1 1.2-1.2 1.5-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8l.6-.6c.2-.2.3-.4.4-.6.1-.2.1-.5 0-.7-.1-.2-.8-2-.9-2.7z"
+      fill="#fff"
+    />
+  </svg>
 
-
-
-<svg width="37" height="36" style=" margin-right: 10px;"fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M2.677 34.14l2.303-8.394a16.177 16.177 0 01-2.166-8.087c0-8.923 7.268-16.192 16.191-16.192 4.334 0 8.394 1.69 11.465 4.743a16.109 16.109 0 014.744 11.449c0 8.923-7.269 16.191-16.192 16.191-2.713 0-5.374-.682-7.746-1.979l-8.599 2.27z" fill="url(#paint0_linear_whatsapp_mobile_logo)"/><path fill="url(#pattern0)" d="M.92 0h36v36h-36z"/><path d="M2.097 34.72l2.389-8.684a16.736 16.736 0 01-2.236-8.377C2.233 8.394 9.758.87 19.005.87c4.487 0 8.701 1.74 11.875 4.914a16.673 16.673 0 014.914 11.875c0 9.247-7.525 16.771-16.772 16.771-2.815 0-5.562-.7-8.019-2.047L2.097 34.72zm9.299-5.357l.511.307a13.955 13.955 0 007.098 1.945c7.678 0 13.94-6.261 13.94-13.94 0-3.719-1.45-7.233-4.078-9.86a13.89 13.89 0 00-9.862-4.096c-7.695 0-13.956 6.262-13.956 13.94 0 2.627.733 5.204 2.132 7.422l.324.529-1.416 5.152 5.306-1.399z" fill="url(#paint1_linear_whatsapp_mobile_logo)"/><path fill="url(#pattern1)" d="M8.939 8.531h20.133v18.938H8.939z"/><path fill-rule="evenodd" clip-rule="evenodd" d="M14.825 10.63c-.307-.7-.648-.717-.938-.717-.256-.017-.53-.017-.82-.017-.272 0-.733.102-1.126.529-.392.426-1.467 1.433-1.467 3.497 0 2.065 1.502 4.061 1.706 4.334.205.273 2.9 4.64 7.166 6.33 3.55 1.399 4.266 1.126 5.033 1.04.768-.085 2.474-1.006 2.833-1.996.34-.972.34-1.825.239-1.996-.103-.17-.393-.273-.802-.495-.427-.204-2.474-1.228-2.867-1.365-.392-.136-.665-.204-.938.205-.273.427-1.075 1.365-1.33 1.638-.24.273-.496.307-.905.102-.427-.204-1.775-.648-3.378-2.081-1.246-1.11-2.082-2.491-2.338-2.9-.239-.427-.034-.649.188-.854.188-.187.426-.494.631-.733.205-.24.273-.427.427-.7.136-.273.068-.529-.034-.733-.103-.188-.905-2.253-1.28-3.089z" fill="#fff"/><defs><linearGradient id="paint0_linear_whatsapp_mobile_logo" x1="18.942" y1="34.138" x2="18.942" y2="1.461" gradientUnits="userSpaceOnUse"><stop stop-color="#20B038"/><stop offset="1" stop-color="#60D66A"/></linearGradient><linearGradient id="paint1_linear_whatsapp_mobile_logo" x1="18.942" y1="34.724" x2="18.942" y2=".875" gradientUnits="userSpaceOnUse"><stop stop-color="#F9F9F9"/><stop offset="1" stop-color="#fff"/></linearGradient><pattern id="pattern0_whatsapp_mobile_logo" patternContentUnits="objectBoundingBox" width="1" height="1"><use xlink:href="#image0"/></pattern><pattern id="pattern1_whatsapp_mobile_logo" patternContentUnits="objectBoundingBox" width="1" height="1"><use xlink:href="#image1"/></pattern><image id="image0_whatsapp_mobile_logo" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANMAAADTCAYAAAAbBybZAAAACXBIWXMAAAsSAAALEgHS3X78AAAA"/></defs></svg>
- Chat Now
+  <span>Chat Now</span>
 </a>
 
 
@@ -2027,7 +2060,7 @@ creating hand-painted narrowboats that blend heritage, design, and individuality
             <h2 id="gallery" class="my4 h2 theme2-anchored theme2-divider ">Gallery</h2>
 
             
-<p class="mb4  heading-secondary  white">
+<p class="mb4  heading-secondary  white ">
   
          Browse our gallery to see examples of our hand-painted narrowboats, decorative panels, and signwriting work.        
   </p>
@@ -2143,7 +2176,7 @@ creating hand-painted narrowboats that blend heritage, design, and individuality
 
 
 
-    <p class="mb4 mt4 ">
+    <p class="mb4 mt4 left-align">
               
       
 Each piece is a celebration of traditional canal art and the individuality of every boat owner we work with.
@@ -2155,16 +2188,11 @@ Each piece is a celebration of traditional canal art and the individuality of ev
   <h2 id="locations" class="my4 theme2-anchored theme2-divider   h2">Locations &amp; Contacts</h2>
  <dl class="clearfix">
           
- <dt>  <p class="mb4 flex-container left-align" > 
-             <svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px" fill="#D89E38"
-             class="mr1"
-             
-             
-             ><path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"/></svg>
+ <dt>  
+            
+              <p class=" mb4  heading-secondary  white" >  Based at Knighton Wharf on the Shropshire Union Canal  </p>
                 
-              <span class="mb0 h4 mt1 heading-secondary" >  Based at Knighton Wharf on the Shropshire Union Canal  </span>
-                
-</p></dt>
+</dt>
          
            <dd class=" md-col-6 sm-col-12  mb1 self-center right-align-image">
     
@@ -2173,48 +2201,16 @@ Each piece is a celebration of traditional canal art and the individuality of ev
 
            
 
-   <a href="https://www.google.com/maps?q=52.83778,-2.37528" target="_blank" rel="noopener noreferrer" class="mb0 mb0 h5 mt1 my2"  style="display: flex;
+   <a href="https://www.google.com/maps?q=52.83778,-2.37528" target="_blank" rel="noopener noreferrer" 
+   class="mb0 mb0 h5 mt1 my2 no-underline"  style="display: flex;
   align-items: center;">
 
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 5644.173 5644.173" width="30px" height="30px "
-style=" 
-    width: 34px;
-    height: 34px;"
-class="mr1"
->
-	<defs>
-		<path id="a" d="M4300.322 0c-439.439 0-829.828 210.985-1075.081 537.54H403.155C181.42 537.54 0 718.96 0 940.695v4300.322c0 221.736 181.42 403.155 403.155 403.155h4300.322c221.735 0 403.155-181.419 403.155-403.155V2609.086c282.208-412.562 537.54-784.137 537.54-1265.235C5644.173 601.373 5042.8 0 4300.322 0z"/>
-		<path id="m" fill="#DB4437" d="M4300.322 0c-742.478 0-1343.851 601.373-1343.851 1343.851 0 1012.591 1130.85 1540.053 1264.563 2985.364 4.031 40.315 38.3 71.896 79.287 71.896s75.927-31.581 79.287-71.896c133.713-1445.312 1264.563-1972.773 1264.563-2985.364C5644.173 601.373 5042.8 0 4300.322 0z"/>
-		<clipPath id="c">
-			<use overflow="visible" style="transform:scaleX(1.6) translateX(-31.5%)" xlink:href="#a"/>
-		</clipPath>
-		<filter id="b" width="280%" height="280%" x="-70%" y="-70%">
-			<feGaussianBlur in="SourceAlpha" stdDeviation="600"/>
-			<feComponentTransfer>
-				<feFuncA exponent=".7" type="gamma"/>
-			</feComponentTransfer>
-			<feOffset dx="300" dy="100"/>
-		</filter>
-	</defs>
-	<path fill="#0F9D58" d="M2553.316 3090.856l2268.569-2535.46c-37.479-11.6-77.248-17.856-118.408-17.856H403.155C181.42 537.54 0 718.96 0 940.695v4300.322c0 41.16 6.257 80.929 17.856 118.408l2535.46-2268.569z"/>
-	<path fill="#4285F4" d="M2553.316 3090.856L284.747 5626.316c37.479 11.6 77.248 17.856 118.408 17.856h4300.322c41.16 0 80.929-6.256 118.408-17.856l-2268.569-2535.46z"/>
-	<path fill="#D2D2D2" d="M2553.316 3090.856l2535.46 2268.569c11.6-37.479 17.856-77.248 17.856-118.408V940.695c0-41.16-6.257-80.929-17.856-118.408l-2535.46 2268.569z"/>
-	<path fill="#F1F1F1" d="M5106.633 5241.018L2687.701 2822.086l-470.348 403.155 2418.931 2418.931h67.192c221.737.001 403.157-181.419 403.157-403.154z"/>
-	<path fill="#FFDE48" d="M4703.478 537.54L0 5241.018c0 221.736 181.42 403.155 403.155 403.155h67.193l4636.285-4636.285v-67.193c0-221.735-181.42-403.155-403.155-403.155z"/>
-	<path fill="#FFF" fill-opacity=".2" d="M4703.478 537.54H403.155C181.42 537.54 0 718.96 0 940.695v33.596c0-221.735 181.42-403.155 403.155-403.155h4300.322c221.735 0 403.155 181.42 403.155 403.155v-33.596c.001-221.735-181.419-403.155-403.154-403.155z"/>
-	<path fill="#263238" fill-opacity=".1" d="M4703.478 5610.577H403.155C181.42 5610.577 0 5429.157 0 5207.421v33.596c0 221.736 181.42 403.155 403.155 403.155h4300.322c221.735 0 403.155-181.419 403.155-403.155v-33.596c.001 221.736-181.419 403.156-403.154 403.156z"/>
-	<path fill="#EEE" d="M1142.273 1545.428v286.24h397.78c-31.581 169.997-180.748 293.631-397.78 293.631-241.221 0-437.423-204.265-437.423-444.814s196.202-444.814 437.423-444.814c108.852 0 205.609 37.628 282.881 110.196l211.657-211.656c-128.338-120.275-294.975-193.515-494.537-193.515-408.531 0-739.118 330.587-739.118 739.118s330.587 739.118 739.118 739.118c426.672 0 709.553-300.351 709.553-722.32 0-52.41-4.703-102.805-13.438-151.183h-696.116z"/>
-	<use clip-path="url(#c)" filter="url(#b)" opacity=".25" style="transform:scaleX(.625) translateX(50.4%)" xlink:href="#m"/>
-	<use xlink:href="#m"/>
-	<circle cx="4300.322" cy="1343.851" r="470.348" fill="#7B231E"/>
-	<path fill="#FFF" fill-opacity=".2" d="M4300.322 33.596c735.758 0 1333.1 591.294 1343.179 1324.365 0-4.703.672-9.407.672-14.11C5644.173 601.373 5042.8 0 4300.322 0s-1343.85 601.373-1343.85 1343.851c0 4.703.672 9.407.672 14.11 10.078-733.07 607.42-1324.365 1343.178-1324.365z"/>
-	<path fill="#3E2723" fill-opacity=".2" d="M4379.609 4295.619c-3.36 40.315-38.3 71.896-79.287 71.896s-75.927-31.581-79.287-71.896C4088.666 2857.027 2967.894 2327.55 2957.144 1324.365c0 6.719-.672 12.767-.672 19.486 0 1012.591 1130.85 1540.053 1264.564 2985.364 4.031 40.315 38.3 71.896 79.287 71.896s75.927-31.581 79.287-71.896c133.712-1445.312 1264.563-1972.773 1264.563-2985.364 0-6.719-.672-12.767-.672-19.486-10.751 1003.184-1130.851 1533.333-1263.892 2971.254z"/>
-	<radialGradient id="r" cx="140.0966" cy="5533.9414" r="6883.6064" gradientTransform="matrix(1 0 0 -1 0 6182.7524)" gradientUnits="userSpaceOnUse">
-		<stop offset="0" stop-color="#fff" stop-opacity=".1"/>
-		<stop offset="1" stop-color="#fff" stop-opacity="0"/>
-	</radialGradient>
-	<path fill="url(#r)" d="M4300.322 0c-439.439 0-829.828 210.985-1075.081 537.54H403.155C181.42 537.54 0 718.96 0 940.695v4300.322c0 221.736 181.42 403.155 403.155 403.155h4300.322c221.735 0 403.155-181.419 403.155-403.155V2609.086c282.208-412.562 537.54-784.137 537.54-1265.235C5644.173 601.373 5042.8 0 4300.322 0z"/>
-</svg>
+ <svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px" fill="#D89E38"
+             class="mr1"
+             
+             
+             ><path d="M480-480q33 0 56.5-23.5T560-560q0-33-23.5-56.5T480-640q-33 0-56.5 23.5T400-560q0 33 23.5 56.5T480-480Zm0 294q122-112 181-203.5T720-552q0-109-69.5-178.5T480-800q-101 0-170.5 69.5T240-552q0 71 59 162.5T480-186Zm0 106Q319-217 239.5-334.5T160-552q0-150 96.5-239T480-880q127 0 223.5 89T800-552q0 100-79.5 217.5T480-80Zm0-480Z"/></svg>
+                
   <span class="h5 left-align">Open Knighton Wharf on  <br>
     Google Maps 
     <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="24px" fill="#ff5d20"><path d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"/></svg>
@@ -2225,7 +2221,7 @@ class="mr1"
 
               <strong class="flex-container mb1">
                 
-                <svg xmlns="http://www.w3.org/2000/svg" class="mr1" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"><path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"/></svg> 
+                <svg xmlns="http://www.w3.org/2000/svg" class="mr1" height="24px" viewBox="0 -960 960 960" width="24px" fill="#aaa"><path d="M798-120q-125 0-247-54.5T329-329Q229-429 174.5-551T120-798q0-18 12-30t30-12h162q14 0 25 9.5t13 22.5l26 140q2 16-1 27t-11 19l-97 98q20 37 47.5 71.5T387-386q31 31 65 57.5t72 48.5l94-94q9-9 23.5-13.5T670-390l138 28q14 4 23 14.5t9 23.5v162q0 18-12 30t-30 12ZM241-600l66-66-17-94h-89q5 41 14 81t26 79Zm358 358q39 17 79.5 27t81.5 13v-88l-94-19-67 67ZM241-600Zm358 358Z"/></svg> 
             
             
             <a class="no-underline" href="tel:447495132562">  +44&nbsp749&nbsp513&nbsp2562</a>
@@ -2239,7 +2235,8 @@ class="mr1"
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                 style=" 
     width: 34px;
-    height: 34px;" class="mr1" x="0px" y="0px" width="293.5px" height="293.5px" viewBox="0 0 293.5 293.5" enable-background="new 0 0 293.5 293.5" xml:space="preserve">
+    height: 34px;" class="mr1" x="0px" y="0px" width="293.5px" height="293.5px" viewBox="0 0 293.5 293.5" 
+    enable-background="new 0 0 293.5 293.5" xml:space="preserve">
 <g id="background_1_" enable-background="new    ">
 </g>
 <g id="WhatsApp_Logo_Icon_1_">
@@ -2257,7 +2254,7 @@ class="mr1"
 </svg>
 <span class="h5 left-align">  
             Send us a text message  on <br> WhatsApp
-            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="24px" fill="white"><path d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="24px" fill="#ff5d20"><path d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"/></svg>
  </span>
             </a>
 
@@ -2309,7 +2306,7 @@ class="mr1"
   </div>
      <p class="flex-container mb0 mt3 ">
                 
-                <svg xmlns="http://www.w3.org/2000/svg" height="24px" class="mr1" viewBox="0 -960 960 960" width="24px" fill="white"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" height="24px" class="mr1" viewBox="0 -960 960 960" width="24px" fill="#aaa"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
               
                
                <a class="no-underline" href="mailto:lostartboatpainters@gmail.com">lostartboatpainters@gmail.com</a>
