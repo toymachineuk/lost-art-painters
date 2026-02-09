@@ -1,3 +1,4 @@
+
 <!doctype html>
 
 
@@ -33,7 +34,8 @@
 
   <style amp-boilerplate="">body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate="">body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
 
-
+<script async custom-element="amp-animation"
+        src="https://cdn.ampproject.org/v0/amp-animation-0.1.js"></script>
 <script custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js" async=""></script>
 <script custom-element="amp-image-lightbox" src="https://cdn.ampproject.org/v0/amp-image-lightbox-0.1.js" async=""></script>
 <script custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js" async=""></script>
@@ -46,23 +48,198 @@
 
 
 <style amp-custom="">
+/* Testimonials */
+    
+.ticker {
+  overflow: hidden;
+}
+
+.ticker-track {
+  display: flex;
+  gap: 30px;
+  width: max-content; /* IMPORTANT */
+
+ 
+}
+
+.ticker.reverse .ticker-track {
+  animation-direction: reverse;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+
+
+
+
+
+.ticker:nth-of-type(1) .ticker-track {
+  animation: scroll 180s linear infinite;
+}
+
+.ticker:nth-of-type(2) .ticker-track {
+  animation: scroll 260s linear infinite reverse;
+}
+
+.ticker:nth-of-type(3) .ticker-track {
+  animation: scroll 210s linear infinite;
+}
+
+
+
+
+
+
+.testimonials{
+   max-width: 1200px;
+  margin: 0 auto;
+
+
+  display: grid;
+  gap: 30px; 
+  margin-left: calc(-1.5rem);
+  margin-right: calc(-1.5rem);
+  
+}
+
+
+
+
+
+.testimonial-card {
+  width: 420px;
+  flex-shrink: 0;
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 20px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+/* Image */
+.testimonial-img{
+  flex-shrink:0;
+
+  overflow:hidden;
+    flex-shrink: 0;
+
+
+}
+
+.testimonial-img amp-img{
+      border-radius: 8px;
+
+  aspect-ratio: auto 120 / 120;
+
+}
+
+/* Content */
+.testimonial-name{
+
+
+font-size: 16px;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #1d1d1d;
+  font-family: Montserrat, Sans-serif;
+ 
+}
+
+.testimonial-role{
+
+  padding: 0;
+
+  font-family: Montserrat, Sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  color: #888;
+  margin: 2px 0 6px; 
+}
+
+.testimonial-text{
+
+
+  margin-top: 5px;
+ height: 79px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 13px;
+  line-height: 1.5;
+color: #1d1d1d;
+ 
+}
+
+/* Responsive */
+@media (max-width:1024px){
+  .testimonials-grid{
+    grid-template-columns:repeat(2, 1fr);
+  }
+}
+
+@media (max-width:640px){
+  .testimonials{
+    padding:60px 20px;
+  }
+
+  .testimonials-grid{
+    grid-template-columns:1fr;
+  }
+
+  .testimonial-card{
+    flex-direction:column;
+    text-align:center;
+    align-items:center;
+  }
+}
+
+/* Testimonials-end */
+    
 
 /*** Note-Banner ***/
 
 .note-banner {
   max-width: 600px;
   background: #1a1d22; /* lighter black */
-  padding: 20px;
+
   border-radius: 16px;
 }
 
 .note-banner-title {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 600;
   margin-bottom: 14px;
   line-height: 1.2;
 }
 
+.note-banner-subtitle {
+  font-size: 15px;
+  line-height: 1.6;
+  color: #cfcfcf;
+    font-weight: 600;
+      margin-top: 24px;
+  margin-bottom: 10px;
+    
+}
+
+.service-title {
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+    line-height: 1.3;
+}
 
 
 .meta {
@@ -71,21 +248,15 @@
   margin-bottom: 16px;
 }
 
-.google {
-  font-weight: 500;
-}
+
 
 .answer-card {
   background: #20232a;
   border-radius: 14px;
-  padding: 16px;
+
 }
 
-.answer-card p {
-  font-size: 15px;
-  line-height: 1.5;
-  margin: 0 0 12px 0;
-}
+
 
 .answer-card strong {
 font-weight: 800;
@@ -217,22 +388,15 @@ display: inline-block;
 
 
 
-
-
-#content {
-    display: flex;
-    flex-direction: column;
-}
-.side-banner {
-    order: 1;
-}
 article {
     text-align: left;
     padding: 0 35px 0 35px;
+    order:1;
+      min-width: 0;
 }
 @media (min-width:40.06rem) {
     article {
-    order: 2;
+   
     margin-top: 40px;
   
 }
@@ -273,30 +437,80 @@ article {
   }
 }
 
-@media (max-width:1023px) {
-    .side-banner {
-    order: 2;
-    margin-top: 0;
+
+main {
+   max-width: 100%;
+  margin: 0 auto;
+
+  
+
 }
-article {
-    order: 1;
-}
-}main {
+
+  .layout {
+display: flex;
+ flex-direction: column;
+
+  }
+
+@media (min-width: 1024px) {
+
+  .layout {
+   
+    justify-content: center;
+    gap: 40px;
     max-width: 1280px;
-    position: relative;
+    margin: 0 auto;
+    align-items: flex-start;
+      padding-top: 40px;
+      flex-direction: unset;
+  }
+
 }
+
+
+
+
+.right-banner {
+  flex: 0 0 300px;
+   position: sticky;
+}
+
+.side-banner {
+       order:2;
+}
+
 @media (min-width:1024px) {
-    main>article {
-    max-width: 720px;
+    article {
+          flex: 0 0 720px;
+   
     margin: 0 auto;
 }
-.side-banner {
-    width: 320px;
-    position: absolute;
-    top: 0;
-    right: 0;
+
+aside p{
+  font-size: 14px;
+  line-height: 1.6;
 }
-}.banner-inner {
+.side-banner {
+    flex: 0 0 300px;
+   
+    top: 120px;
+    align-self: flex-start;
+      will-change: transform;
+      order:1;
+   
+   
+     
+}
+
+}
+
+
+
+
+
+
+
+.banner-inner {
     padding: 1rem;
 }
 @media (min-width:40.06rem) {
@@ -304,18 +518,20 @@ article {
     padding: 0 0 0 2rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+  
     box-sizing: border-box;
 }
 }.promo-card {
     padding: 1rem;
-    border: 4px solid #d89e38;
+    border: 3px solid #d89e38;
+    border-radius:14px;
+    background: #20232a;
 }
 .promo-card__section p {
     font-size: 14px;
     font-weight: 500;
     line-height: 21px;
-    color: #d89e38;
+    color: #b9b9b9;
 }
 
 .aux-head-before {
@@ -331,14 +547,8 @@ article {
     padding-right: 1.5rem;
 }
 }@media (min-width:1024px) {
-    .side-banner {
-    width: 320px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-top: 5rem;
-}
-.banner-inner .col, .banner-inner img {
+   
+ .banner-inner img {
     max-width: 100%;
     text-align: center;
 }
@@ -406,7 +616,19 @@ article {
 @media (max-width:40.06rem) {
     .video-wrapper amp-video {
     width: 100%}
-}.hero-slide {
+}
+
+
+.hero-carousel{
+      position: relative;
+  z-index: 1;
+  max-width: 1400px;
+  margin: auto;
+}
+
+
+
+.hero-slide {
     position: relative;
     color: #fff;
     text-align: center;
@@ -428,7 +650,7 @@ article {
 .corner-text {
     position: absolute;
     top: 90%;
-    right: 70px;
+    right: 10px;
     transform: translatey(-50%);
     white-space: nowrap;
     
@@ -444,7 +666,7 @@ article {
   gap: 14px;
   padding: 12px 18px;
   border-radius: 8px;
-  width: 80%;
+  width: 100%;
   box-sizing: border-box;
 }
 @media (max-width:40.06rem) {
@@ -1249,12 +1471,15 @@ button {
     box-sizing: border-box;
 }
 p {
+    font-size: 15px;
+  line-height: 1.7;
+  color: #d6d6d6; /* slightly brighter */
     padding: 0;
-    color: #aaa;
+  
     font-family: Montserrat, Sans-serif;
-    font-size: 16px;
+
     font-weight: 300;
-    line-height: 26px;
+  
     margin: 0 0 1em 0;
 }
 dt {
@@ -1328,7 +1553,7 @@ body {
 }
 @media (min-width:40.06rem) {
     .h3, h3 {
-    line-height: 35px;
+    line-height: 1.2;
 }
 }.h4, h4 {
     color: rgba(255, 255, 255, .7);
@@ -1803,7 +2028,7 @@ _:-ms-lang(x) {
 
 
 <!-- HERO CAROUSEL (Desktop: ≥768px) -->
-<amp-carousel
+<amp-carousel class="hero-carousel"
     width="2880"
     height="1226"
     layout="responsive"
@@ -2007,9 +2232,12 @@ _:-ms-lang(x) {
 
   <main id="content" role="main" >
 
- 
-   <!-- Sticky side banner -->
-  <aside class="side-banner " aria-label="Promotional banner">
+   <!-- FLEX WRAPPER -->
+  <div class="layout">
+
+
+       <!-- Sticky side banner left -->
+  <aside class="side-banner left-banner " aria-label="Promotional banner">
     <div class="banner-inner">
 
 
@@ -2017,53 +2245,7 @@ _:-ms-lang(x) {
 
 
 
-<div class="promo-card ">
-    
 
-  <div class="mb1 aux-head-before white mb1 promo-card__header">
-
-
-      
-
-     <h3 class="h3 aux-head-before white">
-        DIY Dock Hire
-     </h3>
-
-    <svg width="83" height="40" viewBox="0 0 65 30"  fill="#FF0000" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_418_11367)">
-<path d="M41.9028 10.5758C40.4188 11.8061 39.2179 12.9442 37.8651 13.8916C36.7676 14.6614 35.5321 15.2666 34.2898 15.8192C33.9171 15.9837 33.3304 15.7206 32.6126 15.6219C33.5927 13.8192 34.3933 12.2798 35.2561 10.7732C36.5122 8.56924 37.8167 6.39161 39.0936 4.20082C39.1212 4.14819 39.1281 4.06924 39.1765 4.04293C39.494 3.85214 39.9288 3.43767 40.1289 3.52319C40.7156 3.77319 40.5776 4.26003 40.2739 4.72056C39.7079 5.57582 39.1488 6.44424 38.6243 7.31924C37.4716 9.22714 36.3328 11.1482 35.2078 13.0692C35.0973 13.26 35.0973 13.5035 34.9938 13.9574C37.4578 13.2074 38.8935 11.4311 40.6742 10.1285C42.4757 8.80609 43.5731 6.95082 44.8224 5.06924C45.8025 5.79293 45.7679 6.41135 45.2503 7.16135C43.9527 9.04951 43.0623 11.1153 42.1927 13.6679C43.1244 13.2206 43.7525 13.0035 44.2771 12.6482C46.0302 11.4837 47.5901 10.1548 48.7289 8.37188C49.6331 6.9574 50.7927 5.69424 51.8625 4.37845C51.9522 4.26661 52.2007 4.26661 52.4768 4.18767C52.9392 4.83898 53.0635 5.39819 52.4561 6.06924C50.1094 8.69424 48.1078 11.5956 45.2572 13.8192C44.3875 14.4969 43.4765 14.9113 42.4204 15.089C41.1504 15.2995 40.5914 14.7929 40.8399 13.6087C40.9848 12.9179 41.3299 12.26 41.5784 11.589C41.675 11.3258 41.744 11.0627 41.9028 10.5627V10.5758Z" fill="#FF0000"/>
-<path d="M24.9166 16.2638C22.8667 16.7178 20.9341 17.152 19.0015 17.5796C18.6978 17.6454 18.3941 17.7573 18.0904 17.7638C17.2 17.7836 16.8342 17.2178 17.2829 16.4744C17.559 16.0138 17.9938 15.6454 18.2906 15.1915C18.9118 14.2309 19.4846 13.2441 20.1265 12.1981C19.8574 12.0796 19.6089 12.0138 19.4294 11.8757C19.1188 11.6388 18.8427 11.3494 18.5529 11.0862C18.9256 10.7309 19.2638 10.3165 19.6917 10.0402C19.9057 9.902 20.2991 10.0204 20.6097 10.027C21.3206 10.0467 21.7692 9.73753 22.066 9.11253C22.5009 8.19147 22.984 7.29016 23.2946 6.67832C23.1151 5.73095 22.77 5.027 22.9219 4.44147C23.1496 3.54674 24.0745 4.15858 24.7026 4.09279C25.2548 3.13226 25.7793 2.20463 26.3177 1.25726C26.9067 1.74411 26.8446 2.70244 26.1314 4.13226C27.8983 4.28358 29.5962 4.40858 31.2872 4.57963C31.8325 4.63226 32.3985 4.75068 32.9023 4.94805C33.5028 5.18489 33.6822 5.65858 33.3095 6.43489C32.0119 6.23095 30.6798 5.98095 29.3408 5.82963C28.0432 5.68489 26.7318 5.63884 25.3445 5.54016C24.6198 6.84937 23.9365 8.09279 23.198 9.43489C24.7371 9.43489 26.0899 9.33621 27.422 9.46121C28.6713 9.57963 30.2174 9.07305 31.0525 10.5599C30.5694 11.2638 29.9827 11.1257 29.3477 11.0994C27.3599 11.027 25.3652 11.0336 23.3705 11.0402C22.4939 11.0402 21.8797 11.3823 21.4931 12.2309C20.9548 13.4217 20.2577 14.5467 19.4915 15.9481C20.9686 15.6388 22.1765 15.4152 23.3705 15.1323C24.2609 14.9217 24.8545 15.0533 24.9097 16.2507L24.9166 16.2638Z" fill="#FF0000"/>
-<path d="M11.3476 12.3954C13.4113 9.79017 15.4751 7.18491 17.5388 4.57965C17.8011 4.2507 17.9874 3.82307 18.3325 3.60596C18.581 3.44807 19.1815 3.40859 19.3264 3.57307C19.5542 3.82307 19.6301 4.29675 19.5818 4.65201C19.5542 4.89544 19.2229 5.1257 18.9882 5.30991C16.3033 7.42175 14.4881 10.2178 12.4589 12.8428C11.6789 13.8494 10.8783 14.8362 10.1052 15.8494C9.80845 16.2441 9.58758 16.7244 8.94569 16.4546C8.24167 16.1586 8.37971 15.6191 8.55917 15.0928C9.18036 13.2836 9.87747 11.5007 10.4158 9.67175C10.9887 7.73096 11.1889 5.73096 11.037 3.42833C8.994 5.27044 7.42032 7.13886 6.16414 9.25728C4.6871 11.7375 3.07891 14.1586 2.43011 17.0073C2.23685 17.8625 1.59496 17.7046 0.808121 17.2441C1.14632 16.3889 1.36719 15.4612 1.84343 14.6652C3.75531 11.4546 5.66029 8.23754 7.73782 5.11912C8.59368 3.82965 9.86366 2.79017 10.9887 1.67175C11.2165 1.44807 11.7824 1.19149 11.9136 1.29017C12.2035 1.5007 12.5072 1.95465 12.4658 2.27701C12.0861 5.22438 11.6375 8.16517 11.2096 11.106C11.1475 11.5073 11.0784 11.9152 11.0094 12.3165C11.1198 12.3428 11.2303 12.3691 11.3407 12.402L11.3476 12.3954Z" fill="#FF0000"/>
-<path d="M61.1251 -0.00390625C62.0569 0.417146 62.0845 0.897409 61.6635 1.51583C59.4686 4.73951 57.2807 7.96978 55.0927 11.2C54.9616 11.3974 54.7683 11.6014 54.7545 11.8119C54.7131 12.4764 54.3473 12.9106 53.7123 12.7395C53.2982 12.6277 53.0152 12.0948 52.677 11.7527C56.5352 8.38425 58.2815 3.89083 61.1251 -0.00390625Z" fill="#FF0000"/>
-<path d="M52.725 19.1357C52.1797 19.5239 51.8898 19.8726 51.524 19.9647C50.8131 20.1489 50.6613 19.4515 50.7165 19.1094C50.7717 18.7805 51.2548 18.412 51.6345 18.2936C51.8208 18.2344 52.1866 18.7015 52.725 19.1357Z" fill="#FF0000"/>
-</g>
-<defs>
-<clipPath id="clip0_418_11367">
-<rect width="61.1111" height="20" fill="#FF0000" transform="translate(0.814667 -0.00390625)"/>
-</clipPath>
-</defs>
-</svg>
-</div>
-
-  <div class="promo-card__section ">
-    <amp-img
-      src="./img/illustrations/ENVIRONMOENT 2.jpg"
-      width="450"
-      height="250"
-      layout="responsive"
-      alt="DIY painting tuition environment">
-    </amp-img>
-      <p class="mt1">
-      Learn more about how you can hire our dock, use our materials, and receive one-to-one tuition by visiting our
-      <a href="dock-hire-uk.html">DIY Tuition page</a>.
-    </p>
-
-  </div>
-
-
-
-
-</div>
 
 
 <div class="note-banner">
@@ -2072,16 +2254,14 @@ _:-ms-lang(x) {
  
 
   <div class="meta">
-    <span class="google">How Can I Make Sure My Boat is Ready for Painting?</span>
+    <span class="note-banner-subtitle">How Can I Make Sure My Boat is Ready for Painting?</span>
     
   </div>
 
   <div class="answer-card">
 
-    <p>Proper planning is essential to ensure your boat is fully prepared for painting and that the project remains on schedule.
+   
 
-
-<p>
 
     <p>
 When painting is planned following engineering or other preparatory works, it is crucial to engage only reliable, proven professionals. Delays during these preliminary stages may lead to unavoidable rescheduling of the painting works.
@@ -2111,11 +2291,114 @@ To help prevent this, we collaborate with trusted companies and can recommend sp
 </div>
 
 
+
+    <div class="banner-container pt2"> 
+     <a class="fb-banner fb-link" href="https://www.facebook.com/LostArtPainters" target="_blank" rel="noopener noreferrer" aria-label="Find us on Facebook (opens in new tab)">
+    <!-- Inline Facebook "f" logo SVG (flat style, matches FB brand colors) -->
+    <span class="fb-logo" aria-hidden="true">
+      <svg viewBox="0 0 24 24" width="100%" height="100%" role="img" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+        <rect width="24" height="24" rx="4" fill="#1877F2"/>
+        <path d="M15.12 8.5h-1.37c-.35 0-.82.18-.82.9v1.05h2.2l-.29 2.21h-1.91V20H10.7v-6.29H8.9v-2.21h1.8V9.65c0-1.98 1.16-3.07 2.86-3.07.83 0 1.55.06 1.69.09v2.83z" fill="#fff"/>
+      </svg>
+    </span>
+
+   
+    <span class="fb-text">
+      <span class="fb-title">Lost Art Painters</span>
+      
+        <span class="fb-text">Join us on Facebook</span>
+
+
+        <span class="fb-followers">900+ followers</span>
+    </span>
+  </a> 
+
+         
+    <div class="corner-text">
+        Business Page
     </div>
+
+  </div>
+
+
+      <h2 class="note-banner-title mt4 ">Services </h2>
+          
+          <p class=" theme2-divider note-banner-subtitle   white">
+            We offer a range of traditional narrowboat painting services, including:
+          </p>
+
+<dl class="clearfix ">
+         
+          
+        
+          <dt class="col sm-col-10 service-title mb1 aux-head-before white">Full and partial boat repaints </dt>
+          
+      
+          <dd class="col col-12 m0 mb4">
+
+            <p> From full hull repaints to cabin tops, panels, and decorative detailing, we ensure a smooth, durable finish that reflects the pride you have in your boat.
+           </p>
+           
+        
+        </dd>
+
+          <dt class="col sm-col-10 service-title mb1 white aux-head-before">
+            Signwriting and decorative lettering
+
+          
+          </dt>
+          
+         
+
+
+ <dd class="col sm-col-10 m0 mb4 self-center left-align">
+
+    <p> Using hand-painted techniques — never vinyl — we can create everything from classic name panels and scrollwork to modern styles that still respect the boat’s heritage.
+  </p>
+         
+  
+  </dd>
+         
+        
+          
+                        
+
+    
+
+          <dt class="col sm-col-10 service-title mb1 white aux-head-before">Restoration and repainting of historic narrowboats</dt>
+         
+          <dd class="col sm-col-10 m0 mb4">
+           
+           <p> We take great pride in restoring traditional narrowboats and historic working boats, respecting the methods and materials of the original builders.
+         </p>
+           
+           
+        </dd>
+
+         
+
+              <dt class="col sm-col-10 service-title mb1 white aux-head-before">Custom designs and bespoke commissions</dt>
+       
+          <dd class="col sm-col-10 m0 theme2-divider  ">
+
+            <p>  We love projects that mix heritage and creativity, producing something that’s uniquely yours while rooted in traditional canal painting values.
+        </p>
+         
+        </dd>
+          
+        </dl>
+
+    </div>
+
+
+
+
+
+
   </aside>
 
 
-      <article class="mt2">
+      <article class="mt2 article1">
             <h1 id="story" class="my4 h1">About </h1>
 
             
@@ -2137,9 +2420,422 @@ We take pride in traditional techniques, fine materials, and attention to detail
 that <strong> exceeds expectations </strong> and celebrates the rich <strong>heritage of Britain’s waterways</strong>. </p>
            
            
-          
+
+<h2 id="gallery" class="my4 h2 theme2-anchored  ">Gallery</h2>
+
+            
+<p class="mb4  heading-secondary  theme2-divider white ">
+  
+         Browse our gallery to see examples of our hand-painted narrowboats, decorative panels, and signwriting work.        
+  </p>
+
+    <p class="mb4 mt4 left-align">
+              
+      
+Each piece is a celebration of traditional canal art and the individuality of every boat owner we work with.
+</p>
+
+
+
+
+                     <amp-image-lightbox id="lightbox" layout="nodisplay"></amp-image-lightbox>
+  <amp-carousel
+  class="mb4 mxn3"
+  height="320"
+  layout="fixed-height"
+  type="carousel">
+
+  <amp-img src="./img/boats/narrowboatpainting24.jpg"
+           width="480" height="320"
+           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
+
+  <amp-img src="./img/boats/narrowboatpainting25.jpg"
+           width="480" height="320"
+           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
+
+  <amp-img src="./img/boats/narrowboatpainting31.jpg"
+           width="480" height="320"
+           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
+
+  <amp-img src="./img/boats/narrowboatpainting27.jpg"
+           width="480" height="320"
+           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
+
+  <amp-img src="./img/boats/narrowboatpainting26.jpg"
+           width="480" height="320"
+           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
+
+  <amp-img src="./img/boats/narrowboatpainting28.jpg"
+           width="480" height="320"
+           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
+
+  <amp-img src="./img/boats/narrowboatpainting30.jpg"
+           width="480" height="320"
+           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
+
+  <amp-img src="./img/boats/012.jpg"
+           width="480" height="320"
+           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
+
+  <amp-img src="./img/boats/07.jpg"
+           width="480" height="320"
+           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
+
+  <amp-img src="./img/boats/06.jpg"
+           width="480" height="320"
+           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
+
+  <amp-img src="./img/boats/05.jpg"
+           width="480" height="320"
+           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
+
+  <amp-img src="./img/boats/01.jpg"
+           width="480" height="320"
+           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
+
+  <amp-img src="./img/boats/03.jpg"
+           width="480" height="320"
+           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
+
+  <amp-img src="./img/boats/02.jpg"
+           width="480" height="320"
+           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
+
+  <amp-img src="./img/boats/08.jpg"
+           width="480" height="320"
+           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
+
+  <amp-img src="./img/boats/010.jpg"
+           width="480" height="320"
+           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
+
+  <amp-img src="./img/boats/011.jpg"
+           width="480" height="320"
+           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
+
+
+
+  <amp-img src="./img/boats/014.jpg"
+           width="480" height="320"
+           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
+
+  <amp-img src="./img/boats/015.jpg"
+           width="480" height="320"
+           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
+
+  <amp-img src="./img/boats/016.jpg"
+           width="480" height="320"
+           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
+
+  <amp-img src="./img/boats/018.jpg"
+           width="480" height="320"
+           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
+
+  <amp-img src="./img/boats/019.jpg"
+           width="480" height="320"
+           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
+
+  <amp-img src="./img/boats/020.jpg"
+           width="480" height="320"
+           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
+
+  <amp-img src="./img/boats/022.jpg"
+           width="480" height="320"
+           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
+
+</amp-carousel> 
       
           
+
+       
+
+            
+
+
+
+
+
+
+
+
+<h2 id="gallery" class="my4 h2 theme2-anchored  ">Testimonials</h2>
+
+
+    <div class="quote-row my4" >
+
+<svg xmlns="http://www.w3.org/2000/svg" height="44px" viewBox="0 -960 960 960" width="44px" fill="#D89E38"><path d="m228-240 92-160q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 23-5.5 42.5T458-480L320-240h-92Zm360 0 92-160q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 23-5.5 42.5T818-480L680-240h-92ZM320-500q25 0 42.5-17.5T380-560q0-25-17.5-42.5T320-620q-25 0-42.5 17.5T260-560q0 25 17.5 42.5T320-500Zm360 0q25 0 42.5-17.5T740-560q0-25-17.5-42.5T680-620q-25 0-42.5 17.5T620-560q0 25 17.5 42.5T680-500Zm0-60Zm-360 0Z"/></svg>
+ 
+  <span class="heading-secondary " >What our clients say about us</span> 
+ </div>
+  
+<div class="testimonial my4 ">
+  <figure class="testimonial__figure">
+    <div class="testimonial__media video-wrapper">
+      <amp-video
+        controls
+        width="1090"
+        height="1920"
+        layout="responsive"
+        poster="./img/illustrations/screenshot.jpg">
+        <source src="./img/illustrations/VID_20240205_105722.mp4" type="video/mp4" />
+        <div fallback>
+          <p>This browser does not support the video element.</p>
+        </div>
+      </amp-video>
+    </div>
+
+
+  </figure>
+</div>
+
+<section class="testimonials">
+
+<div class="ticker">
+    <div class="ticker-track">
+
+    <!-- 1 -->
+    <div class="testimonial-card">
+      <div class="testimonial-img">
+        <amp-img src="img/boats/recommend1.png"
+          width="110" height="110" layout="fixed"
+          ></amp-img>
+      </div>
+      <div>
+        <h3 class="testimonial-name">Catherine Chefneux</h3>
+        <div class="testimonial-role">Web Performance and Security geek</div>
+        <div class="testimonial-text">
+         Dan Holmes from Lost Art did a complete repaint on our traditional narrowboat, and the results are absolutely superb. From the very beginning, Dan was professional, knowledgeable, and clearly passionate about his craft. He took the time to discuss colours, finishes, and traditional details, making sure everything was right before work began.
+
+The quality of the repaint is exceptional — crisp lines, deep gloss, and flawless attention to detail throughout. The boat looks stunning and has completely transformed in appearance. The work was carried out with care and pride, and it really shows in the final result. Everywhere we travel we get comments and are asked where the boat was painted.
+
+Dan kept us informed throughout the process, and treated the boat with real respect. If you’re looking for a traditional narrowboat painter who genuinely understands the art of proper signwriting and painting, we can’t recommend Dan Holmes at Lost Art highly enough.
+       
+        </div>
+      </div>
+    </div>
+
+    <!-- 2 -->
+    <div class="testimonial-card">
+      <div class="testimonial-img">
+        <amp-img src="img/boats/recommend2.png"
+          width="110" height="110" layout="fixed"
+        ></amp-img>
+      </div>
+      <div>
+        <h3 class="testimonial-name">Martin Buck</h3>
+        <div class="testimonial-role">Musicbed</div>
+        <div class="testimonial-text">
+         We had seen the quality of the work that Dan had achieved, and he had worked on our previous boat which was the reason we chose to book his talents. We had acquired a replica working boat and wanted to ensure the standard of painting merited the legacy of working boats. Dan was from start to finish a conscientious worker whose eye for detail was exemplary.
+He kept us informed every step of the process and delivered an outstanding result which more than met our expectations. He even suggested a few minor improvements to the finished product.
+During our travels we received so many compliments and inquiries as to who had painted the boat, which were duly passed on but for customer satisfaction he gets 10/10
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 -->
+    <div class="testimonial-card">
+      <div class="testimonial-img">
+        <amp-img src="img/boats/recommend1.png"
+          width="110" height="110" layout="fixed"
+          ></amp-img>
+      </div>
+      <div>
+        <h3 class="testimonial-name">Janet Shackshaft</h3>
+        <div class="testimonial-role">Boat: TillerGirl2</div>
+        <div class="testimonial-text">
+          It is 2 years since Dan painted our boat, yet still, when we're out & about, we get people admiring our paint job on a daily basis.
+          <br>
+Dan is a talented painter with an excellent eye and sense of what will work best. He followed our brief but also made suggestions on what would look good.
+We were impressed by his level of prep, stripping the existing paint, removing all the fixtures then building up with at least 12 layers of primer, undercoat then top coat, all done by hand.
+This is not a quick process, but Dan was consulting and updating us continually and we were thrilled with the end result ... a boat to be proud of.
+Thank you Dan.
+        
+        </div>
+      </div>
+    </div>
+    <!-- DUPLICATE same set -->
+    <!-- 1 -->
+    <div class="testimonial-card">
+      <div class="testimonial-img">
+        <amp-img src="https://via.placeholder.com/110"
+          width="110" height="110" layout="fixed"
+          ></amp-img>
+      </div>
+      <div>
+        <h3 class="testimonial-name">Catherine Chefneux</h3>
+        <div class="testimonial-role">Web Performance and Security geek</div>
+        <div class="testimonial-text">
+          Dan Holmes from Lost Art did a complete repaint on our traditional narrowboat, and the results are absolutely superb. From the very beginning, Dan was professional, knowledgeable, and clearly passionate about his craft. He took the time to discuss colours, finishes, and traditional details, making sure everything was right before work began.
+
+The quality of the repaint is exceptional — crisp lines, deep gloss, and flawless attention to detail throughout. The boat looks stunning and has completely transformed in appearance. The work was carried out with care and pride, and it really shows in the final result. Everywhere we travel we get comments and are asked where the boat was painted.
+
+Dan kept us informed throughout the process, and treated the boat with real respect. If you’re looking for a traditional narrowboat painter who genuinely understands the art of proper signwriting and painting, we can’t recommend Dan Holmes at Lost Art highly enough.
+        
+        </div>
+      </div>
+    </div>
+
+    <!-- 2 -->
+      <div class="testimonial-card">
+      <div class="testimonial-img">
+        <amp-img src="img/boats/recommend2.png"
+          width="110" height="110" layout="fixed"
+        ></amp-img>
+      </div>
+      <div>
+        <h3 class="testimonial-name">Martin Buck</h3>
+        <div class="testimonial-role">Musicbed</div>
+        <div class="testimonial-text">
+         We had seen the quality of the work that Dan had achieved, and he had worked on our previous boat which was the reason we chose to book his talents. We had acquired a replica working boat and wanted to ensure the standard of painting merited the legacy of working boats. Dan was from start to finish a conscientious worker whose eye for detail was exemplary.
+He kept us informed every step of the process and delivered an outstanding result which more than met our expectations. He even suggested a few minor improvements to the finished product.
+During our travels we received so many compliments and inquiries as to who had painted the boat, which were duly passed on but for customer satisfaction he gets 10/10
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 -->
+   <div class="testimonial-card">
+      <div class="testimonial-img">
+        <amp-img src="img/boats/recommend1.png"
+          width="110" height="110" layout="fixed"
+          ></amp-img>
+      </div>
+      <div>
+        <h3 class="testimonial-name">Janet Shackshaft</h3>
+        <div class="testimonial-role">Boat: TillerGirl2</div>
+        <div class="testimonial-text">
+          It is 2 years since Dan painted our boat, yet still, when we're out & about, we get people admiring our paint job on a daily basis.
+          <br>
+Dan is a talented painter with an excellent eye and sense of what will work best. He followed our brief but also made suggestions on what would look good.
+We were impressed by his level of prep, stripping the existing paint, removing all the fixtures then building up with at least 12 layers of primer, undercoat then top coat, all done by hand.
+This is not a quick process, but Dan was consulting and updating us continually and we were thrilled with the end result ... a boat to be proud of.
+Thank you Dan.
+        
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+      </div>  </div>
+
+
+<div class="ticker reverse">
+    <div class="ticker-track">
+    <!-- 4 -->
+    <div class="testimonial-card">
+      <div class="testimonial-img">
+        <amp-img src="/img/boats/recommend2.png"
+          width="110" height="110" layout="fixed"
+          ></amp-img>
+      </div>
+      <div>
+        <h3 class="testimonial-name">Ben Jameson</h3>
+        <div class="testimonial-role">Hitachi Data Systems</div>
+        <div class="testimonial-text">
+          Lost Art did a fantastic job painting our 60' narrowboat to a very high standard which has held up to boating really well subsequently.
+
+Dan is really friendly and helpful, his communication during the whole process was second to none and he looked after the boat really well whilst it was in his care
+       
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="testimonial-card">
+      <div class="testimonial-img">
+        <amp-img src="https://via.placeholder.com/110"
+          width="110" height="110" layout="fixed"
+          alt="Cato Johnston"></amp-img>
+      </div>
+      <div>
+        <h3 class="testimonial-name">Cato Johnston</h3>
+        <div class="testimonial-role">Digital Arts Network</div>
+        <div class="testimonial-text">
+          We used SpeedCurve to track Synthetic and RUM results over time. Load times went through the floor!
+        </div>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="testimonial-card">
+      <div class="testimonial-img">
+        <amp-img src="/img/boats/recommend3.png"
+          width="110" height="110" layout="fixed"
+          ></amp-img>
+      </div>
+      <div>
+        <h3 class="testimonial-name">Dave Martin</h3>
+        <div class="testimonial-role">Causes</div>
+        <div class="testimonial-text">
+          If you want a quality paint job at a reasonable price, Dan’s your man. He works with you, not for you. Comes up with suggestions, and tells you what won’t work. He wants you to be involved from start to finish. Highly recommended!!
+        </div>
+      </div>
+    </div> 
+
+  <!-- DUPLICATE same set -->
+
+    <!-- 4 -->
+    <div class="testimonial-card">
+      <div class="testimonial-img">
+        <amp-img src="/img/boats/recommend4.png"
+          width="110" height="110" layout="fixed"
+          ></amp-img>
+      </div>
+      <div>
+        <h3 class="testimonial-name">Ben Jameson</h3>
+        <div class="testimonial-role">Hitachi Data Systems</div>
+        <div class="testimonial-text">
+         Lost Art did a fantastic job painting our 60' narrowboat to a very high standard which has held up to boating really well subsequently.
+
+Dan is really friendly and helpful, his communication during the whole process was second to none and he looked after the boat really well whilst it was in his care
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 -->
+    <div class="testimonial-card">
+      <div class="testimonial-img">
+        <amp-img src="https://via.placeholder.com/110"
+          width="110" height="110" layout="fixed"
+          alt="Cato Johnston"></amp-img>
+      </div>
+      <div>
+        <h3 class="testimonial-name">Cato Johnston</h3>
+        <div class="testimonial-role">Digital Arts Network</div>
+        <div class="testimonial-text">
+          We used SpeedCurve to track Synthetic and RUM results over time. Load times went through the floor!
+        </div>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="testimonial-card">
+      <div class="testimonial-img">
+        <amp-img src="/img/boats/recommend3.png"
+          width="110" height="110" layout="fixed"
+          ></amp-img>
+      </div>
+      <div>
+        <h3 class="testimonial-name">Dave Martin</h3>
+        <div class="testimonial-role">Causes</div>
+        <div class="testimonial-text">
+         If you want a quality paint job at a reasonable price, Dan’s your man. He works with you, not for you. Comes up with suggestions, and tells you what won’t work. He wants you to be involved from start to finish. Highly recommended!!
+        </div>
+      </div>
+    </div> 
+
+
+
+</div> </div>
+
+
+</section>
+
             <h2 class="h2 my4 ">Our Story</h2>
 
 
@@ -2313,241 +3009,88 @@ creating hand-painted narrowboats that blend heritage, design, and individuality
 
             </div>
 
-       
 
-            
-
-  <h2 class=" h2 my4 ">Services </h2>
-          
-          <p class="mb4  theme2-divider  heading-secondary  white">
-            We offer a range of traditional narrowboat painting services, including:
-          </p>
-
-<dl class="clearfix ">
-         
-          
-        
-          <dt class="col sm-col-10 h3 mb1 aux-head-before white">Full and partial boat repaints </dt>
-           <dd class="m0 col col-2 m0 mb1 self-center right-align">
-            
-        
-            </dd>
-      
-          <dd class="col col-12 m0 mb4">
-            From full hull repaints to cabin tops, panels, and decorative detailing, we ensure a smooth, durable finish that reflects the pride you have in your boat.
-          </dd>
-
-          <dt class="col sm-col-10 h3 mb1 white aux-head-before">
-            Signwriting and decorative lettering
-
-          
-          </dt>
-          
-             <dd class="m0 col col-2 m0 mb1 self-center right-align">
-            
-        
-            </dd>
+    </article>
+  <aside class="side-banner right-banner " aria-label="Promotional banner">
+    <div class="banner-inner">
 
 
- <dd class="col sm-col-10 m0 mb4 self-center left-align">
-          Using hand-painted techniques — never vinyl — we can create everything from classic name panels and scrollwork to modern styles that still respect the boat’s heritage.
-  
-  
-  </dd>
-         
-        
-          
-                        
 
+
+
+
+<div class="promo-card ">
     
 
-          <dt class="col sm-col-10 h3 mb1 white aux-head-before">Restoration and repainting of historic narrowboats</dt>
-             <dd class="m0 col col-2 m0 mb1 self-center right-align">
-            
-        
-        
-            </dd>
-          <dd class="col sm-col-10 m0 mb4">
-            We take great pride in restoring traditional narrowboats and historic working boats, respecting the methods and materials of the original builders.
-          </dd>
-
-         
-
-              <dt class="col sm-col-10 h3 mb1 white aux-head-before">Custom designs and bespoke commissions</dt>
-        <dd class="m0 col col-2 m0 mb1 self-center right-align">
-            
-        
-            </dd >
-          <dd class="col sm-col-10 m0 theme2-divider  ">
-           We love projects that mix heritage and creativity, producing something that’s uniquely yours while rooted in traditional canal painting values.
-          </dd>
-          
-        </dl>
+  <div class="mb1 aux-head-before white mb1 promo-card__header">
 
 
+      
+
+     <h3 class="h3 aux-head-before white">
+        DIY Dock Hire
+     </h3>
+
+    <svg width="83" height="40" viewBox="0 0 65 30"  fill="#FF0000" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_418_11367)">
+<path d="M41.9028 10.5758C40.4188 11.8061 39.2179 12.9442 37.8651 13.8916C36.7676 14.6614 35.5321 15.2666 34.2898 15.8192C33.9171 15.9837 33.3304 15.7206 32.6126 15.6219C33.5927 13.8192 34.3933 12.2798 35.2561 10.7732C36.5122 8.56924 37.8167 6.39161 39.0936 4.20082C39.1212 4.14819 39.1281 4.06924 39.1765 4.04293C39.494 3.85214 39.9288 3.43767 40.1289 3.52319C40.7156 3.77319 40.5776 4.26003 40.2739 4.72056C39.7079 5.57582 39.1488 6.44424 38.6243 7.31924C37.4716 9.22714 36.3328 11.1482 35.2078 13.0692C35.0973 13.26 35.0973 13.5035 34.9938 13.9574C37.4578 13.2074 38.8935 11.4311 40.6742 10.1285C42.4757 8.80609 43.5731 6.95082 44.8224 5.06924C45.8025 5.79293 45.7679 6.41135 45.2503 7.16135C43.9527 9.04951 43.0623 11.1153 42.1927 13.6679C43.1244 13.2206 43.7525 13.0035 44.2771 12.6482C46.0302 11.4837 47.5901 10.1548 48.7289 8.37188C49.6331 6.9574 50.7927 5.69424 51.8625 4.37845C51.9522 4.26661 52.2007 4.26661 52.4768 4.18767C52.9392 4.83898 53.0635 5.39819 52.4561 6.06924C50.1094 8.69424 48.1078 11.5956 45.2572 13.8192C44.3875 14.4969 43.4765 14.9113 42.4204 15.089C41.1504 15.2995 40.5914 14.7929 40.8399 13.6087C40.9848 12.9179 41.3299 12.26 41.5784 11.589C41.675 11.3258 41.744 11.0627 41.9028 10.5627V10.5758Z" fill="#FF0000"/>
+<path d="M24.9166 16.2638C22.8667 16.7178 20.9341 17.152 19.0015 17.5796C18.6978 17.6454 18.3941 17.7573 18.0904 17.7638C17.2 17.7836 16.8342 17.2178 17.2829 16.4744C17.559 16.0138 17.9938 15.6454 18.2906 15.1915C18.9118 14.2309 19.4846 13.2441 20.1265 12.1981C19.8574 12.0796 19.6089 12.0138 19.4294 11.8757C19.1188 11.6388 18.8427 11.3494 18.5529 11.0862C18.9256 10.7309 19.2638 10.3165 19.6917 10.0402C19.9057 9.902 20.2991 10.0204 20.6097 10.027C21.3206 10.0467 21.7692 9.73753 22.066 9.11253C22.5009 8.19147 22.984 7.29016 23.2946 6.67832C23.1151 5.73095 22.77 5.027 22.9219 4.44147C23.1496 3.54674 24.0745 4.15858 24.7026 4.09279C25.2548 3.13226 25.7793 2.20463 26.3177 1.25726C26.9067 1.74411 26.8446 2.70244 26.1314 4.13226C27.8983 4.28358 29.5962 4.40858 31.2872 4.57963C31.8325 4.63226 32.3985 4.75068 32.9023 4.94805C33.5028 5.18489 33.6822 5.65858 33.3095 6.43489C32.0119 6.23095 30.6798 5.98095 29.3408 5.82963C28.0432 5.68489 26.7318 5.63884 25.3445 5.54016C24.6198 6.84937 23.9365 8.09279 23.198 9.43489C24.7371 9.43489 26.0899 9.33621 27.422 9.46121C28.6713 9.57963 30.2174 9.07305 31.0525 10.5599C30.5694 11.2638 29.9827 11.1257 29.3477 11.0994C27.3599 11.027 25.3652 11.0336 23.3705 11.0402C22.4939 11.0402 21.8797 11.3823 21.4931 12.2309C20.9548 13.4217 20.2577 14.5467 19.4915 15.9481C20.9686 15.6388 22.1765 15.4152 23.3705 15.1323C24.2609 14.9217 24.8545 15.0533 24.9097 16.2507L24.9166 16.2638Z" fill="#FF0000"/>
+<path d="M11.3476 12.3954C13.4113 9.79017 15.4751 7.18491 17.5388 4.57965C17.8011 4.2507 17.9874 3.82307 18.3325 3.60596C18.581 3.44807 19.1815 3.40859 19.3264 3.57307C19.5542 3.82307 19.6301 4.29675 19.5818 4.65201C19.5542 4.89544 19.2229 5.1257 18.9882 5.30991C16.3033 7.42175 14.4881 10.2178 12.4589 12.8428C11.6789 13.8494 10.8783 14.8362 10.1052 15.8494C9.80845 16.2441 9.58758 16.7244 8.94569 16.4546C8.24167 16.1586 8.37971 15.6191 8.55917 15.0928C9.18036 13.2836 9.87747 11.5007 10.4158 9.67175C10.9887 7.73096 11.1889 5.73096 11.037 3.42833C8.994 5.27044 7.42032 7.13886 6.16414 9.25728C4.6871 11.7375 3.07891 14.1586 2.43011 17.0073C2.23685 17.8625 1.59496 17.7046 0.808121 17.2441C1.14632 16.3889 1.36719 15.4612 1.84343 14.6652C3.75531 11.4546 5.66029 8.23754 7.73782 5.11912C8.59368 3.82965 9.86366 2.79017 10.9887 1.67175C11.2165 1.44807 11.7824 1.19149 11.9136 1.29017C12.2035 1.5007 12.5072 1.95465 12.4658 2.27701C12.0861 5.22438 11.6375 8.16517 11.2096 11.106C11.1475 11.5073 11.0784 11.9152 11.0094 12.3165C11.1198 12.3428 11.2303 12.3691 11.3407 12.402L11.3476 12.3954Z" fill="#FF0000"/>
+<path d="M61.1251 -0.00390625C62.0569 0.417146 62.0845 0.897409 61.6635 1.51583C59.4686 4.73951 57.2807 7.96978 55.0927 11.2C54.9616 11.3974 54.7683 11.6014 54.7545 11.8119C54.7131 12.4764 54.3473 12.9106 53.7123 12.7395C53.2982 12.6277 53.0152 12.0948 52.677 11.7527C56.5352 8.38425 58.2815 3.89083 61.1251 -0.00390625Z" fill="#FF0000"/>
+<path d="M52.725 19.1357C52.1797 19.5239 51.8898 19.8726 51.524 19.9647C50.8131 20.1489 50.6613 19.4515 50.7165 19.1094C50.7717 18.7805 51.2548 18.412 51.6345 18.2936C51.8208 18.2344 52.1866 18.7015 52.725 19.1357Z" fill="#FF0000"/>
+</g>
+<defs>
+<clipPath id="clip0_418_11367">
+<rect width="61.1111" height="20" fill="#FF0000" transform="translate(0.814667 -0.00390625)"/>
+</clipPath>
+</defs>
+</svg>
+</div>
+
+  <div class="promo-card__section ">
+    <amp-img
+      src="./img/illustrations/ENVIRONMOENT 2.jpg"
+      width="450"
+      height="250"
+      layout="responsive"
+      alt="DIY painting tuition environment">
+    </amp-img>
+      <p class="mt1">
+      Learn more about how you can hire our dock, use our materials, and receive one-to-one tuition by visiting our
+      <a href="dock-hire-uk.html">DIY Tuition page</a>.
+    </p>
+
+  </div>
 
 
 
-<div class="quote-row" >
 
-<svg xmlns="http://www.w3.org/2000/svg" height="44px" viewBox="0 -960 960 960" width="44px" fill="#D89E38"><path d="m228-240 92-160q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 23-5.5 42.5T458-480L320-240h-92Zm360 0 92-160q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 23-5.5 42.5T818-480L680-240h-92ZM320-500q25 0 42.5-17.5T380-560q0-25-17.5-42.5T320-620q-25 0-42.5 17.5T260-560q0 25 17.5 42.5T320-500Zm360 0q25 0 42.5-17.5T740-560q0-25-17.5-42.5T680-620q-25 0-42.5 17.5T620-560q0 25 17.5 42.5T680-500Zm0-60Zm-360 0Z"/></svg>
- 
-  <span class="heading-secondary " >What our clients say about us</span> 
- </div>
-
-
-
-<div class="testimonial my4 ">
-  <figure class="testimonial__figure">
-    <div class="testimonial__media video-wrapper">
-      <amp-video
-        controls
-        width="1090"
-        height="1920"
-        layout="responsive"
-        poster="./img/illustrations/screenshot.jpg">
-        <source src="./img/illustrations/VID_20240205_105722.mp4" type="video/mp4" />
-        <div fallback>
-          <p>This browser does not support the video element.</p>
-        </div>
-      </amp-video>
-    </div>
-
-    <figcaption class="testimonial__author h5 ">
-      Dave Martin
-    </figcaption>
-  </figure>
 </div>
 
 
 
 
+    </div>
+    
+
+
+
+
+    
+  </aside>
+  </div>
+  <!-- END FLEX WRAPPER -->
 
 
 
 
 
 
-            <h2 id="gallery" class="my4 h2 theme2-anchored  ">Gallery</h2>
+    <article>
+
 
             
-<p class="mb4  heading-secondary  theme2-divider white ">
-  
-         Browse our gallery to see examples of our hand-painted narrowboats, decorative panels, and signwriting work.        
-  </p>
 
-    <p class="mb4 mt4 left-align">
-              
-      
-Each piece is a celebration of traditional canal art and the individuality of every boat owner we work with.
-</p>
-
-            <amp-image-lightbox id="lightbox" layout="nodisplay"></amp-image-lightbox>
-  <amp-carousel
-  class="mb4 mxn3"
-  height="320"
-  layout="fixed-height"
-  type="carousel">
-
-  <amp-img src="./img/boats/narrowboatpainting24.jpg"
-           width="480" height="320"
-           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
-
-  <amp-img src="./img/boats/narrowboatpainting25.jpg"
-           width="480" height="320"
-           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
-
-  <amp-img src="./img/boats/narrowboatpainting31.jpg"
-           width="480" height="320"
-           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
-
-  <amp-img src="./img/boats/narrowboatpainting27.jpg"
-           width="480" height="320"
-           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
-
-  <amp-img src="./img/boats/narrowboatpainting26.jpg"
-           width="480" height="320"
-           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
-
-  <amp-img src="./img/boats/narrowboatpainting28.jpg"
-           width="480" height="320"
-           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
-
-  <amp-img src="./img/boats/narrowboatpainting30.jpg"
-           width="480" height="320"
-           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
-
-  <amp-img src="./img/boats/012.jpg"
-           width="480" height="320"
-           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
-
-  <amp-img src="./img/boats/07.jpg"
-           width="480" height="320"
-           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
-
-  <amp-img src="./img/boats/06.jpg"
-           width="480" height="320"
-           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
-
-  <amp-img src="./img/boats/05.jpg"
-           width="480" height="320"
-           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
-
-  <amp-img src="./img/boats/01.jpg"
-           width="480" height="320"
-           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
-
-  <amp-img src="./img/boats/03.jpg"
-           width="480" height="320"
-           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
-
-  <amp-img src="./img/boats/02.jpg"
-           width="480" height="320"
-           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
-
-  <amp-img src="./img/boats/08.jpg"
-           width="480" height="320"
-           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
-
-  <amp-img src="./img/boats/010.jpg"
-           width="480" height="320"
-           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
-
-  <amp-img src="./img/boats/011.jpg"
-           width="480" height="320"
-           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
-
-
-
-  <amp-img src="./img/boats/014.jpg"
-           width="480" height="320"
-           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
-
-  <amp-img src="./img/boats/015.jpg"
-           width="480" height="320"
-           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
-
-  <amp-img src="./img/boats/016.jpg"
-           width="480" height="320"
-           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
-
-  <amp-img src="./img/boats/018.jpg"
-           width="480" height="320"
-           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
-
-  <amp-img src="./img/boats/019.jpg"
-           width="480" height="320"
-           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
-
-  <amp-img src="./img/boats/020.jpg"
-           width="480" height="320"
-           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
-
-  <amp-img src="./img/boats/022.jpg"
-           width="480" height="320"
-           alt="English narrowboat"> <div placeholder class="img-placeholder"></div></amp-img>
-
-</amp-carousel>
 
 
 
@@ -2580,6 +3123,22 @@ Each piece is a celebration of traditional canal art and the individuality of ev
  alt="English narrowboat" layout="responsive" class="mb4 pb1 " tabindex="0"> <div placeholder class="img-placeholder"></div></amp-img>
 
            
+
+
+</dd>
+
+
+          <dd class=" md-col-6 sm-col-12 m0 mb4 ">
+           
+
+
+          </dd>
+
+
+  <dd class=" md-col-6 sm-col-12  mb1 self-center ">
+
+
+
 
    <a href="https://www.google.com/maps?q=52.83778,-2.37528" target="_blank" rel="noopener noreferrer" 
    class="mb0 mb0 h5 mt1 my2 no-underline"  style="display: flex;
@@ -2637,46 +3196,6 @@ Each piece is a celebration of traditional canal art and the individuality of ev
             <svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="24px" fill="#ff5d20"><path d="m256-240-56-56 384-384H240v-80h480v480h-80v-344L256-240Z"/></svg>
  </span>
             </a>
-
-</dd>
-
-
-          <dd class=" md-col-6 sm-col-12 m0 mb4 ">
-           
-
-
-          </dd>
-
-
-  <dd class=" md-col-6 sm-col-12  mb1 self-center ">
-
-<div class="banner-container pt2"> 
-     <a class="fb-banner fb-link" href="https://www.facebook.com/LostArtPainters" target="_blank" rel="noopener noreferrer" aria-label="Find us on Facebook (opens in new tab)">
-    <!-- Inline Facebook "f" logo SVG (flat style, matches FB brand colors) -->
-    <span class="fb-logo" aria-hidden="true">
-      <svg viewBox="0 0 24 24" width="100%" height="100%" role="img" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-        <rect width="24" height="24" rx="4" fill="#1877F2"/>
-        <path d="M15.12 8.5h-1.37c-.35 0-.82.18-.82.9v1.05h2.2l-.29 2.21h-1.91V20H10.7v-6.29H8.9v-2.21h1.8V9.65c0-1.98 1.16-3.07 2.86-3.07.83 0 1.55.06 1.69.09v2.83z" fill="#fff"/>
-      </svg>
-    </span>
-
-   
-    <span class="fb-text">
-      <span class="fb-title">Lost Art Painters</span>
-      
-        <span class="fb-text">Join us on Facebook</span>
-
-
-        <span class="fb-followers">900+ followers</span>
-    </span>
-  </a> 
-
-         
-    <div class="corner-text">
-        Business Page
-    </div>
-
-  </div>
      <p class="flex-container mb0 mt3 ">
                 
                 <svg xmlns="http://www.w3.org/2000/svg" height="24px" class="mr1" viewBox="0 -960 960 960" width="24px" fill="#aaa"><path d="M160-160q-33 0-56.5-23.5T80-240v-480q0-33 23.5-56.5T160-800h640q33 0 56.5 23.5T880-720v480q0 33-23.5 56.5T800-160H160Zm320-280L160-640v400h640v-400L480-440Zm0-80 320-200H160l320 200ZM160-640v-80 480-400Z"/></svg>
@@ -2703,10 +3222,11 @@ Each piece is a celebration of traditional canal art and the individuality of ev
 
   
 
-      </article>
-
+  
+    </article>
     
- 
+    <!-- Sticky side banner right -->
+
   </main>
  <div class="gradient-left"></div>  
   <!-- Start Footer -->
