@@ -1,4 +1,3 @@
-
 <!doctype html>
 
 
@@ -458,11 +457,12 @@ display: flex;
    
     justify-content: center;
     gap: 40px;
-    max-width: 1280px;
+     max-width: 1280px;
     margin: 0 auto;
     align-items: flex-start;
       padding-top: 40px;
       flex-direction: unset;
+
   }
 
 }
@@ -480,11 +480,21 @@ display: flex;
 }
 
 @media (min-width:1024px) {
-    article {
-          flex: 0 0 720px;
-   
-    margin: 0 auto;
+.layout article {
+    flex: 1;           /* take remaining space */
+    margin: 0;         /* remove your auto centering */
+  }
 }
+
+ 
+
+
+
+
+  .layout aside {
+    flex: 0 0 360px;   /* fixed sidebar width */
+  }
+
 
 aside p{
   font-size: 14px;
@@ -515,7 +525,7 @@ aside p{
 }
 @media (min-width:40.06rem) {
     .banner-inner {
-    padding: 0 0 0 2rem;
+    
     display: flex;
     flex-direction: column;
   
@@ -523,7 +533,7 @@ aside p{
 }
 }.promo-card {
     padding: 1rem;
-    border: 3px solid #d89e38;
+    
     border-radius:14px;
     background: #20232a;
 }
@@ -2248,7 +2258,7 @@ _:-ms-lang(x) {
 
 
 
-<div class="note-banner">
+<div class="note-banner pr2 pl2 pt2 pb2">
   <h2 class="note-banner-title">From Our Clients' Most Frequently asked Questions </h2>
 
  
@@ -2258,7 +2268,7 @@ _:-ms-lang(x) {
     
   </div>
 
-  <div class="answer-card">
+  <div class="answer-card p2">
 
    
 
@@ -2292,7 +2302,7 @@ To help prevent this, we collaborate with trusted companies and can recommend sp
 
 
 
-    <div class="banner-container pt2"> 
+    <div class="banner-container pt2 m2"> 
      <a class="fb-banner fb-link" href="https://www.facebook.com/LostArtPainters" target="_blank" rel="noopener noreferrer" aria-label="Find us on Facebook (opens in new tab)">
     <!-- Inline Facebook "f" logo SVG (flat style, matches FB brand colors) -->
     <span class="fb-logo" aria-hidden="true">
@@ -2321,13 +2331,13 @@ To help prevent this, we collaborate with trusted companies and can recommend sp
   </div>
 
 
-      <h2 class="note-banner-title mt4 ">Services </h2>
+      <h2 class="note-banner-title mt4 pr2 pl2 ">Services </h2>
           
-          <p class=" theme2-divider note-banner-subtitle   white">
+          <p class=" pr2 pl2 note-banner-subtitle   white">
             We offer a range of traditional narrowboat painting services, including:
           </p>
 
-<dl class="clearfix ">
+<dl class="clearfix pr2 pl2 ">
          
           
         
@@ -2379,7 +2389,7 @@ To help prevent this, we collaborate with trusted companies and can recommend sp
 
               <dt class="col sm-col-10 service-title mb1 white aux-head-before">Custom designs and bespoke commissions</dt>
        
-          <dd class="col sm-col-10 m0 theme2-divider  ">
+          <dd class="col sm-col-10 m0   ">
 
             <p>  We love projects that mix heritage and creativity, producing something that’s uniquely yours while rooted in traditional canal painting values.
         </p>
@@ -2390,7 +2400,65 @@ To help prevent this, we collaborate with trusted companies and can recommend sp
 
     </div>
 
+   <div class="banner-inner">
 
+
+
+
+
+
+<div class="promo-card p2 ">
+    
+
+  <div class="mb1 aux-head-before white mb1 promo-card__header">
+
+
+      
+
+     <span class="service-title aux-head-before white">
+        DIY Dock Hire
+     </span>
+
+    <svg width="83" height="40" viewBox="0 0 65 30"  fill="#FF0000" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_418_11367)">
+<path d="M41.9028 10.5758C40.4188 11.8061 39.2179 12.9442 37.8651 13.8916C36.7676 14.6614 35.5321 15.2666 34.2898 15.8192C33.9171 15.9837 33.3304 15.7206 32.6126 15.6219C33.5927 13.8192 34.3933 12.2798 35.2561 10.7732C36.5122 8.56924 37.8167 6.39161 39.0936 4.20082C39.1212 4.14819 39.1281 4.06924 39.1765 4.04293C39.494 3.85214 39.9288 3.43767 40.1289 3.52319C40.7156 3.77319 40.5776 4.26003 40.2739 4.72056C39.7079 5.57582 39.1488 6.44424 38.6243 7.31924C37.4716 9.22714 36.3328 11.1482 35.2078 13.0692C35.0973 13.26 35.0973 13.5035 34.9938 13.9574C37.4578 13.2074 38.8935 11.4311 40.6742 10.1285C42.4757 8.80609 43.5731 6.95082 44.8224 5.06924C45.8025 5.79293 45.7679 6.41135 45.2503 7.16135C43.9527 9.04951 43.0623 11.1153 42.1927 13.6679C43.1244 13.2206 43.7525 13.0035 44.2771 12.6482C46.0302 11.4837 47.5901 10.1548 48.7289 8.37188C49.6331 6.9574 50.7927 5.69424 51.8625 4.37845C51.9522 4.26661 52.2007 4.26661 52.4768 4.18767C52.9392 4.83898 53.0635 5.39819 52.4561 6.06924C50.1094 8.69424 48.1078 11.5956 45.2572 13.8192C44.3875 14.4969 43.4765 14.9113 42.4204 15.089C41.1504 15.2995 40.5914 14.7929 40.8399 13.6087C40.9848 12.9179 41.3299 12.26 41.5784 11.589C41.675 11.3258 41.744 11.0627 41.9028 10.5627V10.5758Z" fill="#FF0000"/>
+<path d="M24.9166 16.2638C22.8667 16.7178 20.9341 17.152 19.0015 17.5796C18.6978 17.6454 18.3941 17.7573 18.0904 17.7638C17.2 17.7836 16.8342 17.2178 17.2829 16.4744C17.559 16.0138 17.9938 15.6454 18.2906 15.1915C18.9118 14.2309 19.4846 13.2441 20.1265 12.1981C19.8574 12.0796 19.6089 12.0138 19.4294 11.8757C19.1188 11.6388 18.8427 11.3494 18.5529 11.0862C18.9256 10.7309 19.2638 10.3165 19.6917 10.0402C19.9057 9.902 20.2991 10.0204 20.6097 10.027C21.3206 10.0467 21.7692 9.73753 22.066 9.11253C22.5009 8.19147 22.984 7.29016 23.2946 6.67832C23.1151 5.73095 22.77 5.027 22.9219 4.44147C23.1496 3.54674 24.0745 4.15858 24.7026 4.09279C25.2548 3.13226 25.7793 2.20463 26.3177 1.25726C26.9067 1.74411 26.8446 2.70244 26.1314 4.13226C27.8983 4.28358 29.5962 4.40858 31.2872 4.57963C31.8325 4.63226 32.3985 4.75068 32.9023 4.94805C33.5028 5.18489 33.6822 5.65858 33.3095 6.43489C32.0119 6.23095 30.6798 5.98095 29.3408 5.82963C28.0432 5.68489 26.7318 5.63884 25.3445 5.54016C24.6198 6.84937 23.9365 8.09279 23.198 9.43489C24.7371 9.43489 26.0899 9.33621 27.422 9.46121C28.6713 9.57963 30.2174 9.07305 31.0525 10.5599C30.5694 11.2638 29.9827 11.1257 29.3477 11.0994C27.3599 11.027 25.3652 11.0336 23.3705 11.0402C22.4939 11.0402 21.8797 11.3823 21.4931 12.2309C20.9548 13.4217 20.2577 14.5467 19.4915 15.9481C20.9686 15.6388 22.1765 15.4152 23.3705 15.1323C24.2609 14.9217 24.8545 15.0533 24.9097 16.2507L24.9166 16.2638Z" fill="#FF0000"/>
+<path d="M11.3476 12.3954C13.4113 9.79017 15.4751 7.18491 17.5388 4.57965C17.8011 4.2507 17.9874 3.82307 18.3325 3.60596C18.581 3.44807 19.1815 3.40859 19.3264 3.57307C19.5542 3.82307 19.6301 4.29675 19.5818 4.65201C19.5542 4.89544 19.2229 5.1257 18.9882 5.30991C16.3033 7.42175 14.4881 10.2178 12.4589 12.8428C11.6789 13.8494 10.8783 14.8362 10.1052 15.8494C9.80845 16.2441 9.58758 16.7244 8.94569 16.4546C8.24167 16.1586 8.37971 15.6191 8.55917 15.0928C9.18036 13.2836 9.87747 11.5007 10.4158 9.67175C10.9887 7.73096 11.1889 5.73096 11.037 3.42833C8.994 5.27044 7.42032 7.13886 6.16414 9.25728C4.6871 11.7375 3.07891 14.1586 2.43011 17.0073C2.23685 17.8625 1.59496 17.7046 0.808121 17.2441C1.14632 16.3889 1.36719 15.4612 1.84343 14.6652C3.75531 11.4546 5.66029 8.23754 7.73782 5.11912C8.59368 3.82965 9.86366 2.79017 10.9887 1.67175C11.2165 1.44807 11.7824 1.19149 11.9136 1.29017C12.2035 1.5007 12.5072 1.95465 12.4658 2.27701C12.0861 5.22438 11.6375 8.16517 11.2096 11.106C11.1475 11.5073 11.0784 11.9152 11.0094 12.3165C11.1198 12.3428 11.2303 12.3691 11.3407 12.402L11.3476 12.3954Z" fill="#FF0000"/>
+<path d="M61.1251 -0.00390625C62.0569 0.417146 62.0845 0.897409 61.6635 1.51583C59.4686 4.73951 57.2807 7.96978 55.0927 11.2C54.9616 11.3974 54.7683 11.6014 54.7545 11.8119C54.7131 12.4764 54.3473 12.9106 53.7123 12.7395C53.2982 12.6277 53.0152 12.0948 52.677 11.7527C56.5352 8.38425 58.2815 3.89083 61.1251 -0.00390625Z" fill="#FF0000"/>
+<path d="M52.725 19.1357C52.1797 19.5239 51.8898 19.8726 51.524 19.9647C50.8131 20.1489 50.6613 19.4515 50.7165 19.1094C50.7717 18.7805 51.2548 18.412 51.6345 18.2936C51.8208 18.2344 52.1866 18.7015 52.725 19.1357Z" fill="#FF0000"/>
+</g>
+<defs>
+<clipPath id="clip0_418_11367">
+<rect width="61.1111" height="20" fill="#FF0000" transform="translate(0.814667 -0.00390625)"/>
+</clipPath>
+</defs>
+</svg>
+</div>
+
+  <div class="promo-card__section ">
+    <amp-img
+      src="./img/illustrations/ENVIRONMOENT 2.jpg"
+      width="450"
+      height="250"
+      layout="responsive"
+      alt="DIY painting tuition environment">
+    </amp-img>
+      <p class="mt1">
+      Learn more about how you can hire our dock, use our materials, and receive one-to-one tuition by visiting our
+      <a href="dock-hire-uk.html">DIY Tuition page</a>.
+    </p>
+
+  </div>
+
+
+
+
+</div>
+
+
+
+
+    </div>
 
 
 
@@ -2419,7 +2487,167 @@ painted boat</strong>. </p>
 We take pride in traditional techniques, fine materials, and attention to detail — delivering a finish
 that <strong> exceeds expectations </strong> and celebrates the rich <strong>heritage of Britain’s waterways</strong>. </p>
            
-           
+                <h2 class="h2 my4 ">Our Story</h2>
+
+
+               
+
+                      <div class="my4 theme2-divider ">
+
+
+                               <p class=" mb1 mt2  heading-secondary white">
+                
+                Lost Art Painters is owned and run by Dan Holmes, who has an extensive background in art and
+design and holds a First-Class Honours Degree in Fine Art.
+                
+                </p>     
+
+        
+
+
+            </div>
+
+
+             <p class="mb0">The company name came about when Dan taught himself how to paint beside the canal. With hours of
+trial, error, and experimentation — and few references to guide him — he uncovered what truly felt like
+a lost art: the traditional skill of coach painting narrowboats.</p>
+<dl class="clearfix">
+          
+          
+     
+
+           <dd class=" md-col-6 sm-col-12  mb3 self-center left-align-image">
+  <div class="image-svg-wrapper"> 
+
+
+
+
+
+<amp-img src="./img/dan.jpg" width="3" height="4" alt="English narrowboat"  class="my3" layout="responsive"> <div placeholder class="img-placeholder"></div></amp-img>
+<svg width="44" height="44" viewBox="0 0 24 24" class="sparkle sparkle-1"
+     xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path
+    d="M12 1
+       L13.6 10.4
+       L23 12
+       L13.6 13.6
+       L12 23
+       L10.4 13.6
+       L1 12
+       L10.4 10.4
+       Z"
+    fill="none"
+    stroke="#aaa"
+    stroke-width="1"
+    stroke-linejoin="round"
+  />
+</svg>
+
+
+<svg width="44" height="44" viewBox="0 0 26 26" class="sparkle sparkle-2"
+     xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <path
+    d="M13 1
+       L15.2 8.8
+       L25 13
+       L15.2 17.2
+       L13 25
+       L10.8 17.2
+       L1 13
+       L10.8 8.8
+       Z"
+    fill="none"
+    stroke="#aaa"
+    stroke-width="1"
+    stroke-linejoin="round"
+  />
+</svg>
+  <p class="mb1">We take great pride in restoring traditional narrowboats and historic working boats, respecting the methods and materials of the original builders.
+</p> 
+
+
+</div>
+
+</dd>
+          
+          <dd class="col md-col-6 sm-col-12 m0 mb0">
+
+
+<p class="mb0">Before long, other boat owners began asking Dan to paint their vessels, and what started as a passion
+became a full-time craft. Today, the workshop at Knighton Wharf continues that same tradition —
+creating hand-painted narrowboats that blend heritage, design, and individuality.<br></p>
+
+
+          </dd>
+
+
+
+
+          <dd class="col md-col-6 sm-col-12  mb1 self-center right-align-image">
+
+
+<amp-img src="./img/illustrations/MEG GREGORY.jpg" width="326" height="277"  class="my3 mt2"  layout="responsive"> <div placeholder class="img-placeholder"></div></amp-img>
+
+
+  <p class="mb1">From colour matching to period-correct lettering and designs, our aim is always to preserve authenticity while providing long-lasting protection for the years ahead.
+
+
+</p>
+<svg
+  width="44"
+  height="44"
+  viewBox="0 0 44 44"
+  xmlns="http://www.w3.org/2000/svg"
+  aria-hidden="true"
+  class="sparkle"
+>
+  <g
+    fill="none"
+    stroke="#aaa"
+    stroke-width="1.4"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  >
+    <!-- OUTER SEGMENTS -->
+
+    <!-- vertical -->
+    <line x1="22" y1="2"  x2="22" y2="14" />
+    <line x1="22" y1="30" x2="22" y2="42" />
+
+    <!-- horizontal -->
+    <line x1="2"  y1="22" x2="14" y2="22" />
+    <line x1="30" y1="22" x2="42" y2="22" />
+
+    <!-- diagonals -->
+    <line x1="8"  y1="8"  x2="15" y2="15" />
+    <line x1="29" y1="15" x2="36" y2="8" />
+    <line x1="8"  y1="36" x2="15" y2="29" />
+    <line x1="29" y1="29" x2="36" y2="36" />
+
+    <!-- INNER STAR -->
+    <path
+      d="M22 16
+         L23.6 22
+         L28 22
+         L23.9 24.5
+         L25.4 30
+         L22 26.6
+         L18.6 30
+         L20.1 24.5
+         L16 22
+         L20.4 22
+         Z"
+    />
+  </g>
+</svg>
+
+</dd>
+
+
+
+
+    
+        </dl>       
 
 <h2 id="gallery" class="my4 h2 theme2-anchored  ">Gallery</h2>
 
@@ -2746,20 +2974,7 @@ Dan is really friendly and helpful, his communication during the whole process w
     </div>
 
     <!-- 5 -->
-    <div class="testimonial-card">
-      <div class="testimonial-img">
-        <amp-img src="https://via.placeholder.com/110"
-          width="110" height="110" layout="fixed"
-          alt="Cato Johnston"></amp-img>
-      </div>
-      <div>
-        <h3 class="testimonial-name">Cato Johnston</h3>
-        <div class="testimonial-role">Digital Arts Network</div>
-        <div class="testimonial-text">
-          We used SpeedCurve to track Synthetic and RUM results over time. Load times went through the floor!
-        </div>
-      </div>
-    </div>
+ 
 
     <!-- 6 -->
     <div class="testimonial-card">
@@ -2798,20 +3013,7 @@ Dan is really friendly and helpful, his communication during the whole process w
     </div>
 
     <!-- 5 -->
-    <div class="testimonial-card">
-      <div class="testimonial-img">
-        <amp-img src="https://via.placeholder.com/110"
-          width="110" height="110" layout="fixed"
-          alt="Cato Johnston"></amp-img>
-      </div>
-      <div>
-        <h3 class="testimonial-name">Cato Johnston</h3>
-        <div class="testimonial-role">Digital Arts Network</div>
-        <div class="testimonial-text">
-          We used SpeedCurve to track Synthetic and RUM results over time. Load times went through the floor!
-        </div>
-      </div>
-    </div>
+
 
     <!-- 6 -->
     <div class="testimonial-card">
@@ -2836,167 +3038,7 @@ Dan is really friendly and helpful, his communication during the whole process w
 
 </section>
 
-            <h2 class="h2 my4 ">Our Story</h2>
 
-
-               
-
-                      <div class="my4 theme2-divider ">
-
-
-                               <p class=" mb1 mt2  heading-secondary white">
-                
-                Lost Art Painters is owned and run by Dan Holmes, who has an extensive background in art and
-design and holds a First-Class Honours Degree in Fine Art.
-                
-                </p>     
-
-        
-
-
-            </div>
-
-
-             <p class="mb0">The company name came about when Dan taught himself how to paint beside the canal. With hours of
-trial, error, and experimentation — and few references to guide him — he uncovered what truly felt like
-a lost art: the traditional skill of coach painting narrowboats.</p>
-<dl class="clearfix">
-          
-          
-     
-
-           <dd class=" md-col-6 sm-col-12  mb3 self-center left-align-image">
-  <div class="image-svg-wrapper"> 
-
-
-
-
-
-<amp-img src="./img/dan.jpg" width="3" height="4" alt="English narrowboat"  class="my3" layout="responsive"> <div placeholder class="img-placeholder"></div></amp-img>
-<svg width="44" height="44" viewBox="0 0 24 24" class="sparkle sparkle-1"
-     xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-  <path
-    d="M12 1
-       L13.6 10.4
-       L23 12
-       L13.6 13.6
-       L12 23
-       L10.4 13.6
-       L1 12
-       L10.4 10.4
-       Z"
-    fill="none"
-    stroke="#aaa"
-    stroke-width="1"
-    stroke-linejoin="round"
-  />
-</svg>
-
-
-<svg width="44" height="44" viewBox="0 0 26 26" class="sparkle sparkle-2"
-     xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-  <path
-    d="M13 1
-       L15.2 8.8
-       L25 13
-       L15.2 17.2
-       L13 25
-       L10.8 17.2
-       L1 13
-       L10.8 8.8
-       Z"
-    fill="none"
-    stroke="#aaa"
-    stroke-width="1"
-    stroke-linejoin="round"
-  />
-</svg>
-  <p class="mb1">We take great pride in restoring traditional narrowboats and historic working boats, respecting the methods and materials of the original builders.
-</p> 
-
-
-</div>
-
-</dd>
-          
-          <dd class="col md-col-6 sm-col-12 m0 mb0">
-
-
-<p class="mb0">Before long, other boat owners began asking Dan to paint their vessels, and what started as a passion
-became a full-time craft. Today, the workshop at Knighton Wharf continues that same tradition —
-creating hand-painted narrowboats that blend heritage, design, and individuality.<br></p>
-
-
-          </dd>
-
-
-
-
-          <dd class="col md-col-6 sm-col-12  mb1 self-center right-align-image">
-
-
-<amp-img src="./img/illustrations/MEG GREGORY.jpg" width="326" height="277"  class="my3 mt2"  layout="responsive"> <div placeholder class="img-placeholder"></div></amp-img>
-
-
-  <p class="mb1">From colour matching to period-correct lettering and designs, our aim is always to preserve authenticity while providing long-lasting protection for the years ahead.
-
-
-</p>
-<svg
-  width="44"
-  height="44"
-  viewBox="0 0 44 44"
-  xmlns="http://www.w3.org/2000/svg"
-  aria-hidden="true"
-  class="sparkle"
->
-  <g
-    fill="none"
-    stroke="#aaa"
-    stroke-width="1.4"
-    stroke-linecap="round"
-    stroke-linejoin="round"
-  >
-    <!-- OUTER SEGMENTS -->
-
-    <!-- vertical -->
-    <line x1="22" y1="2"  x2="22" y2="14" />
-    <line x1="22" y1="30" x2="22" y2="42" />
-
-    <!-- horizontal -->
-    <line x1="2"  y1="22" x2="14" y2="22" />
-    <line x1="30" y1="22" x2="42" y2="22" />
-
-    <!-- diagonals -->
-    <line x1="8"  y1="8"  x2="15" y2="15" />
-    <line x1="29" y1="15" x2="36" y2="8" />
-    <line x1="8"  y1="36" x2="15" y2="29" />
-    <line x1="29" y1="29" x2="36" y2="36" />
-
-    <!-- INNER STAR -->
-    <path
-      d="M22 16
-         L23.6 22
-         L28 22
-         L23.9 24.5
-         L25.4 30
-         L22 26.6
-         L18.6 30
-         L20.1 24.5
-         L16 22
-         L20.4 22
-         Z"
-    />
-  </g>
-</svg>
-
-</dd>
-
-
-
-
-    
-        </dl>
 
 
   
@@ -3011,79 +3053,14 @@ creating hand-painted narrowboats that blend heritage, design, and individuality
 
 
     </article>
-  <aside class="side-banner right-banner " aria-label="Promotional banner">
-    <div class="banner-inner">
 
-
-
-
-
-
-<div class="promo-card ">
-    
-
-  <div class="mb1 aux-head-before white mb1 promo-card__header">
-
-
-      
-
-     <h3 class="h3 aux-head-before white">
-        DIY Dock Hire
-     </h3>
-
-    <svg width="83" height="40" viewBox="0 0 65 30"  fill="#FF0000" xmlns="http://www.w3.org/2000/svg">
-<g clip-path="url(#clip0_418_11367)">
-<path d="M41.9028 10.5758C40.4188 11.8061 39.2179 12.9442 37.8651 13.8916C36.7676 14.6614 35.5321 15.2666 34.2898 15.8192C33.9171 15.9837 33.3304 15.7206 32.6126 15.6219C33.5927 13.8192 34.3933 12.2798 35.2561 10.7732C36.5122 8.56924 37.8167 6.39161 39.0936 4.20082C39.1212 4.14819 39.1281 4.06924 39.1765 4.04293C39.494 3.85214 39.9288 3.43767 40.1289 3.52319C40.7156 3.77319 40.5776 4.26003 40.2739 4.72056C39.7079 5.57582 39.1488 6.44424 38.6243 7.31924C37.4716 9.22714 36.3328 11.1482 35.2078 13.0692C35.0973 13.26 35.0973 13.5035 34.9938 13.9574C37.4578 13.2074 38.8935 11.4311 40.6742 10.1285C42.4757 8.80609 43.5731 6.95082 44.8224 5.06924C45.8025 5.79293 45.7679 6.41135 45.2503 7.16135C43.9527 9.04951 43.0623 11.1153 42.1927 13.6679C43.1244 13.2206 43.7525 13.0035 44.2771 12.6482C46.0302 11.4837 47.5901 10.1548 48.7289 8.37188C49.6331 6.9574 50.7927 5.69424 51.8625 4.37845C51.9522 4.26661 52.2007 4.26661 52.4768 4.18767C52.9392 4.83898 53.0635 5.39819 52.4561 6.06924C50.1094 8.69424 48.1078 11.5956 45.2572 13.8192C44.3875 14.4969 43.4765 14.9113 42.4204 15.089C41.1504 15.2995 40.5914 14.7929 40.8399 13.6087C40.9848 12.9179 41.3299 12.26 41.5784 11.589C41.675 11.3258 41.744 11.0627 41.9028 10.5627V10.5758Z" fill="#FF0000"/>
-<path d="M24.9166 16.2638C22.8667 16.7178 20.9341 17.152 19.0015 17.5796C18.6978 17.6454 18.3941 17.7573 18.0904 17.7638C17.2 17.7836 16.8342 17.2178 17.2829 16.4744C17.559 16.0138 17.9938 15.6454 18.2906 15.1915C18.9118 14.2309 19.4846 13.2441 20.1265 12.1981C19.8574 12.0796 19.6089 12.0138 19.4294 11.8757C19.1188 11.6388 18.8427 11.3494 18.5529 11.0862C18.9256 10.7309 19.2638 10.3165 19.6917 10.0402C19.9057 9.902 20.2991 10.0204 20.6097 10.027C21.3206 10.0467 21.7692 9.73753 22.066 9.11253C22.5009 8.19147 22.984 7.29016 23.2946 6.67832C23.1151 5.73095 22.77 5.027 22.9219 4.44147C23.1496 3.54674 24.0745 4.15858 24.7026 4.09279C25.2548 3.13226 25.7793 2.20463 26.3177 1.25726C26.9067 1.74411 26.8446 2.70244 26.1314 4.13226C27.8983 4.28358 29.5962 4.40858 31.2872 4.57963C31.8325 4.63226 32.3985 4.75068 32.9023 4.94805C33.5028 5.18489 33.6822 5.65858 33.3095 6.43489C32.0119 6.23095 30.6798 5.98095 29.3408 5.82963C28.0432 5.68489 26.7318 5.63884 25.3445 5.54016C24.6198 6.84937 23.9365 8.09279 23.198 9.43489C24.7371 9.43489 26.0899 9.33621 27.422 9.46121C28.6713 9.57963 30.2174 9.07305 31.0525 10.5599C30.5694 11.2638 29.9827 11.1257 29.3477 11.0994C27.3599 11.027 25.3652 11.0336 23.3705 11.0402C22.4939 11.0402 21.8797 11.3823 21.4931 12.2309C20.9548 13.4217 20.2577 14.5467 19.4915 15.9481C20.9686 15.6388 22.1765 15.4152 23.3705 15.1323C24.2609 14.9217 24.8545 15.0533 24.9097 16.2507L24.9166 16.2638Z" fill="#FF0000"/>
-<path d="M11.3476 12.3954C13.4113 9.79017 15.4751 7.18491 17.5388 4.57965C17.8011 4.2507 17.9874 3.82307 18.3325 3.60596C18.581 3.44807 19.1815 3.40859 19.3264 3.57307C19.5542 3.82307 19.6301 4.29675 19.5818 4.65201C19.5542 4.89544 19.2229 5.1257 18.9882 5.30991C16.3033 7.42175 14.4881 10.2178 12.4589 12.8428C11.6789 13.8494 10.8783 14.8362 10.1052 15.8494C9.80845 16.2441 9.58758 16.7244 8.94569 16.4546C8.24167 16.1586 8.37971 15.6191 8.55917 15.0928C9.18036 13.2836 9.87747 11.5007 10.4158 9.67175C10.9887 7.73096 11.1889 5.73096 11.037 3.42833C8.994 5.27044 7.42032 7.13886 6.16414 9.25728C4.6871 11.7375 3.07891 14.1586 2.43011 17.0073C2.23685 17.8625 1.59496 17.7046 0.808121 17.2441C1.14632 16.3889 1.36719 15.4612 1.84343 14.6652C3.75531 11.4546 5.66029 8.23754 7.73782 5.11912C8.59368 3.82965 9.86366 2.79017 10.9887 1.67175C11.2165 1.44807 11.7824 1.19149 11.9136 1.29017C12.2035 1.5007 12.5072 1.95465 12.4658 2.27701C12.0861 5.22438 11.6375 8.16517 11.2096 11.106C11.1475 11.5073 11.0784 11.9152 11.0094 12.3165C11.1198 12.3428 11.2303 12.3691 11.3407 12.402L11.3476 12.3954Z" fill="#FF0000"/>
-<path d="M61.1251 -0.00390625C62.0569 0.417146 62.0845 0.897409 61.6635 1.51583C59.4686 4.73951 57.2807 7.96978 55.0927 11.2C54.9616 11.3974 54.7683 11.6014 54.7545 11.8119C54.7131 12.4764 54.3473 12.9106 53.7123 12.7395C53.2982 12.6277 53.0152 12.0948 52.677 11.7527C56.5352 8.38425 58.2815 3.89083 61.1251 -0.00390625Z" fill="#FF0000"/>
-<path d="M52.725 19.1357C52.1797 19.5239 51.8898 19.8726 51.524 19.9647C50.8131 20.1489 50.6613 19.4515 50.7165 19.1094C50.7717 18.7805 51.2548 18.412 51.6345 18.2936C51.8208 18.2344 52.1866 18.7015 52.725 19.1357Z" fill="#FF0000"/>
-</g>
-<defs>
-<clipPath id="clip0_418_11367">
-<rect width="61.1111" height="20" fill="#FF0000" transform="translate(0.814667 -0.00390625)"/>
-</clipPath>
-</defs>
-</svg>
-</div>
-
-  <div class="promo-card__section ">
-    <amp-img
-      src="./img/illustrations/ENVIRONMOENT 2.jpg"
-      width="450"
-      height="250"
-      layout="responsive"
-      alt="DIY painting tuition environment">
-    </amp-img>
-      <p class="mt1">
-      Learn more about how you can hire our dock, use our materials, and receive one-to-one tuition by visiting our
-      <a href="dock-hire-uk.html">DIY Tuition page</a>.
-    </p>
-
-  </div>
-
-
-
-
-</div>
-
-
-
-
-    </div>
-    
-
-
-
-
-    
-  </aside>
   </div>
   <!-- END FLEX WRAPPER -->
 
 
 
 
+<div class="layout"> 
 
 
     <article>
@@ -3224,7 +3201,7 @@ creating hand-painted narrowboats that blend heritage, design, and individuality
 
   
     </article>
-    
+  </div>  
     <!-- Sticky side banner right -->
 
   </main>
